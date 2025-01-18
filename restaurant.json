@@ -1,0 +1,4995 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$IQy96WADShERcyo9xqxpvx$46OUWR/2Pk3kj8cAtd4aSlShS8TsvA4zJY5Och+4Nuk=",
+            "last_login": "2025-01-01T08:36:54.481Z",
+            "is_superuser": true,
+            "username": "ohana",
+            "first_name": "",
+            "last_name": "",
+            "email": "ohana@gmail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2024-12-04T03:43:52.252Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$pAUbQFXgq5uFHkHsxbiZmr$gM7EQxIRXSQLyFbVU/lWd9mdh4DUyIJKVQpVMuiIUmg=",
+            "last_login": "2024-12-31T05:42:43.769Z",
+            "is_superuser": true,
+            "username": "sajal",
+            "first_name": "",
+            "last_name": "",
+            "email": "errorsajal@gmail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2024-12-29T10:43:16.251Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "2t1r7bv2mg8pnkrk1zza2xaywozfdgkl",
+        "fields": {
+            "session_data": ".eJxVjDsOwjAQBe_iGlleG3-gpM8Zol3vggPIluKkQtwdIqWA9s3Me6kR16WMa5d5nFidFajD70aYH1I3wHest6Zzq8s8kd4UvdOuh8byvOzu30HBXr61BU8AxlLymSTyiUzw7DABCkN0GNPV-RhszA6MCWDFWTQC4NlyOKr3B8mFNuo:1tIgJ6:yM1I6jjxB3kvBh2tNzeV4OTr1aq1Y9eL3lE2Wg8c3ps",
+            "expire_date": "2024-12-18T03:44:08.633Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "5jgji1pjgi6jy874acpraqgni9pplnz1",
+        "fields": {
+            "session_data": ".eJxVjDsOwjAQBe_iGlm2E_8o6TmDtV7v4gBypDipEHeHSCmgfTPzXiLBtta0dVrSVMRZaHH63TLgg9oOyh3abZY4t3WZstwVedAur3Oh5-Vw_w4q9PqtMUQbbQD2o4XsMxZkVxyxD9GbsSjSBtApE5U2AzMyEmmrgx6cNy6K9wf2Ajfp:1tSuDm:YVhuuOGsIyKBWGSkGmJ4cmCOXNZnnUIknkEQI1JLEM4",
+            "expire_date": "2025-01-15T08:36:54.496Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "5jmza5a31ymcu3cuv6wursjwl9wcbk20",
+        "fields": {
+            "session_data": ".eJxVjDsOwjAQBe_iGlm2E_8o6TmDtV7v4gBypDipEHeHSCmgfTPzXiLBtta0dVrSVMRZaHH63TLgg9oOyh3abZY4t3WZstwVedAur3Oh5-Vw_w4q9PqtMUQbbQD2o4XsMxZkVxyxD9GbsSjSBtApE5U2AzMyEmmrgx6cNy6K9wf2Ajfp:1tJrbx:1briL3b8j1HpXl5ICVVC1h7aXA2GyN2-kMzSMcuP6_o",
+            "expire_date": "2024-12-21T10:00:29.765Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "ab5547qy09jo5z9goewe5yhzyutvc2lt",
+        "fields": {
+            "session_data": ".eJxVjDsOwjAQBe_iGlm2E_8o6TmDtV7v4gBypDipEHeHSCmgfTPzXiLBtta0dVrSVMRZaHH63TLgg9oOyh3abZY4t3WZstwVedAur3Oh5-Vw_w4q9PqtMUQbbQD2o4XsMxZkVxyxD9GbsSjSBtApE5U2AzMyEmmrgx6cNy6K9wf2Ajfp:1tSpwu:sfrOysuZ9NlteHLC4I7IOwVxggkh1MhKWW6s3mz8_Sw",
+            "expire_date": "2025-01-15T04:03:12.987Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "el53w2hp8lhfc82cy2rkmb5f146oaoot",
+        "fields": {
+            "session_data": ".eJxVjDsOwjAQBe_iGlm2E_8o6TmDtV7v4gBypDipEHeHSCmgfTPzXiLBtta0dVrSVMRZaHH63TLgg9oOyh3abZY4t3WZstwVedAur3Oh5-Vw_w4q9PqtMUQbbQD2o4XsMxZkVxyxD9GbsSjSBtApE5U2AzMyEmmrgx6cNy6K9wf2Ajfp:1tSqsp:oUW69gdBAuQt79Z1tToKk-0TuUMQbLqyOTWywuYYrR0",
+            "expire_date": "2025-01-15T05:03:03.656Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "w304r4m2tzz8u65poj1paimdafbdwtnc",
+        "fields": {
+            "session_data": ".eJxVjDsOwjAQBe_iGlm2E_8o6TmDtV7v4gBypDipEHeHSCmgfTPzXiLBtta0dVrSVMRZaHH63TLgg9oOyh3abZY4t3WZstwVedAur3Oh5-Vw_w4q9PqtMUQbbQD2o4XsMxZkVxyxD9GbsSjSBtApE5U2AzMyEmmrgx6cNy6K9wf2Ajfp:1tSrWu:POpxNQlCue2h3X19rl7neL2JYTNiqQYa1bSJWkppA7k",
+            "expire_date": "2025-01-15T05:44:28.203Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "yxro4e0lyyetnomt977tkig6p94qr73m",
+        "fields": {
+            "session_data": ".eJxVjDsOwjAQBe_iGlm2E_8o6TmDtV7v4gBypDipEHeHSCmgfTPzXiLBtta0dVrSVMRZaHH63TLgg9oOyh3abZY4t3WZstwVedAur3Oh5-Vw_w4q9PqtMUQbbQD2o4XsMxZkVxyxD9GbsSjSBtApE5U2AzMyEmmrgx6cNy6K9wf2Ajfp:1tSr3t:5hzogbIlZrB-y5A1q-YqUP7HxXBOoMGVXRLytWuN0P8",
+            "expire_date": "2025-01-15T05:14:29.316Z"
+        }
+    },
+    {
+        "model": "restaurant.company",
+        "pk": 1,
+        "fields": {
+            "name": "Ohana Diner",
+            "logo": "company_logos/Messenger_creation_785911da-c070-41f3-824e-4e69fc042076_1_pVItGyx.png"
+        }
+    },
+    {
+        "model": "restaurant.company",
+        "pk": 2,
+        "fields": {
+            "name": "Mini Malaysia",
+            "logo": "company_logos/IMG-20240914-WA0016.png"
+        }
+    },
+    {
+        "model": "restaurant.company",
+        "pk": 3,
+        "fields": {
+            "name": "Sunny Side Up",
+            "logo": "company_logos/Messenger_creation_15977cf1-1916-44fa-9620-6d430f0d3f62_IQB8xtF.png"
+        }
+    },
+    {
+        "model": "restaurant.companyprofile",
+        "pk": 2,
+        "fields": {
+            "company": 1,
+            "description": "<p>Hawaiian food is all about flavours that contrast and complement. Established back in 2019, Ohana Diner is a popular pioneer Hawaiian-style diner in Dhaka. Eventually, Ohana expanded its cuisine range, upholding the richness of seafood, meat and poultry with an aesthetic oceanic themed interior. Ohana strides and strives in creating signature dishes and unique recipes consistently to the satisfaction of its esteemed guests.</p>",
+            "image": "company_profile_images/Messenger_creation_785911da-c070-41f3-824e-4e69fc042076_2.png",
+            "email": "ohana.diner2023@gmail.com",
+            "phone": "8801880200570",
+            "website": "",
+            "facebook_link": "https://www.facebook.com/OhanaDinerbd",
+            "instagram_link": "@ohanadiner",
+            "youtube_link": null,
+            "twitter_link": "@ohana.diner",
+            "linkedin_link": "",
+            "tiktok_link": "@ohana.diner",
+            "pinterest_link": null,
+            "address": "House 133, Road 9/A (New), Captain Road, Shankar, Dhanmondi, 1209- Dhaka",
+            "established_year": null,
+            "services_offered": null
+        }
+    },
+    {
+        "model": "restaurant.companyprofile",
+        "pk": 3,
+        "fields": {
+            "company": 2,
+            "description": "<p>Sharing a roof with Ohana Diner, Mini Malaysia was founded in 2024. The main objective of Mini Malaysia is to serve the most authentic Malaysian cuisine in Dhaka prioritizing the balance of unique blend of spice, flavours, and textures, influenced by many cultures of Malaysia.</p>",
+            "image": "company_profile_images/IMG-20240914-WA0016_1.png",
+            "email": "minimalaysia2024@gmail.com",
+            "phone": "8801979212611",
+            "website": "",
+            "facebook_link": "https://www.facebook.com/profile.php?id=61565872655510",
+            "instagram_link": "@_minimalaysia",
+            "youtube_link": null,
+            "twitter_link": "@mini.malaysia",
+            "linkedin_link": "",
+            "tiktok_link": "@mini.malaysia",
+            "pinterest_link": null,
+            "address": "House 133, Road 9/A (New), Captain Road, Shankar, Dhanmondi, 1209- Dhaka",
+            "established_year": null,
+            "services_offered": null
+        }
+    },
+    {
+        "model": "restaurant.companyprofile",
+        "pk": 4,
+        "fields": {
+            "company": 3,
+            "description": "<p>Established in early 2023, the goal of Sunny Side Up is to introduce the concept of being able to enjoy breakfast anytime of the day in Dhanmondi. It is our&nbsp;small-scale venture of meals prepared with a colourful mix and an \"everything is allowed\" attitude.</p>",
+            "image": "company_profile_images/Messenger_creation_15977cf1-1916-44fa-9620-6d430f0d3f62_1.png",
+            "email": "sunnysideupfeb23@gmail.com",
+            "phone": "8801979212611",
+            "website": "",
+            "facebook_link": "https://www.facebook.com/profile.php?id=100089607471874",
+            "instagram_link": "@sunnysideup_744",
+            "youtube_link": null,
+            "twitter_link": "@sunnysideup_744",
+            "linkedin_link": "",
+            "tiktok_link": "@sunnysideup_744",
+            "pinterest_link": null,
+            "address": "House 133, Road 9/A (New), Captain Road, Shankar, Dhanmondi, 1209- Dhaka",
+            "established_year": null,
+            "services_offered": null
+        }
+    },
+    {
+        "model": "restaurant.owner",
+        "pk": 3,
+        "fields": {
+            "name": "Ayesha Hossain Shahnila",
+            "company": 1,
+            "description": "",
+            "image": "owner_images/Picture1.jpg",
+            "email": "ahshahnila@gmail.com",
+            "phone": "",
+            "facebook_link": "",
+            "instagram_link": "",
+            "linkedin_link": "",
+            "twitter_link": "",
+            "pinterest_link": null,
+            "tiktok_link": null,
+            "role": null,
+            "achievements": null,
+            "address": null
+        }
+    },
+    {
+        "model": "restaurant.owner",
+        "pk": 4,
+        "fields": {
+            "name": "Ayesha Hossain Shahnila",
+            "company": 2,
+            "description": "",
+            "image": "owner_images/Picture1_B3JL1BN.jpg",
+            "email": "ahshahnila@gmail.com",
+            "phone": "",
+            "facebook_link": "",
+            "instagram_link": "",
+            "linkedin_link": "",
+            "twitter_link": "",
+            "pinterest_link": null,
+            "tiktok_link": null,
+            "role": null,
+            "achievements": null,
+            "address": null
+        }
+    },
+    {
+        "model": "restaurant.owner",
+        "pk": 5,
+        "fields": {
+            "name": "Tadvin Hossain Prince",
+            "company": 2,
+            "description": "",
+            "image": "owner_images/Picture2.jpg",
+            "email": "tadvinrealone@gmail.com",
+            "phone": "",
+            "facebook_link": "",
+            "instagram_link": "",
+            "linkedin_link": "",
+            "twitter_link": "",
+            "pinterest_link": null,
+            "tiktok_link": null,
+            "role": null,
+            "achievements": null,
+            "address": null
+        }
+    },
+    {
+        "model": "restaurant.owner",
+        "pk": 6,
+        "fields": {
+            "name": "Amreen Hossain",
+            "company": 2,
+            "description": "",
+            "image": "owner_images/ameerthana_xTJekHW.jpg",
+            "email": "amreen.thana@gmail.com",
+            "phone": "",
+            "facebook_link": "",
+            "instagram_link": "",
+            "linkedin_link": "",
+            "twitter_link": "",
+            "pinterest_link": null,
+            "tiktok_link": null,
+            "role": null,
+            "achievements": null,
+            "address": null
+        }
+    },
+    {
+        "model": "restaurant.owner",
+        "pk": 7,
+        "fields": {
+            "name": "Ayesha Hossain Shahnila",
+            "company": 3,
+            "description": "",
+            "image": "owner_images/Picture1_JyFhZQl.jpg",
+            "email": "ahshahnila@gmail.com",
+            "phone": "",
+            "facebook_link": "",
+            "instagram_link": "",
+            "linkedin_link": "",
+            "twitter_link": "",
+            "pinterest_link": null,
+            "tiktok_link": null,
+            "role": null,
+            "achievements": null,
+            "address": null
+        }
+    },
+    {
+        "model": "restaurant.owner",
+        "pk": 8,
+        "fields": {
+            "name": "Tadvin Hossain Prince",
+            "company": 3,
+            "description": "",
+            "image": "owner_images/Picture2_PnfKgeE.jpg",
+            "email": "tadvinrealone@gmail.com",
+            "phone": "",
+            "facebook_link": "",
+            "instagram_link": "",
+            "linkedin_link": "",
+            "twitter_link": "",
+            "pinterest_link": null,
+            "tiktok_link": null,
+            "role": null,
+            "achievements": null,
+            "address": null
+        }
+    },
+    {
+        "model": "restaurant.owner",
+        "pk": 9,
+        "fields": {
+            "name": "Amreen Hossain",
+            "company": 3,
+            "description": "",
+            "image": "owner_images/ameerthana_aZpsHuj.jpg",
+            "email": "amreen.thana@gmail.com",
+            "phone": "",
+            "facebook_link": "",
+            "instagram_link": "",
+            "linkedin_link": "",
+            "twitter_link": "",
+            "pinterest_link": null,
+            "tiktok_link": null,
+            "role": null,
+            "achievements": null,
+            "address": null
+        }
+    },
+    {
+        "model": "restaurant.contactus",
+        "pk": 4,
+        "fields": {
+            "company": 1,
+            "email": "ohana.diner2023@gmail.com",
+            "phone": "+8801880200570",
+            "address": "House 133, Road 9/A (New), Captain Road, Shankar, Dhanmondi, 1209- Dhaka\r\n (Behind Bangladesh Eye Hospital)\r\n"
+        }
+    },
+    {
+        "model": "restaurant.contactus",
+        "pk": 5,
+        "fields": {
+            "company": 2,
+            "email": "minimalaysia2024@gmail.com",
+            "phone": "+8801979212611",
+            "address": "House 133, Road 9/A (New), Captain Road, Shankar, Dhanmondi, 1209- Dhaka\r\n(Behind Bangladesh Eye Hospital)\r\n"
+        }
+    },
+    {
+        "model": "restaurant.contactus",
+        "pk": 6,
+        "fields": {
+            "company": 3,
+            "email": "sunnysideupfeb23@gmail.com",
+            "phone": "+8801979212611",
+            "address": "House 133, Road 9/A (New), Captain Road, Shankar, Dhanmondi, 1209- Dhaka\r\n (Behind Bangladesh Eye Hospital)\r\n"
+        }
+    },
+    {
+        "model": "restaurant.category",
+        "pk": 2,
+        "fields": {
+            "name": "Ice Cream",
+            "status": true,
+            "image": "category_images/50050-five-minute-ice-cream-DDMFS-2x1-077-c9d38152e1c1490284371890762ce600.jpg",
+            "description": ""
+        }
+    },
+    {
+        "model": "restaurant.category",
+        "pk": 3,
+        "fields": {
+            "name": "Chicken",
+            "status": true,
+            "image": "category_images/Malaysian-Chicken-Rendang-8.jpg",
+            "description": "Chicken Curry"
+        }
+    },
+    {
+        "model": "restaurant.category",
+        "pk": 4,
+        "fields": {
+            "name": "Vegetable",
+            "status": true,
+            "image": "category_images/ShrimpAvocadoSummerRolls-49.jpg",
+            "description": "Vegetable/Vegan"
+        }
+    },
+    {
+        "model": "restaurant.category",
+        "pk": 5,
+        "fields": {
+            "name": "Asian Fried Rice",
+            "status": true,
+            "image": "category_images/easy-vegetable-fried-rice-recipe-hero-2-fed2a62b8bce4c51b945d9c24c2edb68.jpg",
+            "description": "Asian Fried Rice "
+        }
+    },
+    {
+        "model": "restaurant.category",
+        "pk": 6,
+        "fields": {
+            "name": "Starters",
+            "status": true,
+            "image": "category_images/cold-appetizer-ideas.jpg",
+            "description": "Appetizers"
+        }
+    },
+    {
+        "model": "restaurant.category",
+        "pk": 7,
+        "fields": {
+            "name": "Pasta and Noodles",
+            "status": true,
+            "image": "category_images/laksa-soup-Malaysian-curry-noodle.jpg",
+            "description": "Pasta and Noodles"
+        }
+    },
+    {
+        "model": "restaurant.category",
+        "pk": 8,
+        "fields": {
+            "name": "Burger",
+            "status": true,
+            "image": "category_images/25473-the-perfect-basic-burger-DDMFS-4x3-56eaba3833fd4a26a82755bcd0be0c54.jpg",
+            "description": "Burger"
+        }
+    },
+    {
+        "model": "restaurant.category",
+        "pk": 9,
+        "fields": {
+            "name": "Sea Food",
+            "status": true,
+            "image": "category_images/Seafood_Clear_Soup.jpeg",
+            "description": "Sea Food"
+        }
+    },
+    {
+        "model": "restaurant.category",
+        "pk": 10,
+        "fields": {
+            "name": "Snacks",
+            "status": true,
+            "image": "category_images/Sliders.jpeg",
+            "description": "Snacks"
+        }
+    },
+    {
+        "model": "restaurant.category",
+        "pk": 11,
+        "fields": {
+            "name": "Drinks",
+            "status": true,
+            "image": "category_images/drinks.jpg",
+            "description": "Variety of hot and cold drinks"
+        }
+    },
+    {
+        "model": "restaurant.category",
+        "pk": 12,
+        "fields": {
+            "name": "Hawaiian Plate lunches",
+            "status": true,
+            "image": "category_images/hawaiian_plate_2XPmFsN.webp",
+            "description": "Hawaiian Plate lunches"
+        }
+    },
+    {
+        "model": "restaurant.category",
+        "pk": 13,
+        "fields": {
+            "name": "Rice Bowl",
+            "status": true,
+            "image": "category_images/Korean_20Rice_20Bowl_201_T6KIvWn.jpg",
+            "description": "Rice Bowl"
+        }
+    },
+    {
+        "model": "restaurant.category",
+        "pk": 14,
+        "fields": {
+            "name": "Mocktails/Drinks",
+            "status": true,
+            "image": "category_images/Dash-of-Jazz-Ginger-Ale-Mocktail-8.jpg",
+            "description": "Mocktails/Drinks"
+        }
+    },
+    {
+        "model": "restaurant.category",
+        "pk": 15,
+        "fields": {
+            "name": "Platters 1:2",
+            "status": true,
+            "image": "category_images/3911.jpg",
+            "description": "Platters 1:2"
+        }
+    },
+    {
+        "model": "restaurant.category",
+        "pk": 16,
+        "fields": {
+            "name": "Dessert",
+            "status": true,
+            "image": "category_images/dessert.jpeg",
+            "description": "Dessert"
+        }
+    },
+    {
+        "model": "restaurant.gallerycategory",
+        "pk": 1,
+        "fields": {
+            "name": "Ohana Diner",
+            "status": true,
+            "image": "category_images/Hazelnut-Brownies-with-Frangelico-Ice-Cream.jpg",
+            "description": "test"
+        }
+    },
+    {
+        "model": "restaurant.gallerycategory",
+        "pk": 2,
+        "fields": {
+            "name": "Mini Malaysia",
+            "status": true,
+            "image": "category_images/Messenger_creation_15977cf1-1916-44fa-9620-6d430f0d3f62_1.png",
+            "description": "tere"
+        }
+    },
+    {
+        "model": "restaurant.gallery",
+        "pk": 1,
+        "fields": {
+            "Gallerycategory": 1,
+            "image": "gallery_images/IMG-20241123-WA0000_WyXsGUi.jpg",
+            "status": true,
+            "caption": "test\r\n"
+        }
+    },
+    {
+        "model": "restaurant.gallery",
+        "pk": 2,
+        "fields": {
+            "Gallerycategory": 2,
+            "image": "gallery_images/2023-02-11.jpg",
+            "status": true,
+            "caption": ""
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 13,
+        "fields": {
+            "company": 2,
+            "category": 3,
+            "name": "Chicken Rendang",
+            "description": "Chicken cooked in coconut milk & a paste of mixed ground spices, served with steamed rice",
+            "price": "420.00",
+            "thumb_image": "menu_thumbs/Malaysian-Chicken-Rendang-8.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "2.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 15,
+        "fields": {
+            "company": 3,
+            "category": 6,
+            "name": "Cheesy Corn Dogs ",
+            "description": "Crunchy panko fried cheese corn dogs",
+            "price": "350.00",
+            "thumb_image": "menu_thumbs/631a7268247ff.webp",
+            "hot_deal_status": false,
+            "vat_tax": "2.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 16,
+        "fields": {
+            "company": 2,
+            "category": 5,
+            "name": "NASI GORENG KAMPUNG",
+            "description": "A classic Malaysian fried rice dish with a rustic twist! Wok-fried with fragrant spices, anchovies, chili, and fresh vegetables, delivering a hearty and flavorful taste of traditional kampung-style cooking. Perfectly served at Mini Malaysia, where authentic flavors meet heartfelt hospitality.",
+            "price": "380.00",
+            "thumb_image": "menu_thumbs/maxresdefault.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 17,
+        "fields": {
+            "company": 2,
+            "category": 5,
+            "name": "Nasi Goreng Pattaya",
+            "description": "At Mini Malaysia, savor the authentic taste of Nasi Goreng PattayaΓÇöa flavorful Malaysian fried rice wrapped in a delicate omelet, bursting with spices and served with a side of our signature sambal. A true taste of Malaysia in every bite!",
+            "price": "320.00",
+            "thumb_image": "menu_thumbs/nasi-goreng-pattaya-1718774366503.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 18,
+        "fields": {
+            "company": 2,
+            "category": 5,
+            "name": "Nasi Ayam Percik",
+            "description": "At Mini Malaysia, enjoy our Nasi Ayam PercikΓÇöa delicious combination of tender Malay grilled chicken coated in creamy percik sauce, served with fragrant tomato rice. A perfect harmony of smoky, savory, and tangy flavors!",
+            "price": "350.00",
+            "thumb_image": "menu_thumbs/m6p.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 19,
+        "fields": {
+            "company": 2,
+            "category": 5,
+            "name": "Hainanese Chicken Rice",
+            "description": "At Mini Malaysia, experience the classic Hainanese Chicken RiceΓÇötender poached chicken paired with fragrant seasoned rice, served with our special trio of sauces: chili, ginger, and soy. A timeless favorite full of authentic flavors!",
+            "price": "360.00",
+            "thumb_image": "menu_thumbs/hainanese-chicken-rice-recipe-linsfood.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 20,
+        "fields": {
+            "company": 2,
+            "category": 5,
+            "name": "Chicken Rendang",
+            "description": "At Mini Malaysia, savor the rich and aromatic flavors of Chicken RendangΓÇötender chicken slow-cooked in creamy coconut milk and a fragrant blend of ground spices, served with steamed rice for a truly indulgent Malaysian delight!",
+            "price": "420.00",
+            "thumb_image": "menu_thumbs/Rendang-scaled.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 21,
+        "fields": {
+            "company": 2,
+            "category": 7,
+            "name": "Laksa",
+            "description": "At Mini Malaysia, dive into the bold flavors of LaksaΓÇöa hearty, spicy soup featuring shredded chicken, fried tofu, and noodles in a creamy coconut broth infused with a fragrant, spicy paste. A Malaysian classic thatΓÇÖs both comforting and flavorful!",
+            "price": "555.00",
+            "thumb_image": "menu_thumbs/laksa-soup-Malaysian-curry-noodle.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 22,
+        "fields": {
+            "company": 2,
+            "category": 6,
+            "name": "Chicken Satay ",
+            "description": "\r\nAt Mini Malaysia, relish our Chicken SatayΓÇösucculent grilled chicken skewers, marinated to perfection and served with a rich, flavorful peanut dipping sauce. A classic Malaysian favorite thatΓÇÖs perfect for sharing!",
+            "price": "300.00",
+            "thumb_image": "menu_thumbs/chicken-satay-thumb.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 23,
+        "fields": {
+            "company": 2,
+            "category": 7,
+            "name": "Mee Goreng Mamak",
+            "description": "At Mini Malaysia, indulge in our Mee Goreng MamakΓÇösavory, sweet, and spicy fried noodles tossed with tofu, veggies, and served with a side of crispy fried chicken. A perfect combination of flavors and textures for a satisfying meal!",
+            "price": "300.00",
+            "thumb_image": "menu_thumbs/mee-goreng-mamak-foto-resep-utama.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 24,
+        "fields": {
+            "company": 2,
+            "category": 5,
+            "name": "NASI AYAM PAPRIK",
+            "description": "At Mini Malaysia, savor our Nasi Ayam PaprikΓÇötender chicken stir-fried with fresh vegetables in a deliciously sweet, spicy, and savory sauce, served alongside fragrant steamed rice. A vibrant and flavorful dish thatΓÇÖs sure to satisfy!",
+            "price": "400.00",
+            "thumb_image": "menu_thumbs/Nasi-Paprik-scaled.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 25,
+        "fields": {
+            "company": 2,
+            "category": 6,
+            "name": "Cheong fun",
+            "description": "At Mini Malaysia, enjoy our Cheong FunΓÇödelicate rice paper rolls filled with a savory mix of minced prawn, mushrooms, and fresh greens. Light, flavorful, and served to perfection for just 350 TK.",
+            "price": "350.00",
+            "thumb_image": "menu_thumbs/hk-style-ccf-overview1.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 26,
+        "fields": {
+            "company": 1,
+            "category": 6,
+            "name": "Seafood Clear Soup",
+            "description": "At Ohana Diner, enjoy our Seafood Clear SoupΓÇöa delicate seafood broth infused with prawns, squid, crab, and hearty dairy cubes. This light yet flavorful soup offers a perfect balance of freshness and richness, making it a truly satisfying dish!",
+            "price": "470.00",
+            "thumb_image": "menu_thumbs/Seafood_Clear_Soup.jpeg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 27,
+        "fields": {
+            "company": 1,
+            "category": 6,
+            "name": "Cream Of Mushroom",
+            "description": "At Ohana Diner, indulge in our rich and velvety Cream of Mushroom soupΓÇöcreamy, smooth, and bursting with the earthy flavors of fresh mushrooms. A comforting, savory starter thatΓÇÖs perfect for any occasion!",
+            "price": "380.00",
+            "thumb_image": "menu_thumbs/Cream_of_Mushroom_with_Garlic_Bread.png",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 28,
+        "fields": {
+            "company": 1,
+            "category": 6,
+            "name": " Hawaiian Seafood Salad",
+            "description": "At Ohana Diner, enjoy our Hawaiian Seafood SaladΓÇöa vibrant mix of saut├⌐ed prawns, tender squid, creamy dairy cubes, and tangy pickles, all tossed together for a refreshing and flavorful dish. A perfect balance of sweet, savory, and zesty!",
+            "price": "520.00",
+            "thumb_image": "menu_thumbs/Hawaiian_Seafood_Salad__2.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 29,
+        "fields": {
+            "company": 1,
+            "category": 6,
+            "name": "Chicken Wings ",
+            "description": "At Ohana Diner, savor our Chicken Wings with Double DippingsΓÇöcrispy, golden wings served with two irresistible dipping sauces. A perfect combination of crunch and flavor, ideal for sharing or enjoying as a tasty snack!",
+            "price": "420.00",
+            "thumb_image": "menu_thumbs/Chicken_Wings_with_Double_Dipping.jpeg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 30,
+        "fields": {
+            "company": 1,
+            "category": 6,
+            "name": "Seafood Basket",
+            "description": "At Ohana Diner, dive into our Seafood BasketΓÇöa crispy, golden selection of deep-fried seafood pancakes, tender octopus, calamari, Dory strips, and green chilies. A delightful mix of textures and flavors, perfect for seafood lovers!",
+            "price": "799.00",
+            "thumb_image": "menu_thumbs/Screenshot_1.png",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 31,
+        "fields": {
+            "company": 1,
+            "category": 6,
+            "name": "Prawn Dumplings",
+            "description": "At Ohana Diner, enjoy our Prawn DumplingsΓÇöcrispy, golden-fried delights filled with succulent prawns, served with two flavorful dipping sauces. A perfect bite-sized treat for any occasion!",
+            "price": "370.00",
+            "thumb_image": "menu_thumbs/Prawn_Dumpling_.jpeg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 32,
+        "fields": {
+            "company": 1,
+            "category": 6,
+            "name": "Shrimp Tempura",
+            "description": "At Ohana Diner, delight in our Shrimp TempuraΓÇöcrispy, golden-battered shrimp, fried to perfection and served with a savory dipping sauce. A light and crunchy seafood classic thatΓÇÖs simply irresistible!",
+            "price": "420.00",
+            "thumb_image": "menu_thumbs/Tempura_Prawn.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 33,
+        "fields": {
+            "company": 1,
+            "category": 6,
+            "name": "Deep-Fried Calamari",
+            "description": "At Ohana Diner, enjoy our Deep-Fried CalamariΓÇötender calamari rings coated in a crispy golden batter, fried to perfection, and served with a tangy dipping sauce. A classic seafood appetizer thatΓÇÖs full of flavor!",
+            "price": "490.00",
+            "thumb_image": "menu_thumbs/Deep_Fried_Calamari.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 34,
+        "fields": {
+            "company": 1,
+            "category": 6,
+            "name": "Sliders",
+            "description": "At Ohana Diner, try our SlidersΓÇöbite-sized mini burgers packed with juicy chicken, fresh greens, and a medley of flavorful sauces. Perfectly portioned for a delicious snack or light meal!",
+            "price": "450.00",
+            "thumb_image": "menu_thumbs/Sliders.jpeg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 35,
+        "fields": {
+            "company": 1,
+            "category": 6,
+            "name": "French Fries",
+            "description": "At Ohana Diner, enjoy our classic French FriesΓÇöcrispy, golden, and perfectly seasoned. A timeless favorite thatΓÇÖs great on its own or paired with your favorite dish!",
+            "price": "180.00",
+            "thumb_image": "menu_thumbs/rachel-87711-2.jpeg",
+            "hot_deal_status": false,
+            "vat_tax": "10.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 36,
+        "fields": {
+            "company": 1,
+            "category": 6,
+            "name": "Seafood Fried Rice",
+            "description": "At Ohana Diner, savor our Seafood Fried RiceΓÇöa flavorful dish made with our special recipe rice, loaded with tender squid and succulent prawns. A hearty and delicious seafood delight!",
+            "price": "300.00",
+            "thumb_image": "menu_thumbs/Seafood_Fried_Rice_YeRy3rE.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 37,
+        "fields": {
+            "company": 1,
+            "category": 6,
+            "name": "Cheesy Potato Wedges",
+            "description": "At Ohana Diner, indulge in our Cheesy Potato WedgesΓÇöcrispy, golden potato wedges topped with a generous layer of melted cheese and served with a tangy dipping sauce. A perfect combination of savory and cheesy goodness!",
+            "price": "200.00",
+            "thumb_image": "menu_thumbs/60055797.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 38,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Tiger Prawns",
+            "description": "At Ohana Diner, enjoy our Tiger PrawnsΓÇösucculent prawns sizzled in a rich blend of cheese and aromatic herbs, served alongside crispy potato wedges. A savory and indulgent seafood experience!",
+            "price": "680.00",
+            "thumb_image": "menu_thumbs/Tiger_Prawns_with_Potato_Wedges.png",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 39,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Super Spicy Octopus",
+            "description": "At Ohana Diner, challenge your taste buds with our Super Spicy OctopusΓÇötender octopus pan-cooked in a fiery, hot, and spicy Chef's special sauce, complemented with fresh vegetables. Available in 300g or 500g portions for a truly bold and flavorful experience!",
+            "price": "900.00",
+            "thumb_image": "menu_thumbs/Super_Spicy_Octopus.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 40,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Whole Squid Sizzler",
+            "description": "\r\nAt Ohana Diner, enjoy our Whole Squid SizzlerΓÇötender tube squid sizzled to perfection in a rich, flavorful special sauce, served with a medley of fresh veggies. A sizzling seafood delight thatΓÇÖs sure to impress!",
+            "price": "510.00",
+            "thumb_image": "menu_thumbs/Whole_Squid_Sizzler.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 41,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": " Whole Pomfret Sizzler",
+            "description": "At Ohana Diner, indulge in our Whole Pomfret SizzlerΓÇöcrispy fried pomfret sizzled and topped with a sweet and spicy sugar chili syrup. A perfect blend of flavors thatΓÇÖs both tantalizing and satisfying!",
+            "price": "630.00",
+            "thumb_image": "menu_thumbs/WhatsApp_Image_2024-12-31_at_17.40.31_12047a92.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 42,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Assorted Seafood Sizzler",
+            "description": "At Ohana Diner, enjoy our Assorted Seafood SizzlerΓÇöa delectable mix of octopus, clam, prawns, squid, and crab, all sizzled to perfection. A seafood lover's dream, bursting with fresh flavors and served sizzling hot!",
+            "price": "880.00",
+            "thumb_image": "menu_thumbs/WhatsApp_Image_2024-12-31_at_17.40.56_9d0229fa.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 43,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Spicy Crab with Veggies",
+            "description": "At Ohana Diner, savor our Spicy Crab with VeggiesΓÇösucculent crab cooked in a bold, spicy sauce, paired with fresh vegetables for a perfect balance of heat and flavor. A fiery and satisfying seafood dish!",
+            "price": "510.00",
+            "thumb_image": "menu_thumbs/Spicy_Crab_with_Veggies.JPG",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 44,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Singaporean Chili Crab",
+            "description": "At Ohana Diner, experience the vibrant flavors of Singaporean Chili CrabΓÇötender crab cooked in a rich, spicy, and tangy chili sauce, bursting with aromatic herbs and spices. A signature dish thatΓÇÖs both fiery and delicious!",
+            "price": "590.00",
+            "thumb_image": "menu_thumbs/WhatsApp_Image_2024-12-31_at_17.59.18_3a794d44.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 45,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Grilled Salmon",
+            "description": "At Ohana Diner, enjoy our Grilled SalmonΓÇöperfectly grilled to a tender, flaky texture, seasoned with herbs and spices, and served with a side of fresh vegetables. A healthy and flavorful seafood dish thatΓÇÖs simply irresistible!",
+            "price": "1490.00",
+            "thumb_image": "menu_thumbs/Grilled_Salmon_EWc3Zqf.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 46,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": " Grilled Lobster with Sauteed Veggies",
+            "description": "At Ohana Diner, indulge in our Grilled Lobster with Sauteed VeggiesΓÇöa whole lobster flamed to perfection with aromatic herbs, spices, and melting cheese. Served alongside sauteed vegetables for a luxurious and flavorful seafood experience!",
+            "price": "500.00",
+            "thumb_image": "menu_thumbs/Grilled_Lobster_with_Sauteed_Veggies.JPG",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 47,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Grilled Whole Koral",
+            "description": "At Ohana Diner, indulge in our Grilled Whole KoralΓÇöa beautifully prepared whole fish, marinated in a rich blend of aromatic spices to enhance its natural flavors. Skillfully pan-grilled to achieve a perfect balance of crispy exterior and tender, juicy interior. Priced at 280 BDT per 100g, this dish is available in 300g or 500g portions, making it a treat for seafood enthusiasts. Served with a side of fresh greens or tangy dipping sauce to complete the meal, it offers an authentic and satisfying dining experience!",
+            "price": "280.00",
+            "thumb_image": "menu_thumbs/Grilled_Whole_Coral_.jpeg",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 48,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Whole Red Snapper",
+            "description": "At Ohana Diner, savor our Whole Red SnapperΓÇöa premium whole fish marinated in a delightful blend of spices, then expertly pan-grilled to perfection. This dish, available in 300g or 500g portions, boasts a flavorful crispy exterior and tender, juicy interior. Served with fresh greens and a tangy dipping sauce, it's the perfect choice for seafood lovers seeking a rich and authentic culinary experience!",
+            "price": "320.00",
+            "thumb_image": "menu_thumbs/Grilled_Whole_Coral__r2FsPNH.jpeg",
+            "hot_deal_status": false,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 49,
+        "fields": {
+            "company": 2,
+            "category": 11,
+            "name": "Hot Teh Tarik",
+            "description": "A traditional Malaysian tea made with strong black tea and sweetened condensed milk, expertly \"pulled\" to create a frothy, smooth texture. Served hot for a rich, comforting experience with a perfect balance of sweetness and bold tea flavor.",
+            "price": "80.00",
+            "thumb_image": "menu_thumbs/tea.jpeg",
+            "hot_deal_status": false,
+            "vat_tax": "3.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 50,
+        "fields": {
+            "company": 1,
+            "category": 3,
+            "name": "Chickaletta",
+            "description": "A mix of seeds, grains, and sometimes even small pebbles to help with digestion. Provide essential protein and calcium.",
+            "price": "399.00",
+            "thumb_image": "menu_thumbs/Chickaletta_Platter.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 51,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Masala Mussels",
+            "description": "Masala Mussels are a popular seafood dish made with mussels cooked in a flavorful, aromatic Indian-style masala sauce.",
+            "price": "410.00",
+            "thumb_image": "menu_thumbs/Masala_Mussels_with_Steamed_Rice.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 52,
+        "fields": {
+            "company": 1,
+            "category": 3,
+            "name": "Chicken Sizzler",
+            "description": " Combines succulent grilled or fried chicken with stir-fried vegetables and often rice, all served on a hot, sizzling plate. The intense heat creates a smoky aroma and keeps the food warm throughout the meal.",
+            "price": "377.00",
+            "thumb_image": "menu_thumbs/chicken_sizzer_2.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 53,
+        "fields": {
+            "company": 1,
+            "category": 3,
+            "name": "Glazed Chicken",
+            "description": "Glazed chicken is a dish where chicken is coated in a sweet or savory sauce and then cooked, often in the oven or on the stovetop.",
+            "price": "490.00",
+            "thumb_image": "menu_thumbs/ss4.PNG",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 54,
+        "fields": {
+            "company": 1,
+            "category": 3,
+            "name": "Chicken Pizza ",
+            "description": " It often includes other ingredients like onions, bell peppers, mushrooms, and olives. The chicken can be grilled, roasted, or even fried before being added to the pizza.",
+            "price": "650.00",
+            "thumb_image": "menu_thumbs/Chicken_Pizza.jpeg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 55,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Fish & Chips",
+            "description": "Fish & Chips is a classic British dish featuring battered and deep-fried fish, typically cod or haddock, served with crispy, golden fries. The fish is coated in a light, crunchy batter thatΓÇÖs seasoned to perfection, while the fries are thick-cut and fried until golden",
+            "price": "570.00",
+            "thumb_image": "menu_thumbs/Fish__Chips.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "3.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 56,
+        "fields": {
+            "company": 2,
+            "category": 11,
+            "name": "iced latte",
+            "description": " A smooth blend of rich espresso and chilled milk, served over ice for a refreshing and creamy coffee experience. Perfectly balanced and ideal for a cool pick-me-up.",
+            "price": "220.00",
+            "thumb_image": "menu_thumbs/Spanish-Iced-Latte.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 57,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Olepe Carnival",
+            "description": "Olepe Carnival is a delightful seafood dish known for its vibrant presentation and burst of flavors. This dish combines fresh shellfish, aromatic herbs, and spices, creating a perfect harmony of taste and texture.",
+            "price": "810.00",
+            "thumb_image": "menu_thumbs/Olepe_Carnival.JPG",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 58,
+        "fields": {
+            "company": 2,
+            "category": 11,
+            "name": "ICED TEH TARIK",
+            "description": "A Malaysian classic, this smooth and frothy iced tea is made with strong black tea and sweetened condensed milk, expertly \"pulled\" to create a rich, creamy texture. Served cold for a refreshing and indulgent treat.",
+            "price": "180.00",
+            "thumb_image": "menu_thumbs/iced_teh_tarik.png",
+            "hot_deal_status": false,
+            "vat_tax": "3.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 59,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Seafood pizza",
+            "description": "Seafood pizza is a gourmet delight that combines the freshness of the ocean with the comforting charm of a classic pizza. Topped with an array of seafood such as shrimp, calamari, mussels, or crab, itΓÇÖs layered over a crispy crust with a rich tomato sauce, melted cheese, and aromatic herbs.",
+            "price": "777.00",
+            "thumb_image": "menu_thumbs/Seafood_Pizza_.JPG",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 60,
+        "fields": {
+            "company": 2,
+            "category": 11,
+            "name": "Iced Cappuccino",
+            "description": "A chilled blend of bold espresso, cold milk, and a frothy layer of milk foam, served over ice for a refreshing twist on the classic cappuccino. Perfectly creamy and energizing.",
+            "price": "250.00",
+            "thumb_image": "menu_thumbs/iced_cappuccino.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "3.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 61,
+        "fields": {
+            "company": 2,
+            "category": 11,
+            "name": "Iced Milo",
+            "description": "A beloved chocolate malt drink, served cold with a rich and creamy texture. Made with Milo powder, milk, and ice, itΓÇÖs the perfect balance of sweet and refreshing for a satisfying treat.",
+            "price": "280.00",
+            "thumb_image": "menu_thumbs/iced_milo.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "3.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 62,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Creamy Dory with Garlic Bread ",
+            "description": " A delicate white fish cooked in a creamy sauce with Buttery, garlicky toasted bread.",
+            "price": "650.00",
+            "thumb_image": "menu_thumbs/Creamy_Dory_.jpeg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 63,
+        "fields": {
+            "company": 1,
+            "category": 7,
+            "name": "Chicken Penne Pasta",
+            "description": "Chicken Penne Pasta is a delicious dish featuring tender chicken, penne pasta, and a creamy or tomato-based sauce, seasoned with herbs and topped with grated cheese. Perfectly hearty and flavorful!",
+            "price": "450.00",
+            "thumb_image": "menu_thumbs/Chicken_Penne_Pasta.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 64,
+        "fields": {
+            "company": 2,
+            "category": 11,
+            "name": "Hot Milo",
+            "description": "A comforting, warm drink made with rich Milo powder, hot milk, and a touch of sweetness. Perfectly smooth and creamy, offering a cozy, indulgent experience for any time of day.",
+            "price": "150.00",
+            "thumb_image": "menu_thumbs/hot_milo.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 65,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Seashell Bowl",
+            "description": " It's usually served with a creamy sauce, seafood, and vegetables, creating a delightful and visually appealing meal.",
+            "price": "1190.00",
+            "thumb_image": "menu_thumbs/Seashell_Bowl.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 66,
+        "fields": {
+            "company": 1,
+            "category": 7,
+            "name": "Seafood Penne Pasta with Hot Sauce",
+            "description": "Seafood Penne Pasta with Hot Sauce is a bold and flavorful dish that combines the freshness of the ocean with a spicy kick. Succulent shrimp, tender calamari, and juicy mussels are saut├⌐ed to perfection and tossed with al dente penne pasta in a fiery, tangy hot sauce.",
+            "price": "555.00",
+            "thumb_image": "menu_thumbs/Seafood_Penne_Pasta_with_Hot_Sauce.JPG",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 67,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Seafood Blast ",
+            "description": "This dish typically features a variety of seafood such as shrimp, scallops, mussels, and fish, all cooked together in a savory broth or sauce.",
+            "price": "800.00",
+            "thumb_image": "menu_thumbs/Seafood_Blast.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 68,
+        "fields": {
+            "company": 1,
+            "category": 7,
+            "name": "Prawn Spaghetti",
+            "description": "Prawn Spaghetti is a delightful Italian-inspired dish featuring succulent prawns tossed with perfectly cooked spaghetti in a rich, flavorful sauce.",
+            "price": "490.00",
+            "thumb_image": "menu_thumbs/Prawn_Spaghetti_with_Hot_Sauce.JPG",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 69,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Prawn Sambal with Steamed Rice",
+            "description": "he combination of tender prawns, fiery sambal, and fluffy steamed rice creates a satisfying and unforgettable culinary experience.",
+            "price": "450.00",
+            "thumb_image": "menu_thumbs/Prawn_Sambal_with_Steamed_Rice.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 70,
+        "fields": {
+            "company": 2,
+            "category": 6,
+            "name": "Ais Kacang (ABC)",
+            "description": "A delightful Malaysian dessert featuring shaved ice topped with sweet syrups, red beans, corn, and a variety of colorful jellies, often drizzled with condensed milk and evaporated milk. A refreshing and indulgent treat, perfect for cooling off on a warm day.",
+            "price": "280.00",
+            "thumb_image": "menu_thumbs/sldf9.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "3.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 71,
+        "fields": {
+            "company": 1,
+            "category": 7,
+            "name": "Blue Mussels with Spaghetti",
+            "description": "Blue Mussels with Spaghetti is a sophisticated and flavorful dish that brings together the briny sweetness of fresh blue mussels with al dente spaghetti in a savory, aromatic sauce.",
+            "price": "799.00",
+            "thumb_image": "menu_thumbs/Blue_Mussels_with_Spaghetti.JPG",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 73,
+        "fields": {
+            "company": 1,
+            "category": 9,
+            "name": "Chilli Tilapia with Steamed Rice",
+            "description": "Chilli Tilapia is a flavorful and spicy dish featuring tilapia fillets cooked in a fiery chili sauce. ",
+            "price": "399.00",
+            "thumb_image": "menu_thumbs/Chilli_Tilapia_with_Steamed_Rice.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 74,
+        "fields": {
+            "company": 2,
+            "category": 8,
+            "name": "Ramly burger",
+            "description": "A popular Malaysian street food, featuring a juicy beef or chicken patty wrapped in a flavorful egg coating, served in a soft bun with fresh vegetables, mayonnaise, ketchup, and special sauces. A delicious, savory burger with a unique twist that packs a satisfying, flavorful punch.",
+            "price": "380.00",
+            "thumb_image": "menu_thumbs/Ramly-Burger-Recipe-1024x683_DWwORRo.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "3.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 75,
+        "fields": {
+            "company": 1,
+            "category": 7,
+            "name": "Chilli Oil Noodles with Prawns",
+            "description": "Chilli Oil Noodles with Prawns is a bold and spicy dish that combines tender prawns with stir-fried noodles in a fiery, aromatic chili oil sauce. ",
+            "price": "570.00",
+            "thumb_image": "menu_thumbs/Chilli_Oil_Noodles_with_Prawns.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 76,
+        "fields": {
+            "company": 1,
+            "category": 7,
+            "name": "Assorted Seafood Ramen",
+            "description": "Assorted Seafood Ramen is a rich and flavorful Japanese-inspired dish featuring a variety of fresh seafood, such as shrimp, squid, and mussels, served over a bowl of steaming hot ramen noodles",
+            "price": "988.00",
+            "thumb_image": "menu_thumbs/Assorted_Seafood_Ramen.JPG",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 77,
+        "fields": {
+            "company": 1,
+            "category": 7,
+            "name": "Octopasta",
+            "description": "Octopasta is a fun and unique seafood pasta dish that features tender, flavorful octopus combined with al dente pasta in a rich, savory sauce. ",
+            "price": "899.00",
+            "thumb_image": "menu_thumbs/Octopasta.JPG",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 78,
+        "fields": {
+            "company": 1,
+            "category": 12,
+            "name": "Garlic Shrimp",
+            "description": "classic dish featuring succulent shrimp saut├⌐ed in a flavorful garlic-butter sauce. The shrimp are typically cooked quickly over high heat, allowing them to retain their tenderness and absorb the rich flavors of the garlic and butter. ",
+            "price": "540.00",
+            "thumb_image": "menu_thumbs/Hawaiian_Plate_Lunch-Garlic_Shrimp.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 79,
+        "fields": {
+            "company": 1,
+            "category": 12,
+            "name": "Teriyaki Beef",
+            "description": "Grilled or pan-fried beef marinated and glazed with a sweet and savory teriyaki sauce.",
+            "price": "650.00",
+            "thumb_image": "menu_thumbs/Hawaiian_Plate_Lunch-Teriyaki_Beef.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 80,
+        "fields": {
+            "company": 1,
+            "category": 12,
+            "name": "Grilled Chicken ",
+            "description": "Grilled Chicken is chicken cooked on a grill, often seasoned with herbs, spices, or marinades.",
+            "price": "540.00",
+            "thumb_image": "menu_thumbs/Hawaiian_Plate_Lunch-Grilled_Chicken.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 81,
+        "fields": {
+            "company": 1,
+            "category": 13,
+            "name": "Kai Bowl",
+            "description": "A Kai Bowl is a delicious and visually appealing way to enjoy a healthy and refreshing treat.",
+            "price": "499.00",
+            "thumb_image": "menu_thumbs/Kai_Bowl_eTjBk1m.JPG",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 82,
+        "fields": {
+            "company": 1,
+            "category": 13,
+            "name": "Moa Bowl",
+            "description": " traditional Bengali sweet dish. It's made from puffed rice (moa), jaggery (unrefined palm sugar), khoya (dried milk solids)",
+            "price": "399.00",
+            "thumb_image": "menu_thumbs/Moa_Bowl_ZMWwhNh.JPG",
+            "hot_deal_status": true,
+            "vat_tax": "2.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 83,
+        "fields": {
+            "company": 1,
+            "category": 14,
+            "name": "Mona Punch/Maui Punch",
+            "description": "At Ohana Diner, refresh yourself with our Mona Punch or Maui PunchΓÇöan invigorating blend of flavored syrups and a fizzy combo of sodas. Bursting with vibrant flavors and a delightful sparkle, itΓÇÖs the perfect drink to brighten your day!",
+            "price": "250.00",
+            "thumb_image": "menu_thumbs/Moana_Punch.JPG",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 84,
+        "fields": {
+            "company": 1,
+            "category": 13,
+            "name": "Crab Shack",
+            "description": "Crab Shack is known for its seafood boils, featuring large buckets of fresh seafood like crab legs, shrimp, and mussels, often served with sides like corn on the cob and potatoes.",
+            "price": "449.00",
+            "thumb_image": "menu_thumbs/Crab_Shack.JPG",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 85,
+        "fields": {
+            "company": 1,
+            "category": 15,
+            "name": "Sailor",
+            "description": "The Sailor Platter is a sumptuous seafood feast designed for seafood lovers, offering a variety of flavors and textures. It includes an assorted seafood sizzlerΓÇöa sizzling combination of fresh seafood, such as shrimp, squid, and fish fillets, grilled to perfection. ",
+            "price": "1779.00",
+            "thumb_image": "menu_thumbs/Sailor.JPG",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 86,
+        "fields": {
+            "company": 1,
+            "category": 15,
+            "name": "Pirates",
+            "description": "The Pirates Platter is an adventurous seafood feast that brings the bounty of the sea to your table. This indulgent platter features cheesy tiger prawns, succulent prawns topped with a layer of melted cheese for a creamy, rich flavor.",
+            "price": "1680.00",
+            "thumb_image": "menu_thumbs/Pirates.JPG",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 87,
+        "fields": {
+            "company": 1,
+            "category": 14,
+            "name": "Red Sea ",
+            "description": "At Ohana Diner, dive into the refreshing taste of our Red SeaΓÇöa tantalizing mix of fruit-flavored syrup, freshly squeezed orange, and fizzy sodas. A vibrant and invigorating drink thatΓÇÖs perfect for any occasion!",
+            "price": "300.00",
+            "thumb_image": "menu_thumbs/Red_Sea.JPG",
+            "hot_deal_status": false,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 88,
+        "fields": {
+            "company": 1,
+            "category": 16,
+            "name": "Brownie",
+            "description": "A brownie is a chocolate baked dessert bar. ",
+            "price": "250.00",
+            "thumb_image": "menu_thumbs/Brownie.JPG",
+            "hot_deal_status": true,
+            "vat_tax": "3.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 89,
+        "fields": {
+            "company": 1,
+            "category": 14,
+            "name": "Berry Soda",
+            "description": "\r\nAt Ohana Diner, enjoy the sparkling delight of our Berry SodaΓÇöa refreshing blend of mixed berry syrup and a fizzy combination of sodas. Bursting with sweet and tangy berry flavors, itΓÇÖs the perfect thirst-quencher!",
+            "price": "260.00",
+            "thumb_image": "menu_thumbs/Berry_Soda.JPG",
+            "hot_deal_status": false,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 90,
+        "fields": {
+            "company": 1,
+            "category": 15,
+            "name": "Deep Sea",
+            "description": "The Deep Sea Platter is an exquisite seafood extravaganza that brings the best of the ocean to your plate. It features a whole grilled cheesy lobster, perfectly charred and topped with a generous layer of melted cheese for an indulgent bite.",
+            "price": "2099.00",
+            "thumb_image": "menu_thumbs/Deep_Sea.JPG",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 91,
+        "fields": {
+            "company": 1,
+            "category": 14,
+            "name": "Classic Crimson",
+            "description": "At Ohana Diner, indulge in our Classic CrimsonΓÇöa delightful fusion of mixed berry syrup, fresh fruits, and fizzy sodas. This vibrant and refreshing drink is bursting with fruity flavors, making it the perfect companion for any meal!",
+            "price": "400.00",
+            "thumb_image": "menu_thumbs/Classic_Crimson.JPG",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 92,
+        "fields": {
+            "company": 1,
+            "category": 2,
+            "name": "Premium Vanilla/ Butterscotch/ Chocolate Ripple",
+            "description": "This selection offers a variety of classic and popular ice cream flavors to satisfy different taste preferences. Minimum quantity of ice cream price start from 250 BDT.",
+            "price": "400.00",
+            "thumb_image": "menu_thumbs/Premium_Vanilla.JPG",
+            "hot_deal_status": false,
+            "vat_tax": "3.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 93,
+        "fields": {
+            "company": 1,
+            "category": 15,
+            "name": "SeaShore",
+            "description": "The Seashore Platter offers a delightful variety of ocean-inspired flavors, perfect for seafood lovers. The platter features a pan-cooked whole pomfret, perfectly crisp on the outside while maintaining its tender, juicy flesh.",
+            "price": "1755.00",
+            "thumb_image": "menu_thumbs/Seashore.JPG",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 94,
+        "fields": {
+            "company": 1,
+            "category": 14,
+            "name": "Mint Lemonade",
+            "description": "At Ohana Diner, revitalize your senses with our Mint LemonadeΓÇöa zesty blend of carbonated lemonade and fresh mint leaves. This sparkling and refreshing drink is the perfect balance of tangy and cool, ideal for quenching your thirst on any day!",
+            "price": "250.00",
+            "thumb_image": "menu_thumbs/Mint_Lemonade.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 95,
+        "fields": {
+            "company": 1,
+            "category": 2,
+            "name": "Affogato",
+            "description": "An Affogato is a simple yet elegant Italian dessert that combines the richness of vanilla ice cream with the bold flavor of hot espresso.",
+            "price": "299.00",
+            "thumb_image": "menu_thumbs/affagatto.PNG",
+            "hot_deal_status": true,
+            "vat_tax": "2.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 96,
+        "fields": {
+            "company": 1,
+            "category": 14,
+            "name": "Classic Mojito",
+            "description": "\r\nAt Ohana Diner, experience the timeless refreshment of our Classic MojitoΓÇöa vibrant mix of crushed fresh mint and lime blended with fizzy sodas. This sparkling drink delivers a perfect balance of citrusy zest and minty coolness, making it a refreshing classic for all occasions!",
+            "price": "250.00",
+            "thumb_image": "menu_thumbs/Classic_Mojito.JPG",
+            "hot_deal_status": false,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 97,
+        "fields": {
+            "company": 1,
+            "category": 2,
+            "name": "Brownie with Ice Cream",
+            "description": "A classic dessert featuring a warm, fudgy brownie topped with a scoop of cold ice cream. ",
+            "price": "450.00",
+            "thumb_image": "menu_thumbs/brownie-with-vanilla-ice-cream.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "3.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 98,
+        "fields": {
+            "company": 1,
+            "category": 14,
+            "name": "Lemon cola",
+            "description": "Lemon Cola is a refreshing, zesty drink that combines the sweet, fizzy goodness of cola with the bright, tangy flavor of fresh lemon. ",
+            "price": "210.00",
+            "thumb_image": "menu_thumbs/Lemon_cola.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 99,
+        "fields": {
+            "company": 3,
+            "category": 6,
+            "name": "Cheesy Corn Dogs",
+            "description": "At Sunny Side Up, indulge in our Cheesy Corn DogsΓÇöcrispy and golden panko-fried cheese corn dogs, bursting with gooey, melted cheese inside. A perfect blend of crunch and cheesy goodness, it's an irresistible snack for all ages!",
+            "price": "350.00",
+            "thumb_image": "menu_thumbs/Korean-Corn-Dog-13.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 100,
+        "fields": {
+            "company": 3,
+            "category": 6,
+            "name": "Day Breaker",
+            "description": "A classic breakfast with scrambled eggs, crispy bacon, roasted tomatoes, baked beans, and brown bread for a hearty start to the day.",
+            "price": "350.00",
+            "thumb_image": "menu_thumbs/Day_Breaker.jpeg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 101,
+        "fields": {
+            "company": 3,
+            "category": 6,
+            "name": "Crispy Tofu",
+            "description": "At Sunny Side Up, enjoy our Crispy TofuΓÇöcrispy deep-fried tofu fingers served with a special dipping sauce. Golden on the outside and tender on the inside, this dish is a perfect balance of textures and flavors, making it an irresistible choice for any tofu lover!",
+            "price": "220.00",
+            "thumb_image": "menu_thumbs/images_5.jpeg",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 102,
+        "fields": {
+            "company": 3,
+            "category": 6,
+            "name": "Kick Starter",
+            "description": "A hearty breakfast featuring sausages, poached eggs, saut├⌐ed mushrooms, baked beans, and brown bread to provide sustained energy.",
+            "price": "300.00",
+            "thumb_image": "menu_thumbs/sss.jpeg",
+            "hot_deal_status": true,
+            "vat_tax": "2.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 103,
+        "fields": {
+            "company": 1,
+            "category": 2,
+            "name": "Cool Cat",
+            "description": "Cool Cat is a fun and indulgent drink that combines the refreshing fizz of carbonated soda with the creamy, sweet richness of ice cream. The soda, typically a cola or lemon-lime flavor, is poured over a scoop (or more) of your favorite ice cream, creating a delightful float with bubbles and creamy texture in every sip.",
+            "price": "260.00",
+            "thumb_image": "menu_thumbs/chocolate-ice-cream-soda-3057676-Kayla-Hoang-2022-4200baf2b67a436c89fca023cbc670bc.jpeg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 104,
+        "fields": {
+            "company": 3,
+            "category": 6,
+            "name": "The Grand Forks",
+            "description": "A more substantial option with chicken rashers, saut├⌐ed vegetables, Greek yogurt, hash browns, a sunny-side-up egg, and brown bread for a complete and filling breakfast.",
+            "price": "520.00",
+            "thumb_image": "menu_thumbs/Breakfast.jpeg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 105,
+        "fields": {
+            "company": 1,
+            "category": 14,
+            "name": "Fizzy Drinks",
+            "description": "Fizzy drinks, also known as carbonated beverages, are refreshingly effervescent drinks that are infused with carbon dioxide gas to create bubbles. ",
+            "price": "100.00",
+            "thumb_image": "menu_thumbs/glass-cold-cola-soft-drink-600nw-1933899536.webp",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 106,
+        "fields": {
+            "company": 1,
+            "category": 6,
+            "name": "Summer Rolls",
+            "description": "At Sunny Side Up, savor our Summer RollsΓÇölight and refreshing rice paper rolls filled with crisp fresh veggies and crab stick, served with a tangy special dipping sauce. A healthy and flavorful appetizer perfect for a light snack or starter!",
+            "price": "380.00",
+            "thumb_image": "menu_thumbs/404717529_305152875814959_4701766376497382323_n.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 107,
+        "fields": {
+            "company": 1,
+            "category": 14,
+            "name": "Hot coffee",
+            "description": "Hot Coffee is a comforting and invigorating beverage made from freshly brewed coffee beans, served hot to provide warmth and a rich, bold flavor. ",
+            "price": "120.00",
+            "thumb_image": "menu_thumbs/2148180238.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 108,
+        "fields": {
+            "company": 3,
+            "category": 6,
+            "name": "Korean Gyelan",
+            "description": "At Sunny Side Up, delight in our Korean GyelanΓÇösavory Korean-style egg rolls paired with crispy French bread and pan-fried potatoes. Served with a delicious sauce, this dish offers a satisfying blend of textures and flavors, perfect for a hearty meal or snack!",
+            "price": "380.00",
+            "thumb_image": "menu_thumbs/333936092_890795782130930_2273228426083585972_n.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 109,
+        "fields": {
+            "company": 3,
+            "category": 6,
+            "name": "Kani salad",
+            "description": "\r\nAt Sunny Side Up, indulge in our Kani SaladΓÇöa Japanese-inspired crab salad made with shredded crab sticks and crunchy veggies. Light, refreshing, and packed with flavor, this dish is a perfect blend of textures and is ideal for seafood lovers seeking something delicious and healthy!",
+            "price": "300.00",
+            "thumb_image": "menu_thumbs/images_6.jpeg",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 110,
+        "fields": {
+            "company": 3,
+            "category": 6,
+            "name": "crispy cracklings",
+            "description": "\r\nAt Sunny Side Up, enjoy our Crispy CracklingsΓÇöcrispy deep-fried chicken skin, golden and crunchy on the outside while remaining tender inside. A savory treat that's perfectly seasoned and utterly addictive, making it the ultimate snack for those who love bold flavors!",
+            "price": "220.00",
+            "thumb_image": "menu_thumbs/proben-1623091285_PJZPDHZK69BGI4UIER33.jpg",
+            "hot_deal_status": true,
+            "vat_tax": "1.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 111,
+        "fields": {
+            "company": 1,
+            "category": 14,
+            "name": "Black Coffee",
+            "description": "Black Coffee is a simple, bold, and aromatic beverage made by brewing ground coffee beans with hot water, served without any milk or cream.",
+            "price": "60.00",
+            "thumb_image": "menu_thumbs/closeup-shot-cup-black-coffee-table-with-roasted-beans-lights.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 112,
+        "fields": {
+            "company": 1,
+            "category": 14,
+            "name": "Black Coffee",
+            "description": "Black Coffee is a simple, bold, and aromatic beverage made by brewing ground coffee beans with hot water, served without any milk or cream.",
+            "price": "60.00",
+            "thumb_image": "menu_thumbs/closeup-shot-cup-black-coffee-table-with-roasted-beans-lights_LbOc5f1.jpg",
+            "hot_deal_status": false,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 113,
+        "fields": {
+            "company": 3,
+            "category": 6,
+            "name": " Egg Mayo",
+            "description": " A classic combination of creamy egg salad served with slices of brown bread.",
+            "price": "250.00",
+            "thumb_image": "menu_thumbs/ss1.jpeg",
+            "hot_deal_status": true,
+            "vat_tax": "2.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 114,
+        "fields": {
+            "company": 3,
+            "category": 6,
+            "name": "Tuna Decker",
+            "description": "A simple and satisfying platter featuring tuna salad served on slices of brown bread.",
+            "price": "280.00",
+            "thumb_image": "menu_thumbs/ss2.jpeg",
+            "hot_deal_status": true,
+            "vat_tax": "2.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitem",
+        "pk": 115,
+        "fields": {
+            "company": 3,
+            "category": 6,
+            "name": "Nori Wrap",
+            "description": "A unique and flavorful platter with chicken salami, scrambled eggs, and greens wrapped in both nori sheets and rice paper.",
+            "price": "360.00",
+            "thumb_image": "menu_thumbs/ss3.jpeg",
+            "hot_deal_status": true,
+            "vat_tax": "5.00",
+            "status": true
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 48,
+        "fields": {
+            "menu_item": 13,
+            "image": "menu_images/IMG_8351-a.JPG"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 49,
+        "fields": {
+            "menu_item": 13,
+            "image": "menu_images/IMG_8351-a_WiLwpHH.JPG"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 52,
+        "fields": {
+            "menu_item": 15,
+            "image": "menu_images/003_cheesy_jalapeno_corn_dogs_.jpg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 53,
+        "fields": {
+            "menu_item": 15,
+            "image": "menu_images/003_cheesy_jalapeno_corn_dogs__eJIAnHo.jpg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 54,
+        "fields": {
+            "menu_item": 16,
+            "image": "menu_images/maxresdefault.jpg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 56,
+        "fields": {
+            "menu_item": 17,
+            "image": "menu_images/nasi-goreng-pattaya-1718774366503.jpg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 57,
+        "fields": {
+            "menu_item": 17,
+            "image": "menu_images/nasi-goreng-pattaya-1718774366503_hyUxUHu.jpg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 60,
+        "fields": {
+            "menu_item": 18,
+            "image": "menu_images/images_1.jpeg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 61,
+        "fields": {
+            "menu_item": 19,
+            "image": "menu_images/20230911192023-andy-20cooks-20-20hainanese-20chicken-20rice.jpg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 62,
+        "fields": {
+            "menu_item": 19,
+            "image": "menu_images/20230911192023-andy-20cooks-20-20hainanese-20chicken-20rice_kg1dEcu.jpg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 63,
+        "fields": {
+            "menu_item": 20,
+            "image": "menu_images/f9c7048eedb2a6f90fb7f2d20db6c7e7.jpg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 67,
+        "fields": {
+            "menu_item": 21,
+            "image": "menu_images/laksa-soup-Malaysian-curry-noodle.jpg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 68,
+        "fields": {
+            "menu_item": 22,
+            "image": "menu_images/chicken-satay-recipe.jpg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 69,
+        "fields": {
+            "menu_item": 22,
+            "image": "menu_images/chicken-satay-recipe_owiC40J.jpg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 73,
+        "fields": {
+            "menu_item": 23,
+            "image": "menu_images/Mee-Goreng-Mamak-1.jpg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 74,
+        "fields": {
+            "menu_item": 24,
+            "image": "menu_images/Nasi-Paprik-scaled.jpg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 77,
+        "fields": {
+            "menu_item": 25,
+            "image": "menu_images/IMG_4035-featured_QZCLhJY.jpg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 78,
+        "fields": {
+            "menu_item": 26,
+            "image": "menu_images/Seafood_Clear_Soup.jpeg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 79,
+        "fields": {
+            "menu_item": 26,
+            "image": "menu_images/Seafood_Clear_Soup_I23EVIy.jpeg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 80,
+        "fields": {
+            "menu_item": 27,
+            "image": "menu_images/Cream_of_Mushroom_with_Garlic_Bread.png"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 81,
+        "fields": {
+            "menu_item": 27,
+            "image": "menu_images/Cream_of_Mushroom_with_Garlic_Bread_mEQyPVs.png"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 82,
+        "fields": {
+            "menu_item": 30,
+            "image": "menu_images/Screenshot_1.png"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 83,
+        "fields": {
+            "menu_item": 30,
+            "image": "menu_images/Screenshot_1_SDnHg55.png"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 86,
+        "fields": {
+            "menu_item": 106,
+            "image": "menu_images/44767376450_9c7c7112c6_c.jpg"
+        }
+    },
+    {
+        "model": "restaurant.menuitemimage",
+        "pk": 87,
+        "fields": {
+            "menu_item": 106,
+            "image": "menu_images/44767376450_9c7c7112c6_c_JEQELyV.jpg"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 8,
+        "fields": {
+            "menu_item": 16,
+            "name": "spicy fried rice with anchovies",
+            "quantity": "1",
+            "created_at": "2024-12-30T11:27:11.351Z",
+            "updated_at": "2024-12-30T11:27:11.351Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 9,
+        "fields": {
+            "menu_item": 16,
+            "name": "nasi goreng pattaya",
+            "quantity": "1",
+            "created_at": "2024-12-30T11:27:31.395Z",
+            "updated_at": "2024-12-30T11:37:57.769Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 10,
+        "fields": {
+            "menu_item": 17,
+            "name": "seafood",
+            "quantity": "1",
+            "created_at": "2024-12-31T05:10:48.373Z",
+            "updated_at": "2024-12-31T05:10:48.373Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 11,
+        "fields": {
+            "menu_item": 17,
+            "name": "Chicken & veg  fried rice wrapped in egg omelette",
+            "quantity": "10",
+            "created_at": "2024-12-31T05:11:06.542Z",
+            "updated_at": "2024-12-31T05:11:06.542Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 12,
+        "fields": {
+            "menu_item": 20,
+            "name": "Chicken Cooked in coconut milk ",
+            "quantity": "5",
+            "created_at": "2024-12-31T05:39:09.713Z",
+            "updated_at": "2024-12-31T05:39:09.713Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 13,
+        "fields": {
+            "menu_item": 20,
+            "name": "Served with steamed rice",
+            "quantity": "5",
+            "created_at": "2024-12-31T05:39:39.381Z",
+            "updated_at": "2024-12-31T05:39:39.381Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 14,
+        "fields": {
+            "menu_item": 19,
+            "name": "Poached chicken & Seasoned rice",
+            "quantity": "5",
+            "created_at": "2024-12-31T05:40:04.402Z",
+            "updated_at": "2024-12-31T05:40:32.572Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 15,
+        "fields": {
+            "menu_item": 19,
+            "name": "Served with Special Sauces",
+            "quantity": "5",
+            "created_at": "2024-12-31T05:40:53.197Z",
+            "updated_at": "2024-12-31T05:40:53.197Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 16,
+        "fields": {
+            "menu_item": 21,
+            "name": "Spicy soup with shredded chicken",
+            "quantity": "10",
+            "created_at": "2024-12-31T05:53:51.853Z",
+            "updated_at": "2024-12-31T05:53:51.853Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 17,
+        "fields": {
+            "menu_item": 21,
+            "name": "Fried tofu",
+            "quantity": "5",
+            "created_at": "2024-12-31T05:54:06.489Z",
+            "updated_at": "2024-12-31T05:54:06.489Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 18,
+        "fields": {
+            "menu_item": 21,
+            "name": "Noodles",
+            "quantity": "5",
+            "created_at": "2024-12-31T05:54:23.304Z",
+            "updated_at": "2024-12-31T05:54:23.304Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 19,
+        "fields": {
+            "menu_item": 21,
+            "name": "Coconut broth infused with spicy paste",
+            "quantity": "5",
+            "created_at": "2024-12-31T05:54:40.987Z",
+            "updated_at": "2024-12-31T05:54:40.987Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 20,
+        "fields": {
+            "menu_item": 23,
+            "name": "Savoury",
+            "quantity": "1",
+            "created_at": "2024-12-31T06:17:42.626Z",
+            "updated_at": "2024-12-31T06:17:42.626Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 21,
+        "fields": {
+            "menu_item": 23,
+            "name": "Sweet",
+            "quantity": "1",
+            "created_at": "2024-12-31T06:17:56.819Z",
+            "updated_at": "2024-12-31T06:17:56.819Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 22,
+        "fields": {
+            "menu_item": 23,
+            "name": "Spicy",
+            "quantity": "1",
+            "created_at": "2024-12-31T06:18:09.374Z",
+            "updated_at": "2024-12-31T06:18:09.375Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 23,
+        "fields": {
+            "menu_item": 23,
+            "name": "Fried noodles with tofu ",
+            "quantity": "1",
+            "created_at": "2024-12-31T06:18:26.834Z",
+            "updated_at": "2024-12-31T06:18:26.835Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 24,
+        "fields": {
+            "menu_item": 23,
+            "name": "Veggies served with crispy fried ",
+            "quantity": "1",
+            "created_at": "2024-12-31T06:18:41.873Z",
+            "updated_at": "2024-12-31T06:18:41.873Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 25,
+        "fields": {
+            "menu_item": 24,
+            "name": "Chicken stir fried with veggies in a sweet",
+            "quantity": "1",
+            "created_at": "2024-12-31T06:32:38.594Z",
+            "updated_at": "2024-12-31T06:32:38.594Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 26,
+        "fields": {
+            "menu_item": 24,
+            "name": "spicy",
+            "quantity": "1",
+            "created_at": "2024-12-31T06:32:48.711Z",
+            "updated_at": "2024-12-31T06:32:48.711Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 27,
+        "fields": {
+            "menu_item": 24,
+            "name": "Savoury sauce served with steamed rice",
+            "quantity": "1",
+            "created_at": "2024-12-31T06:33:06.322Z",
+            "updated_at": "2024-12-31T06:33:06.323Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 28,
+        "fields": {
+            "menu_item": 25,
+            "name": "Rice paper rolls with minced prawn",
+            "quantity": "1",
+            "created_at": "2024-12-31T06:46:47.825Z",
+            "updated_at": "2024-12-31T06:46:47.825Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 29,
+        "fields": {
+            "menu_item": 25,
+            "name": "Mushroom & greens",
+            "quantity": "1",
+            "created_at": "2024-12-31T06:47:02.547Z",
+            "updated_at": "2024-12-31T06:47:02.547Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 30,
+        "fields": {
+            "menu_item": 26,
+            "name": "Prawns",
+            "quantity": "1",
+            "created_at": "2024-12-31T09:05:08.801Z",
+            "updated_at": "2024-12-31T09:05:08.801Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 31,
+        "fields": {
+            "menu_item": 26,
+            "name": "Squid",
+            "quantity": "2",
+            "created_at": "2024-12-31T09:05:23.519Z",
+            "updated_at": "2024-12-31T09:05:23.519Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 32,
+        "fields": {
+            "menu_item": 26,
+            "name": "Crab",
+            "quantity": "1",
+            "created_at": "2024-12-31T09:05:36.687Z",
+            "updated_at": "2024-12-31T09:05:36.687Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 33,
+        "fields": {
+            "menu_item": 26,
+            "name": "Dory cubes in seafood broth",
+            "quantity": "1",
+            "created_at": "2024-12-31T09:06:12.926Z",
+            "updated_at": "2024-12-31T09:06:12.926Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 34,
+        "fields": {
+            "menu_item": 28,
+            "name": "Sauteed prawns",
+            "quantity": "1",
+            "created_at": "2024-12-31T09:23:29.616Z",
+            "updated_at": "2024-12-31T09:23:29.616Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 35,
+        "fields": {
+            "menu_item": 28,
+            "name": "Squid",
+            "quantity": "1",
+            "created_at": "2024-12-31T09:23:58.939Z",
+            "updated_at": "2024-12-31T09:23:58.939Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 36,
+        "fields": {
+            "menu_item": 28,
+            "name": "Dory cubes on fresh green & pickles",
+            "quantity": "1",
+            "created_at": "2024-12-31T09:24:41.898Z",
+            "updated_at": "2024-12-31T09:24:41.898Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 37,
+        "fields": {
+            "menu_item": 29,
+            "name": "Double Dippings",
+            "quantity": "1",
+            "created_at": "2024-12-31T09:30:40.121Z",
+            "updated_at": "2024-12-31T09:30:40.121Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 38,
+        "fields": {
+            "menu_item": 30,
+            "name": " Deep-fried seafood pancakes",
+            "quantity": "1",
+            "created_at": "2024-12-31T09:43:06.211Z",
+            "updated_at": "2024-12-31T09:43:06.211Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 39,
+        "fields": {
+            "menu_item": 30,
+            "name": " Octopus",
+            "quantity": "1",
+            "created_at": "2024-12-31T09:43:26.035Z",
+            "updated_at": "2024-12-31T09:44:03.814Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 40,
+        "fields": {
+            "menu_item": 30,
+            "name": "Calamari",
+            "quantity": "1",
+            "created_at": "2024-12-31T09:43:46.781Z",
+            "updated_at": "2024-12-31T09:43:46.781Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 41,
+        "fields": {
+            "menu_item": 30,
+            "name": "Dory strips",
+            "quantity": "1",
+            "created_at": "2024-12-31T09:44:27.298Z",
+            "updated_at": "2024-12-31T09:44:27.298Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 42,
+        "fields": {
+            "menu_item": 30,
+            "name": " Green Chilies",
+            "quantity": "1",
+            "created_at": "2024-12-31T09:44:44.801Z",
+            "updated_at": "2024-12-31T09:44:44.801Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 43,
+        "fields": {
+            "menu_item": 38,
+            "name": "Sizzled in cheese ",
+            "quantity": "1",
+            "created_at": "2024-12-31T11:15:36.811Z",
+            "updated_at": "2024-12-31T11:15:36.811Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 44,
+        "fields": {
+            "menu_item": 38,
+            "name": "Herbs",
+            "quantity": "1",
+            "created_at": "2024-12-31T11:16:04.162Z",
+            "updated_at": "2024-12-31T11:16:04.162Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 45,
+        "fields": {
+            "menu_item": 38,
+            "name": "Potato wedges",
+            "quantity": "1",
+            "created_at": "2024-12-31T11:16:21.548Z",
+            "updated_at": "2024-12-31T11:16:21.548Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 46,
+        "fields": {
+            "menu_item": 39,
+            "name": "300/500gms pan cooked in hot ",
+            "quantity": "1",
+            "created_at": "2024-12-31T11:21:00.025Z",
+            "updated_at": "2024-12-31T11:21:00.025Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 47,
+        "fields": {
+            "menu_item": 39,
+            "name": "Spicy Chef's special sauce with veggies",
+            "quantity": "1",
+            "created_at": "2024-12-31T11:21:32.626Z",
+            "updated_at": "2024-12-31T11:21:32.626Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 49,
+        "fields": {
+            "menu_item": 40,
+            "name": "Important tube squid sizzled in special sauces with veggies ",
+            "quantity": "1",
+            "created_at": "2024-12-31T11:27:35.459Z",
+            "updated_at": "2024-12-31T11:27:35.459Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 50,
+        "fields": {
+            "menu_item": 42,
+            "name": "Octopus",
+            "quantity": "1",
+            "created_at": "2024-12-31T11:45:06.169Z",
+            "updated_at": "2024-12-31T11:45:06.169Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 51,
+        "fields": {
+            "menu_item": 42,
+            "name": "Clam",
+            "quantity": "1",
+            "created_at": "2024-12-31T11:45:21.770Z",
+            "updated_at": "2024-12-31T11:45:21.770Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 52,
+        "fields": {
+            "menu_item": 42,
+            "name": "Prawns",
+            "quantity": "1",
+            "created_at": "2024-12-31T11:45:34.687Z",
+            "updated_at": "2024-12-31T11:45:34.687Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 53,
+        "fields": {
+            "menu_item": 42,
+            "name": "Squid",
+            "quantity": "1",
+            "created_at": "2024-12-31T11:45:44.654Z",
+            "updated_at": "2024-12-31T11:45:44.654Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 54,
+        "fields": {
+            "menu_item": 42,
+            "name": "Crab Sizzled With Mild Spices",
+            "quantity": "1",
+            "created_at": "2024-12-31T11:46:35.139Z",
+            "updated_at": "2024-12-31T11:46:35.139Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 55,
+        "fields": {
+            "menu_item": 45,
+            "name": "Norwegian Salmon Fillet Served With Veggle/Rice",
+            "quantity": "1",
+            "created_at": "2024-12-31T12:00:20.015Z",
+            "updated_at": "2024-12-31T12:00:20.015Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 56,
+        "fields": {
+            "menu_item": 46,
+            "name": "Whole lobster flamed with herbs",
+            "quantity": "1",
+            "created_at": "2025-01-01T03:06:08.232Z",
+            "updated_at": "2025-01-01T03:06:08.232Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 57,
+        "fields": {
+            "menu_item": 46,
+            "name": "Spices",
+            "quantity": "1",
+            "created_at": "2025-01-01T03:06:32.723Z",
+            "updated_at": "2025-01-01T03:06:32.724Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 58,
+        "fields": {
+            "menu_item": 46,
+            "name": "Melting Cheese",
+            "quantity": "1",
+            "created_at": "2025-01-01T03:06:55.604Z",
+            "updated_at": "2025-01-01T03:06:55.604Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 59,
+        "fields": {
+            "menu_item": 48,
+            "name": "300gms/500gms spice marinated",
+            "quantity": "1",
+            "created_at": "2025-01-01T03:20:34.746Z",
+            "updated_at": "2025-01-01T03:20:34.746Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 60,
+        "fields": {
+            "menu_item": 48,
+            "name": "Pan-grilled Fish",
+            "quantity": "1",
+            "created_at": "2025-01-01T03:20:51.508Z",
+            "updated_at": "2025-01-01T03:21:37.454Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 61,
+        "fields": {
+            "menu_item": 50,
+            "name": "grilled & sizzled thigh, chili chicken gravy, egg fried rice topped with prawn",
+            "quantity": "2",
+            "created_at": "2025-01-01T06:05:27.750Z",
+            "updated_at": "2025-01-01T06:05:27.750Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 63,
+        "fields": {
+            "menu_item": 52,
+            "name": "sizzled chicken strips, veggies and dried red chilies. ",
+            "quantity": "2",
+            "created_at": "2025-01-01T06:12:07.300Z",
+            "updated_at": "2025-01-01T06:12:07.300Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 64,
+        "fields": {
+            "menu_item": 51,
+            "name": "saut├⌐ed onions",
+            "quantity": "2",
+            "created_at": "2025-01-01T06:12:59.912Z",
+            "updated_at": "2025-01-01T06:12:59.912Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 65,
+        "fields": {
+            "menu_item": 51,
+            "name": "garlic",
+            "quantity": "1",
+            "created_at": "2025-01-01T06:13:36.397Z",
+            "updated_at": "2025-01-01T06:13:36.397Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 66,
+        "fields": {
+            "menu_item": 51,
+            "name": "ginger",
+            "quantity": "1",
+            "created_at": "2025-01-01T06:14:05.850Z",
+            "updated_at": "2025-01-01T06:14:05.850Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 67,
+        "fields": {
+            "menu_item": 51,
+            "name": "combined with tomatoes",
+            "quantity": "3",
+            "created_at": "2025-01-01T06:14:47.286Z",
+            "updated_at": "2025-01-01T06:14:47.286Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 68,
+        "fields": {
+            "menu_item": 51,
+            "name": " green chilies",
+            "quantity": "2",
+            "created_at": "2025-01-01T06:15:34.824Z",
+            "updated_at": "2025-01-01T06:15:34.824Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 69,
+        "fields": {
+            "menu_item": 53,
+            "name": "boneless chicken chunks cooked in dark sauces, served with sticky rice ",
+            "quantity": "1",
+            "created_at": "2025-01-01T06:20:48.668Z",
+            "updated_at": "2025-01-01T06:20:48.668Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 70,
+        "fields": {
+            "menu_item": 54,
+            "name": "Chicken, cheese, pizza sauce, onions, peppers, mushrooms.",
+            "quantity": "1",
+            "created_at": "2025-01-01T06:24:19.081Z",
+            "updated_at": "2025-01-01T06:24:19.081Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 71,
+        "fields": {
+            "menu_item": 55,
+            "name": "White Fish Fillets",
+            "quantity": "2",
+            "created_at": "2025-01-01T06:25:51.373Z",
+            "updated_at": "2025-01-01T06:25:51.373Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 72,
+        "fields": {
+            "menu_item": 55,
+            "name": "Potatoes ",
+            "quantity": "1",
+            "created_at": "2025-01-01T06:26:01.947Z",
+            "updated_at": "2025-01-01T06:26:01.947Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 73,
+        "fields": {
+            "menu_item": 55,
+            "name": "Flour ",
+            "quantity": "4",
+            "created_at": "2025-01-01T06:26:23.269Z",
+            "updated_at": "2025-01-01T06:26:23.269Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 74,
+        "fields": {
+            "menu_item": 55,
+            "name": "Cornstarch ",
+            "quantity": "1",
+            "created_at": "2025-01-01T06:26:34.979Z",
+            "updated_at": "2025-01-01T06:26:34.979Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 75,
+        "fields": {
+            "menu_item": 55,
+            "name": "Baking Powder",
+            "quantity": "3",
+            "created_at": "2025-01-01T06:26:51.625Z",
+            "updated_at": "2025-01-01T06:26:51.625Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 76,
+        "fields": {
+            "menu_item": 57,
+            "name": "Blanched oysters with lemon butter",
+            "quantity": "2",
+            "created_at": "2025-01-01T06:32:41.212Z",
+            "updated_at": "2025-01-01T06:32:41.212Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 77,
+        "fields": {
+            "menu_item": 57,
+            "name": "chilli oil",
+            "quantity": "1",
+            "created_at": "2025-01-01T06:32:55.349Z",
+            "updated_at": "2025-01-01T06:32:55.349Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 78,
+        "fields": {
+            "menu_item": 57,
+            "name": "wasabi",
+            "quantity": "1",
+            "created_at": "2025-01-01T06:33:06.013Z",
+            "updated_at": "2025-01-01T06:33:06.013Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 79,
+        "fields": {
+            "menu_item": 57,
+            "name": "spicy naga flavors",
+            "quantity": "2",
+            "created_at": "2025-01-01T06:33:42.653Z",
+            "updated_at": "2025-01-01T06:33:42.653Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 80,
+        "fields": {
+            "menu_item": 59,
+            "name": "chessy pizza base",
+            "quantity": "1",
+            "created_at": "2025-01-01T06:42:54.322Z",
+            "updated_at": "2025-01-01T06:42:54.322Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 81,
+        "fields": {
+            "menu_item": 59,
+            "name": "octopus",
+            "quantity": "1",
+            "created_at": "2025-01-01T06:43:11.863Z",
+            "updated_at": "2025-01-01T06:43:11.863Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 82,
+        "fields": {
+            "menu_item": 59,
+            "name": "shrimps",
+            "quantity": "4",
+            "created_at": "2025-01-01T06:43:26.636Z",
+            "updated_at": "2025-01-01T06:43:26.637Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 83,
+        "fields": {
+            "menu_item": 59,
+            "name": "squid rings",
+            "quantity": "7",
+            "created_at": "2025-01-01T06:44:09.981Z",
+            "updated_at": "2025-01-01T06:44:09.981Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 84,
+        "fields": {
+            "menu_item": 62,
+            "name": "Dory fillets, Butter ,Flour, Milk ,Heavy cream, Lemon juice ,Garlic, cloves , Salt Pepper Herbs ,",
+            "quantity": "1",
+            "created_at": "2025-01-01T06:57:32.535Z",
+            "updated_at": "2025-01-01T06:57:32.536Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 85,
+        "fields": {
+            "menu_item": 63,
+            "name": "Penne Pasta",
+            "quantity": "2",
+            "created_at": "2025-01-01T06:57:40.515Z",
+            "updated_at": "2025-01-01T06:57:40.515Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 86,
+        "fields": {
+            "menu_item": 63,
+            "name": "Chicken Breast",
+            "quantity": "2",
+            "created_at": "2025-01-01T06:57:49.203Z",
+            "updated_at": "2025-01-01T06:57:49.203Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 87,
+        "fields": {
+            "menu_item": 63,
+            "name": "Olive Oil",
+            "quantity": "2",
+            "created_at": "2025-01-01T06:58:02.821Z",
+            "updated_at": "2025-01-01T06:58:02.821Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 88,
+        "fields": {
+            "menu_item": 63,
+            "name": "Garlic",
+            "quantity": "2",
+            "created_at": "2025-01-01T06:58:21.749Z",
+            "updated_at": "2025-01-01T06:58:21.749Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 89,
+        "fields": {
+            "menu_item": 63,
+            "name": "Onion",
+            "quantity": "3",
+            "created_at": "2025-01-01T06:58:33.577Z",
+            "updated_at": "2025-01-01T06:58:33.577Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 90,
+        "fields": {
+            "menu_item": 65,
+            "name": "signature dish of blue mussels, scallops & clams blended in creamy gravy",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:01:52.130Z",
+            "updated_at": "2025-01-01T07:01:52.130Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 91,
+        "fields": {
+            "menu_item": 66,
+            "name": "Penne Pasta",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:02:17.637Z",
+            "updated_at": "2025-01-01T07:02:17.638Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 92,
+        "fields": {
+            "menu_item": 66,
+            "name": "shrimps",
+            "quantity": "3",
+            "created_at": "2025-01-01T07:02:27.795Z",
+            "updated_at": "2025-01-01T07:02:27.795Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 93,
+        "fields": {
+            "menu_item": 66,
+            "name": "Calamari",
+            "quantity": "3",
+            "created_at": "2025-01-01T07:02:38.056Z",
+            "updated_at": "2025-01-01T07:02:38.056Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 94,
+        "fields": {
+            "menu_item": 66,
+            "name": "Mussels",
+            "quantity": "3",
+            "created_at": "2025-01-01T07:02:56.398Z",
+            "updated_at": "2025-01-01T07:02:56.398Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 95,
+        "fields": {
+            "menu_item": 66,
+            "name": "Garlic",
+            "quantity": "3",
+            "created_at": "2025-01-01T07:03:11.140Z",
+            "updated_at": "2025-01-01T07:03:11.140Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 96,
+        "fields": {
+            "menu_item": 67,
+            "name": "spicy & dark sauces combo of octopus. clam, prawn, squid, crab",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:05:37.138Z",
+            "updated_at": "2025-01-01T07:05:37.138Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 97,
+        "fields": {
+            "menu_item": 68,
+            "name": "Spaghetti",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:07:48.614Z",
+            "updated_at": "2025-01-01T07:07:48.614Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 98,
+        "fields": {
+            "menu_item": 68,
+            "name": "Prawns",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:07:54.639Z",
+            "updated_at": "2025-01-01T07:07:54.639Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 99,
+        "fields": {
+            "menu_item": 69,
+            "name": "Malaysian styled sambal with green peas",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:08:03.505Z",
+            "updated_at": "2025-01-01T07:08:03.505Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 100,
+        "fields": {
+            "menu_item": 68,
+            "name": "Olive Oil",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:08:07.641Z",
+            "updated_at": "2025-01-01T07:08:07.641Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 101,
+        "fields": {
+            "menu_item": 68,
+            "name": "Garlic",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:08:18.011Z",
+            "updated_at": "2025-01-01T07:08:18.011Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 102,
+        "fields": {
+            "menu_item": 68,
+            "name": "Red Chili Flakes",
+            "quantity": "3",
+            "created_at": "2025-01-01T07:08:33.840Z",
+            "updated_at": "2025-01-01T07:08:33.840Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 103,
+        "fields": {
+            "menu_item": 68,
+            "name": "Lemon Juice",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:08:44.539Z",
+            "updated_at": "2025-01-01T07:08:44.539Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 104,
+        "fields": {
+            "menu_item": 73,
+            "name": "Malaysian styled ,pan grilled spicy whole fish",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:13:12.297Z",
+            "updated_at": "2025-01-01T07:13:12.297Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 105,
+        "fields": {
+            "menu_item": 71,
+            "name": "Spaghetti",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:19:12.503Z",
+            "updated_at": "2025-01-01T07:19:12.503Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 106,
+        "fields": {
+            "menu_item": 71,
+            "name": "Blue Mussels",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:19:22.559Z",
+            "updated_at": "2025-01-01T07:19:22.559Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 107,
+        "fields": {
+            "menu_item": 71,
+            "name": "Olive Oil",
+            "quantity": "3",
+            "created_at": "2025-01-01T07:19:33.144Z",
+            "updated_at": "2025-01-01T07:19:33.144Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 108,
+        "fields": {
+            "menu_item": 71,
+            "name": "Cherry Tomatoes",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:19:47.880Z",
+            "updated_at": "2025-01-01T07:19:47.880Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 109,
+        "fields": {
+            "menu_item": 71,
+            "name": "Red Chili Flakes",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:20:02.843Z",
+            "updated_at": "2025-01-01T07:20:02.843Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 110,
+        "fields": {
+            "menu_item": 75,
+            "name": "Noodles",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:20:33.500Z",
+            "updated_at": "2025-01-01T07:20:33.500Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 111,
+        "fields": {
+            "menu_item": 75,
+            "name": "Ginger",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:20:45.195Z",
+            "updated_at": "2025-01-01T07:20:45.195Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 112,
+        "fields": {
+            "menu_item": 75,
+            "name": "Soy Sauce",
+            "quantity": "3",
+            "created_at": "2025-01-01T07:20:51.496Z",
+            "updated_at": "2025-01-01T07:20:51.496Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 113,
+        "fields": {
+            "menu_item": 49,
+            "name": "Black Tea",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:20:53.602Z",
+            "updated_at": "2025-01-01T07:20:53.602Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 114,
+        "fields": {
+            "menu_item": 75,
+            "name": "Sugar",
+            "quantity": "3",
+            "created_at": "2025-01-01T07:21:05.727Z",
+            "updated_at": "2025-01-01T07:21:05.727Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 115,
+        "fields": {
+            "menu_item": 49,
+            "name": "Sweetened Condensed Milk",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:21:09.179Z",
+            "updated_at": "2025-01-01T07:21:09.179Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 116,
+        "fields": {
+            "menu_item": 75,
+            "name": "Red Chili Flakes",
+            "quantity": "3",
+            "created_at": "2025-01-01T07:21:12.623Z",
+            "updated_at": "2025-01-01T07:21:12.623Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 117,
+        "fields": {
+            "menu_item": 49,
+            "name": "Hot Water",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:21:21.682Z",
+            "updated_at": "2025-01-01T07:21:21.682Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 118,
+        "fields": {
+            "menu_item": 75,
+            "name": "Lime Juice",
+            "quantity": "3",
+            "created_at": "2025-01-01T07:21:22.941Z",
+            "updated_at": "2025-01-01T07:21:22.941Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 119,
+        "fields": {
+            "menu_item": 49,
+            "name": "Optional: Evaporated Milk",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:21:38.469Z",
+            "updated_at": "2025-01-01T07:21:38.469Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 120,
+        "fields": {
+            "menu_item": 76,
+            "name": "Ramen Noodles",
+            "quantity": "3",
+            "created_at": "2025-01-01T07:23:24.953Z",
+            "updated_at": "2025-01-01T07:23:24.953Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 121,
+        "fields": {
+            "menu_item": 76,
+            "name": "Fish Stock",
+            "quantity": "3",
+            "created_at": "2025-01-01T07:23:44.331Z",
+            "updated_at": "2025-01-01T07:23:44.331Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 122,
+        "fields": {
+            "menu_item": 76,
+            "name": "Soy Sauce",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:23:54.361Z",
+            "updated_at": "2025-01-01T07:23:54.362Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 123,
+        "fields": {
+            "menu_item": 76,
+            "name": "Miso Paste",
+            "quantity": "3",
+            "created_at": "2025-01-01T07:24:04.584Z",
+            "updated_at": "2025-01-01T07:24:04.584Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 124,
+        "fields": {
+            "menu_item": 76,
+            "name": "Garlic",
+            "quantity": "3",
+            "created_at": "2025-01-01T07:24:12.468Z",
+            "updated_at": "2025-01-01T07:24:12.468Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 125,
+        "fields": {
+            "menu_item": 76,
+            "name": "Nori",
+            "quantity": "3",
+            "created_at": "2025-01-01T07:24:21.680Z",
+            "updated_at": "2025-01-01T07:24:21.680Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 126,
+        "fields": {
+            "menu_item": 77,
+            "name": "Pasta",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:27:38.622Z",
+            "updated_at": "2025-01-01T07:27:38.622Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 127,
+        "fields": {
+            "menu_item": 77,
+            "name": "Octopus",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:27:50.474Z",
+            "updated_at": "2025-01-01T07:27:50.474Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 128,
+        "fields": {
+            "menu_item": 77,
+            "name": "Garlic",
+            "quantity": "3",
+            "created_at": "2025-01-01T07:28:03.114Z",
+            "updated_at": "2025-01-01T07:28:03.114Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 129,
+        "fields": {
+            "menu_item": 77,
+            "name": "White Wine",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:28:15.123Z",
+            "updated_at": "2025-01-01T07:28:15.123Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 130,
+        "fields": {
+            "menu_item": 77,
+            "name": "Lemon Juice",
+            "quantity": "2",
+            "created_at": "2025-01-01T07:28:29.175Z",
+            "updated_at": "2025-01-01T07:28:29.175Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 131,
+        "fields": {
+            "menu_item": 56,
+            "name": "Espresso",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:29:18.239Z",
+            "updated_at": "2025-01-01T07:29:18.240Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 132,
+        "fields": {
+            "menu_item": 56,
+            "name": "Cold Milk",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:29:31.449Z",
+            "updated_at": "2025-01-01T07:29:31.449Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 133,
+        "fields": {
+            "menu_item": 56,
+            "name": "Ice",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:29:42.869Z",
+            "updated_at": "2025-01-01T07:29:42.869Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 134,
+        "fields": {
+            "menu_item": 61,
+            "name": "Milo Powder",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:31:23.204Z",
+            "updated_at": "2025-01-01T07:31:23.204Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 135,
+        "fields": {
+            "menu_item": 61,
+            "name": "Cold Milk",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:31:36.224Z",
+            "updated_at": "2025-01-01T07:31:36.224Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 136,
+        "fields": {
+            "menu_item": 61,
+            "name": "Ice",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:31:46.526Z",
+            "updated_at": "2025-01-01T07:31:46.526Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 137,
+        "fields": {
+            "menu_item": 60,
+            "name": "Espresso",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:32:38.732Z",
+            "updated_at": "2025-01-01T07:32:38.732Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 138,
+        "fields": {
+            "menu_item": 60,
+            "name": "Cold Milk",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:32:47.386Z",
+            "updated_at": "2025-01-01T07:32:47.386Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 139,
+        "fields": {
+            "menu_item": 60,
+            "name": "Ice",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:33:00.784Z",
+            "updated_at": "2025-01-01T07:33:00.784Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 140,
+        "fields": {
+            "menu_item": 64,
+            "name": "Milo Powder",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:35:56.185Z",
+            "updated_at": "2025-01-01T07:35:56.185Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 141,
+        "fields": {
+            "menu_item": 64,
+            "name": "Hot Milk",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:36:07.949Z",
+            "updated_at": "2025-01-01T07:36:07.949Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 142,
+        "fields": {
+            "menu_item": 64,
+            "name": "Sugar (Optional)",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:36:22.960Z",
+            "updated_at": "2025-01-01T07:36:22.960Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 143,
+        "fields": {
+            "menu_item": 70,
+            "name": "Shaved Ice",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:36:55.489Z",
+            "updated_at": "2025-01-01T07:36:55.489Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 144,
+        "fields": {
+            "menu_item": 70,
+            "name": "Sweet Syrup",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:37:08.634Z",
+            "updated_at": "2025-01-01T07:37:08.634Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 145,
+        "fields": {
+            "menu_item": 70,
+            "name": "Red Beans",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:37:16.765Z",
+            "updated_at": "2025-01-01T07:37:16.765Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 146,
+        "fields": {
+            "menu_item": 70,
+            "name": "Sweet Corn",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:37:28.399Z",
+            "updated_at": "2025-01-01T07:37:28.399Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 147,
+        "fields": {
+            "menu_item": 70,
+            "name": "Jelly",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:37:40.495Z",
+            "updated_at": "2025-01-01T07:37:40.496Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 148,
+        "fields": {
+            "menu_item": 70,
+            "name": "Evaporated Milk",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:37:49.520Z",
+            "updated_at": "2025-01-01T07:37:49.520Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 149,
+        "fields": {
+            "menu_item": 70,
+            "name": "Chendol (Optional)",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:38:08.777Z",
+            "updated_at": "2025-01-01T07:38:08.777Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 150,
+        "fields": {
+            "menu_item": 74,
+            "name": "Beef or Chicken Patty",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:39:00.539Z",
+            "updated_at": "2025-01-01T07:39:00.539Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 151,
+        "fields": {
+            "menu_item": 74,
+            "name": "Egg",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:39:09.200Z",
+            "updated_at": "2025-01-01T07:39:09.200Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 152,
+        "fields": {
+            "menu_item": 74,
+            "name": "Burger Bun",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:39:16.997Z",
+            "updated_at": "2025-01-01T07:39:16.997Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 153,
+        "fields": {
+            "menu_item": 74,
+            "name": "Lettuce",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:39:24.921Z",
+            "updated_at": "2025-01-01T07:39:24.922Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 154,
+        "fields": {
+            "menu_item": 74,
+            "name": "Tomato",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:39:32.533Z",
+            "updated_at": "2025-01-01T07:39:32.533Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 155,
+        "fields": {
+            "menu_item": 74,
+            "name": "Mayonnaise",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:39:40.160Z",
+            "updated_at": "2025-01-01T07:39:40.161Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 156,
+        "fields": {
+            "menu_item": 74,
+            "name": "Ketchup",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:39:47.639Z",
+            "updated_at": "2025-01-01T07:39:47.639Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 157,
+        "fields": {
+            "menu_item": 74,
+            "name": "Special Sauce",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:39:57.592Z",
+            "updated_at": "2025-01-01T07:39:57.592Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 158,
+        "fields": {
+            "menu_item": 74,
+            "name": "Cheese (Optional)",
+            "quantity": "1",
+            "created_at": "2025-01-01T07:40:07.021Z",
+            "updated_at": "2025-01-01T07:40:07.021Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 159,
+        "fields": {
+            "menu_item": 78,
+            "name": "Garlic Shrimp is made with shrimp saut├⌐ed in butter, garlic, and often red pepper flakes, served wit",
+            "quantity": "2",
+            "created_at": "2025-01-01T08:51:46.631Z",
+            "updated_at": "2025-01-01T08:51:46.631Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 160,
+        "fields": {
+            "menu_item": 79,
+            "name": "soy sauce, mirin, sake, sugar, and ginger, creating a flavorful and slightly sticky glaze.",
+            "quantity": "2",
+            "created_at": "2025-01-01T08:56:06.743Z",
+            "updated_at": "2025-01-01T08:56:06.743Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 161,
+        "fields": {
+            "menu_item": 80,
+            "name": "Boneless, skinless chicken breasts,Salt, pepper, garlic powder, onion powder, paprika, herbs like or",
+            "quantity": "2",
+            "created_at": "2025-01-01T08:59:17.443Z",
+            "updated_at": "2025-01-01T08:59:17.443Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 162,
+        "fields": {
+            "menu_item": 81,
+            "name": "signature dark fried rice, prawn, squid, dory. saut├⌐ed veggies & smashed cucumber",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:02:40.845Z",
+            "updated_at": "2025-01-01T09:02:40.845Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 163,
+        "fields": {
+            "menu_item": 82,
+            "name": "signature dark fried rice, chicken in special sauces. pickled onion & smashed cucumber",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:05:18.929Z",
+            "updated_at": "2025-01-01T09:05:18.929Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 164,
+        "fields": {
+            "menu_item": 83,
+            "name": "Flavored Syrups",
+            "quantity": "1",
+            "created_at": "2025-01-01T09:05:56.669Z",
+            "updated_at": "2025-01-01T09:05:56.669Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 165,
+        "fields": {
+            "menu_item": 83,
+            "name": "Combo of Sodas",
+            "quantity": "1",
+            "created_at": "2025-01-01T09:06:25.688Z",
+            "updated_at": "2025-01-01T09:06:25.688Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 166,
+        "fields": {
+            "menu_item": 84,
+            "name": "signature dark fried rice, spicy pieces of crab in special sauces",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:08:37.025Z",
+            "updated_at": "2025-01-01T09:08:37.025Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 167,
+        "fields": {
+            "menu_item": 85,
+            "name": "Assorted Seafood Sizzler",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:09:44.797Z",
+            "updated_at": "2025-01-01T09:09:44.798Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 168,
+        "fields": {
+            "menu_item": 85,
+            "name": "Seafood Clear Soup",
+            "quantity": "4",
+            "created_at": "2025-01-01T09:09:55.160Z",
+            "updated_at": "2025-01-01T09:09:55.160Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 169,
+        "fields": {
+            "menu_item": 85,
+            "name": "Seafood Fried Rice",
+            "quantity": "3",
+            "created_at": "2025-01-01T09:10:06.893Z",
+            "updated_at": "2025-01-01T09:10:06.893Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 170,
+        "fields": {
+            "menu_item": 85,
+            "name": "Cheesy Tiger Prawns",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:10:18.233Z",
+            "updated_at": "2025-01-01T09:10:18.233Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 171,
+        "fields": {
+            "menu_item": 85,
+            "name": "Sauteed Veggies",
+            "quantity": "3",
+            "created_at": "2025-01-01T09:10:33.665Z",
+            "updated_at": "2025-01-01T09:10:33.665Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 172,
+        "fields": {
+            "menu_item": 85,
+            "name": "Potato Wedges",
+            "quantity": "3",
+            "created_at": "2025-01-01T09:11:00.662Z",
+            "updated_at": "2025-01-01T09:11:00.662Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 173,
+        "fields": {
+            "menu_item": 86,
+            "name": "Cheesy Tiger Prawns",
+            "quantity": "3",
+            "created_at": "2025-01-01T09:22:40.913Z",
+            "updated_at": "2025-01-01T09:22:40.913Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 174,
+        "fields": {
+            "menu_item": 86,
+            "name": "Grilled Whole Tube Squid",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:22:47.639Z",
+            "updated_at": "2025-01-01T09:22:47.639Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 175,
+        "fields": {
+            "menu_item": 87,
+            "name": " Fruit-Flavored Syrup",
+            "quantity": "1",
+            "created_at": "2025-01-01T09:22:53.698Z",
+            "updated_at": "2025-01-01T09:22:53.698Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 176,
+        "fields": {
+            "menu_item": 86,
+            "name": "Seafood Fried Rice",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:23:01.692Z",
+            "updated_at": "2025-01-01T09:23:01.692Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 177,
+        "fields": {
+            "menu_item": 86,
+            "name": "Potato Wedges",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:23:16.934Z",
+            "updated_at": "2025-01-01T09:23:16.934Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 178,
+        "fields": {
+            "menu_item": 87,
+            "name": "Fresh Orange",
+            "quantity": "1",
+            "created_at": "2025-01-01T09:23:18.279Z",
+            "updated_at": "2025-01-01T09:23:18.279Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 179,
+        "fields": {
+            "menu_item": 86,
+            "name": "Spicy Crab",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:23:24.420Z",
+            "updated_at": "2025-01-01T09:23:24.421Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 180,
+        "fields": {
+            "menu_item": 87,
+            "name": "Sodas",
+            "quantity": "1",
+            "created_at": "2025-01-01T09:23:31.758Z",
+            "updated_at": "2025-01-01T09:23:31.758Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 181,
+        "fields": {
+            "menu_item": 86,
+            "name": "Sauteed Mushrooms",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:23:41.472Z",
+            "updated_at": "2025-01-01T09:23:41.472Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 182,
+        "fields": {
+            "menu_item": 88,
+            "name": "Butter, Melted Sugar, Granulated,  Eggs, Flour, Cocoa Powder",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:25:36.078Z",
+            "updated_at": "2025-01-01T09:25:36.078Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 183,
+        "fields": {
+            "menu_item": 90,
+            "name": "Whole Grilled Cheesy Lobster",
+            "quantity": "3",
+            "created_at": "2025-01-01T09:29:31.043Z",
+            "updated_at": "2025-01-01T09:29:31.044Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 184,
+        "fields": {
+            "menu_item": 90,
+            "name": "Chili Prawns",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:29:37.123Z",
+            "updated_at": "2025-01-01T09:29:37.123Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 185,
+        "fields": {
+            "menu_item": 90,
+            "name": "Garlic Rice",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:29:51.082Z",
+            "updated_at": "2025-01-01T09:29:51.082Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 186,
+        "fields": {
+            "menu_item": 90,
+            "name": "Sauteed Veggies",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:30:01.046Z",
+            "updated_at": "2025-01-01T09:30:01.046Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 187,
+        "fields": {
+            "menu_item": 90,
+            "name": "French Fries",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:30:10.784Z",
+            "updated_at": "2025-01-01T09:30:10.784Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 188,
+        "fields": {
+            "menu_item": 90,
+            "name": "Seafood Pasta:",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:30:19.857Z",
+            "updated_at": "2025-01-01T09:30:19.857Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 189,
+        "fields": {
+            "menu_item": 91,
+            "name": "Mixed berry syrup",
+            "quantity": "1",
+            "created_at": "2025-01-01T09:33:25.789Z",
+            "updated_at": "2025-01-01T09:33:25.789Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 190,
+        "fields": {
+            "menu_item": 91,
+            "name": "Fresh Fruits & Sodas",
+            "quantity": "1",
+            "created_at": "2025-01-01T09:34:04.957Z",
+            "updated_at": "2025-01-01T09:34:04.957Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 191,
+        "fields": {
+            "menu_item": 93,
+            "name": "Pan-Cooked Whole Pomfret",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:37:19.961Z",
+            "updated_at": "2025-01-01T09:37:19.961Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 192,
+        "fields": {
+            "menu_item": 93,
+            "name": "Spicy Crab",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:37:29.277Z",
+            "updated_at": "2025-01-01T09:37:29.277Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 193,
+        "fields": {
+            "menu_item": 93,
+            "name": "Seafood Fried Rice",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:37:37.301Z",
+            "updated_at": "2025-01-01T09:37:37.302Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 194,
+        "fields": {
+            "menu_item": 93,
+            "name": "Shrimp Tempura",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:37:48.450Z",
+            "updated_at": "2025-01-01T09:37:48.450Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 195,
+        "fields": {
+            "menu_item": 93,
+            "name": "Deep-Fried Mushrooms",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:37:56.637Z",
+            "updated_at": "2025-01-01T09:37:56.637Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 196,
+        "fields": {
+            "menu_item": 94,
+            "name": "Crushed fresh mint ",
+            "quantity": "1",
+            "created_at": "2025-01-01T09:38:25.242Z",
+            "updated_at": "2025-01-01T09:38:25.242Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 197,
+        "fields": {
+            "menu_item": 94,
+            "name": "Fresh mint",
+            "quantity": "1",
+            "created_at": "2025-01-01T09:38:44.493Z",
+            "updated_at": "2025-01-01T09:39:42.147Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 198,
+        "fields": {
+            "menu_item": 95,
+            "name": "High-quality vanilla ice cream is essential, freshly brewed espresso",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:41:05.591Z",
+            "updated_at": "2025-01-01T09:41:05.591Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 199,
+        "fields": {
+            "menu_item": 96,
+            "name": "crushed fresh min",
+            "quantity": "1",
+            "created_at": "2025-01-01T09:43:30.504Z",
+            "updated_at": "2025-01-01T09:43:30.504Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 200,
+        "fields": {
+            "menu_item": 96,
+            "name": " lime in pop sodas",
+            "quantity": "1",
+            "created_at": "2025-01-01T09:43:44.277Z",
+            "updated_at": "2025-01-01T09:43:44.277Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 201,
+        "fields": {
+            "menu_item": 97,
+            "name": " brownie, vanilla or chocolate ,Whipped cream",
+            "quantity": "3",
+            "created_at": "2025-01-01T09:44:36.051Z",
+            "updated_at": "2025-01-01T09:44:36.051Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 202,
+        "fields": {
+            "menu_item": 98,
+            "name": "Cola",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:48:15.808Z",
+            "updated_at": "2025-01-01T09:48:15.808Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 203,
+        "fields": {
+            "menu_item": 98,
+            "name": "Fresh Lemon",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:48:21.231Z",
+            "updated_at": "2025-01-01T09:48:21.231Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 204,
+        "fields": {
+            "menu_item": 98,
+            "name": "Ice Cubes",
+            "quantity": "2",
+            "created_at": "2025-01-01T09:48:29.197Z",
+            "updated_at": "2025-01-01T09:48:29.197Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 205,
+        "fields": {
+            "menu_item": 98,
+            "name": "Lemon Slices",
+            "quantity": "3",
+            "created_at": "2025-01-01T09:48:45.136Z",
+            "updated_at": "2025-01-01T09:48:45.136Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 206,
+        "fields": {
+            "menu_item": 99,
+            "name": "Crunchy Panko Fried Cheese  ",
+            "quantity": "1",
+            "created_at": "2025-01-01T10:07:18.689Z",
+            "updated_at": "2025-01-01T10:07:18.689Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 207,
+        "fields": {
+            "menu_item": 99,
+            "name": "corn dogs",
+            "quantity": "1",
+            "created_at": "2025-01-01T10:07:24.959Z",
+            "updated_at": "2025-01-01T10:07:24.959Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 208,
+        "fields": {
+            "menu_item": 100,
+            "name": "Eggs",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:07:28.267Z",
+            "updated_at": "2025-01-01T10:07:28.267Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 209,
+        "fields": {
+            "menu_item": 100,
+            "name": "Beef Bacon",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:07:46.297Z",
+            "updated_at": "2025-01-01T10:07:46.297Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 210,
+        "fields": {
+            "menu_item": 100,
+            "name": "Tomatoes",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:08:07.390Z",
+            "updated_at": "2025-01-01T10:08:07.390Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 211,
+        "fields": {
+            "menu_item": 100,
+            "name": "Brown Bread",
+            "quantity": "4",
+            "created_at": "2025-01-01T10:08:28.126Z",
+            "updated_at": "2025-01-01T10:08:28.126Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 212,
+        "fields": {
+            "menu_item": 101,
+            "name": "Deep-fried crispy tofu fingers  with special sauce",
+            "quantity": "1",
+            "created_at": "2025-01-01T10:11:13.777Z",
+            "updated_at": "2025-01-01T10:11:13.777Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 213,
+        "fields": {
+            "menu_item": 103,
+            "name": "Carbonated Soda",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:11:44.203Z",
+            "updated_at": "2025-01-01T10:11:44.203Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 214,
+        "fields": {
+            "menu_item": 103,
+            "name": "Ice Cream",
+            "quantity": "3",
+            "created_at": "2025-01-01T10:11:52.621Z",
+            "updated_at": "2025-01-01T10:11:52.621Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 215,
+        "fields": {
+            "menu_item": 103,
+            "name": "Ice Cubes",
+            "quantity": "3",
+            "created_at": "2025-01-01T10:12:02.280Z",
+            "updated_at": "2025-01-01T10:12:02.280Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 216,
+        "fields": {
+            "menu_item": 102,
+            "name": "Sausages ",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:12:04.024Z",
+            "updated_at": "2025-01-01T10:12:04.024Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 217,
+        "fields": {
+            "menu_item": 102,
+            "name": "Eggs",
+            "quantity": "1",
+            "created_at": "2025-01-01T10:12:20.098Z",
+            "updated_at": "2025-01-01T10:12:20.098Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 218,
+        "fields": {
+            "menu_item": 102,
+            "name": "Mushrooms",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:12:32.345Z",
+            "updated_at": "2025-01-01T10:12:32.346Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 219,
+        "fields": {
+            "menu_item": 102,
+            "name": "Brown Bread",
+            "quantity": "4",
+            "created_at": "2025-01-01T10:12:49.125Z",
+            "updated_at": "2025-01-01T10:12:49.125Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 220,
+        "fields": {
+            "menu_item": 104,
+            "name": "Chicken Rashers ",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:16:25.478Z",
+            "updated_at": "2025-01-01T10:16:25.478Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 221,
+        "fields": {
+            "menu_item": 104,
+            "name": "Vegetables",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:16:39.926Z",
+            "updated_at": "2025-01-01T10:16:39.926Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 222,
+        "fields": {
+            "menu_item": 104,
+            "name": "Greek Yogurt",
+            "quantity": "3",
+            "created_at": "2025-01-01T10:16:55.121Z",
+            "updated_at": "2025-01-01T10:16:55.121Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 223,
+        "fields": {
+            "menu_item": 104,
+            "name": "Hash Browns",
+            "quantity": "1",
+            "created_at": "2025-01-01T10:17:09.638Z",
+            "updated_at": "2025-01-01T10:17:09.638Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 224,
+        "fields": {
+            "menu_item": 104,
+            "name": "Eggs",
+            "quantity": "4",
+            "created_at": "2025-01-01T10:17:23.470Z",
+            "updated_at": "2025-01-01T10:17:23.470Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 225,
+        "fields": {
+            "menu_item": 104,
+            "name": "Brown Bread",
+            "quantity": "4",
+            "created_at": "2025-01-01T10:17:36.883Z",
+            "updated_at": "2025-01-01T10:17:36.883Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 226,
+        "fields": {
+            "menu_item": 105,
+            "name": "Cola",
+            "quantity": "1",
+            "created_at": "2025-01-01T10:20:42.795Z",
+            "updated_at": "2025-01-01T10:20:42.795Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 227,
+        "fields": {
+            "menu_item": 105,
+            "name": "Lemon-Lime Soda",
+            "quantity": "3",
+            "created_at": "2025-01-01T10:20:48.330Z",
+            "updated_at": "2025-01-01T10:20:48.330Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 228,
+        "fields": {
+            "menu_item": 105,
+            "name": "Ginger Ale",
+            "quantity": "3",
+            "created_at": "2025-01-01T10:20:57.338Z",
+            "updated_at": "2025-01-01T10:20:57.339Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 229,
+        "fields": {
+            "menu_item": 105,
+            "name": "Root Beer",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:21:09.454Z",
+            "updated_at": "2025-01-01T10:21:09.454Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 230,
+        "fields": {
+            "menu_item": 105,
+            "name": "Fruit-flavored Sodas",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:21:22.444Z",
+            "updated_at": "2025-01-01T10:21:22.444Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 231,
+        "fields": {
+            "menu_item": 105,
+            "name": "Sparkling Water",
+            "quantity": "3",
+            "created_at": "2025-01-01T10:21:37.290Z",
+            "updated_at": "2025-01-01T10:21:37.290Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 232,
+        "fields": {
+            "menu_item": 106,
+            "name": "Rice paper rolls filled with fresh veggies",
+            "quantity": "1",
+            "created_at": "2025-01-01T10:23:02.971Z",
+            "updated_at": "2025-01-01T10:23:02.971Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 233,
+        "fields": {
+            "menu_item": 106,
+            "name": "crab stick with special sauce",
+            "quantity": "1",
+            "created_at": "2025-01-01T10:23:18.812Z",
+            "updated_at": "2025-01-01T10:23:18.813Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 234,
+        "fields": {
+            "menu_item": 108,
+            "name": "Korean-style egg rolls",
+            "quantity": "1",
+            "created_at": "2025-01-01T10:26:37.030Z",
+            "updated_at": "2025-01-01T10:26:37.030Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 235,
+        "fields": {
+            "menu_item": 108,
+            "name": "French bread",
+            "quantity": "1",
+            "created_at": "2025-01-01T10:26:51.885Z",
+            "updated_at": "2025-01-01T10:26:51.885Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 236,
+        "fields": {
+            "menu_item": 108,
+            "name": "Pan-fried potatoes with sauce",
+            "quantity": "1",
+            "created_at": "2025-01-01T10:27:09.692Z",
+            "updated_at": "2025-01-01T10:27:09.692Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 237,
+        "fields": {
+            "menu_item": 107,
+            "name": "Coffee Beans or Ground Coffee",
+            "quantity": "1",
+            "created_at": "2025-01-01T10:27:10.629Z",
+            "updated_at": "2025-01-01T10:27:10.629Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 238,
+        "fields": {
+            "menu_item": 107,
+            "name": "Water",
+            "quantity": "3",
+            "created_at": "2025-01-01T10:27:18.005Z",
+            "updated_at": "2025-01-01T10:27:18.005Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 239,
+        "fields": {
+            "menu_item": 107,
+            "name": "Milk",
+            "quantity": "3",
+            "created_at": "2025-01-01T10:27:28.931Z",
+            "updated_at": "2025-01-01T10:27:28.931Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 240,
+        "fields": {
+            "menu_item": 107,
+            "name": "Sugar",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:27:34.075Z",
+            "updated_at": "2025-01-01T10:27:34.075Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 241,
+        "fields": {
+            "menu_item": 107,
+            "name": "Vanilla Extract or Flavoring",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:27:55.929Z",
+            "updated_at": "2025-01-01T10:27:55.929Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 242,
+        "fields": {
+            "menu_item": 109,
+            "name": "Japanese version of crab salad made ",
+            "quantity": "1",
+            "created_at": "2025-01-01T10:31:33.185Z",
+            "updated_at": "2025-01-01T10:31:33.185Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 243,
+        "fields": {
+            "menu_item": 109,
+            "name": "with shredded crab sticks  & crunchy veggies",
+            "quantity": "1",
+            "created_at": "2025-01-01T10:31:40.037Z",
+            "updated_at": "2025-01-01T10:31:40.037Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 244,
+        "fields": {
+            "menu_item": 110,
+            "name": "Crispy deep-fried chicken skin",
+            "quantity": "1",
+            "created_at": "2025-01-01T10:34:12.562Z",
+            "updated_at": "2025-01-01T10:34:12.562Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 245,
+        "fields": {
+            "menu_item": 111,
+            "name": "Coffee Beans or Ground Coffee",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:39:07.288Z",
+            "updated_at": "2025-01-01T10:39:07.288Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 246,
+        "fields": {
+            "menu_item": 111,
+            "name": "Water",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:39:16.958Z",
+            "updated_at": "2025-01-01T10:39:16.959Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 247,
+        "fields": {
+            "menu_item": 111,
+            "name": "Sugar",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:39:23.840Z",
+            "updated_at": "2025-01-01T10:39:23.840Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 248,
+        "fields": {
+            "menu_item": 113,
+            "name": "Eggs",
+            "quantity": "3",
+            "created_at": "2025-01-01T10:41:34.946Z",
+            "updated_at": "2025-01-01T10:41:34.946Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 249,
+        "fields": {
+            "menu_item": 113,
+            "name": "mayonnaise",
+            "quantity": "3",
+            "created_at": "2025-01-01T10:41:51.630Z",
+            "updated_at": "2025-01-01T10:41:51.630Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 250,
+        "fields": {
+            "menu_item": 113,
+            "name": "brown bread",
+            "quantity": "4",
+            "created_at": "2025-01-01T10:42:16.141Z",
+            "updated_at": "2025-01-01T10:42:16.141Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 251,
+        "fields": {
+            "menu_item": 114,
+            "name": "Tuna (canned or fresh)",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:43:44.820Z",
+            "updated_at": "2025-01-01T10:43:44.820Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 252,
+        "fields": {
+            "menu_item": 114,
+            "name": "mayonnaise",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:43:58.999Z",
+            "updated_at": "2025-01-01T10:43:58.999Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 253,
+        "fields": {
+            "menu_item": 114,
+            "name": "brown bread",
+            "quantity": "4",
+            "created_at": "2025-01-01T10:44:16.498Z",
+            "updated_at": "2025-01-01T10:44:16.499Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 254,
+        "fields": {
+            "menu_item": 115,
+            "name": "Chicken salami",
+            "quantity": "3",
+            "created_at": "2025-01-01T10:45:51.708Z",
+            "updated_at": "2025-01-01T10:45:51.708Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 255,
+        "fields": {
+            "menu_item": 115,
+            "name": "Eggs",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:46:04.939Z",
+            "updated_at": "2025-01-01T10:46:04.940Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 256,
+        "fields": {
+            "menu_item": 115,
+            "name": "brown bread",
+            "quantity": "3",
+            "created_at": "2025-01-01T10:46:14.688Z",
+            "updated_at": "2025-01-01T10:46:14.688Z"
+        }
+    },
+    {
+        "model": "restaurant.ingredient",
+        "pk": 257,
+        "fields": {
+            "menu_item": 115,
+            "name": "rice paper",
+            "quantity": "2",
+            "created_at": "2025-01-01T10:46:34.687Z",
+            "updated_at": "2025-01-01T10:46:34.687Z"
+        }
+    }
+    ]
+    

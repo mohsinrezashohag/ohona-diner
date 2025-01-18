@@ -1,0 +1,78 @@
+{% extends "backend/base/base.html" %}
+{% load static %}
+
+{% block main_content %}
+<div class="container mt-5">
+    <h2>Edit Contact Details</h2>
+
+    <!-- Contact Form -->
+    <form id="edit-contact-form" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="contact_id" value="{{ contact.id }}">
+        
+        <div class="mb-3">
+            <label for="company" class="form-label">Company</label>
+            <select id="company" name="company" class="form-control" required>
+                <option value="">Select Company</option>
+                {% for company in companies %}
+                    <option value="{{ company.id }}" {% if company.id == contact.company.id %}selected{% endif %}>{{ company.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control" value="{{ contact.email }}" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" id="phone" name="phone" class="form-control" value="{{ contact.phone }}" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" id="address" name="address" class="form-control" value="{{ contact.address }}" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update Contact</button>
+    </form>
+</div>
+
+<!-- SweetAlert2 Script -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('edit-contact-form');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+            
+            const formData = new FormData(form);
+            
+            fetch(`/user/edit_contactus_admin/${formData.get('contact_id')}/`, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',  // Tell the server this is an AJAX request
+                    'X-CSRFToken': '{{ csrf_token }}'  // CSRF token for security
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Success message with SweetAlert2
+                    Swal.fire('Updated!', data.message, 'success').then(() => {
+                        window.location.href = '/user/contactus_admin/';  // Redirect to the contact list page
+                    });
+                } else {
+                    Swal.fire('Error', data.message, 'error');
+                }
+            })
+            .catch(error => {
+                Swal.fire('Error', 'An error occurred while updating the contact.', 'error');
+            });
+        });
+    });
+</script>
+{% endblock %}

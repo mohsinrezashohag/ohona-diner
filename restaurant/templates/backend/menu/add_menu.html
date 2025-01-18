@@ -1,0 +1,327 @@
+{% extends "backend/base/base.html" %}
+{% load static %}
+
+{% block custom_css %}
+<style>
+    /* Style for the image input boxes */
+    .image-input-box {
+        display: inline-block;
+        padding: 40px;
+        background-color: #f0f0f0;
+        border: 2px dashed #ccc;
+        border-radius: 10px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        color: #555;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+        width: 300px;  /* Increased width */
+        height: 150px; /* Increased height */
+    }
+    
+    .image-input-box:hover {
+        background-color: #e0e0e0;
+        border-color: #888;
+    }
+    
+    /* Style for the image preview container */
+    #images_preview {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    /* Style for individual images in the preview */
+    .image-card {
+        position: relative;
+        display: inline-block;
+        margin: 10px;
+    }
+    
+    .image-card img {
+        max-width: 200px;
+        height: auto;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .remove-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-color: rgba(255, 0, 0, 0.7);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        z-index: 1;
+    }
+
+    .remove-btn:hover {
+        background-color: red;
+    }
+
+    /* Button style for file input */
+    #thumb_image, 
+    #images {
+        display: none;
+    }
+
+    .image-input-box span {
+        font-size: 16px;
+        color: #007bff;
+    }
+
+    /* Adjust label positioning */
+    .form-label {
+        display: block;
+        margin-bottom: 10px;
+    }
+</style>
+{% endblock custom_css %}
+
+{% block main_content %}
+<div class="container mt-5">
+    <h2>Add New Menu Item</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <!-- Company Dropdown -->
+        <div class="mb-3">
+            <label for="company_id" class="form-label">Company</label>
+            <select class="form-control" id="company_id" name="company_id" required>
+                {% for company in companies %}
+                    <option value="{{ company.id }}">{{ company.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Category Dropdown -->
+        <div class="mb-3">
+            <label for="category_id" class="form-label">Category</label>
+            <select class="form-control" id="category_id" name="category_id" required>
+                {% for category in categories %}
+                    <option value="{{ category.id }}">{{ category.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Name Field -->
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <!-- Description Field -->
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" name="description"></textarea>
+        </div>
+
+        <!-- Price Field -->
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" class="form-control" id="price" name="price" required>
+        </div>
+
+        <!-- Hot Deal Checkbox -->
+        <div class="mb-3">
+            <label for="hot_deal_status" class="form-label">Hot Deal</label>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="hot_deal_status" name="hot_deal_status">
+                <label class="form-check-label" for="hot_deal_status">Off</label>
+            </div>
+        </div>
+
+        <!-- VAT/Tax Field -->
+        <div class="mb-3">
+            <label for="vat_tax" class="form-label">VAT/Tax</label>
+            <input type="number" class="form-control" id="vat_tax" name="vat_tax">
+        </div>
+
+        <!-- Status Checkbox -->
+        <div class="mb-3">
+            <label for="status" class="form-label">Status</label>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="status" name="status" checked>
+                <label class="form-check-label" for="status" id="status_label">Active</label>
+            </div>
+        </div>
+
+        <!-- Thumbnail Image (Single Image Upload) -->
+        <div class="mb-3">
+            <label for="thumb_image" class="form-label">Thumbnail Image</label>
+            <div id="thumb_image_box" class="image-input-box">
+                <span>Select Thumbnail Image</span>
+            </div>
+            <input type="file" class="d-none" id="thumb_image" name="thumb_image" accept="image/*">
+            <div id="thumb_image_preview" class="mt-2"></div> <!-- Preview for thumbnail -->
+        </div>
+
+        <!-- Multiple Images Upload -->
+        <div class="mb-3">
+            <label for="images" class="form-label">Additional Images (Multiple Upload)</label>
+            <div id="images_box" class="image-input-box">
+                <span>Select Additional Images</span>
+            </div>
+            <input type="file" class="d-none" id="images" name="images" accept="image/*" multiple>
+            <div id="images_preview" class="mt-2"></div> <!-- Preview for multiple images -->
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+{% endblock %}
+
+
+{% block custom_js %}
+<script>
+    // Handle file input click simulation for thumbnail image
+    document.getElementById('thumb_image_box').addEventListener('click', function() {
+        document.getElementById('thumb_image').click();  // Trigger file input
+    });
+
+    // Handle Thumbnail Image Preview
+    document.getElementById('thumb_image').addEventListener('change', function(event) {
+        const previewContainer = document.getElementById('thumb_image_preview');
+        previewContainer.innerHTML = ''; // Clear previous previews
+
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.alt = "Thumbnail Preview";
+                img.style.maxWidth = '200px';  // Limit size for the preview
+                img.style.marginTop = '10px';  // Add space between the input and preview
+                previewContainer.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // Handle file input click simulation for multiple images
+    document.getElementById('images_box').addEventListener('click', function() {
+        document.getElementById('images').click();  // Trigger file input
+    });
+
+    // Handle Multiple Images Preview
+    document.getElementById('images').addEventListener('change', function(event) {
+        const previewContainer = document.getElementById('images_preview');
+        const files = event.target.files;
+
+        // Add the new images without removing the old ones
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                // Create image element and add to preview container
+                const imageDiv = document.createElement('div');
+                imageDiv.classList.add('image-card');
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.alt = "Multiple Image Preview";
+                img.style.maxWidth = '200px';  // Optional: Limit size for the preview
+                img.style.marginTop = '10px';  // Add space between the input and preview
+                imageDiv.appendChild(img);
+                
+                // Create a remove button
+                const removeBtn = document.createElement('button');
+                removeBtn.innerText = 'X';
+                removeBtn.classList.add('remove-btn');
+                removeBtn.addEventListener('click', function() {
+                    previewContainer.removeChild(imageDiv);  // Remove the image card
+                });
+                imageDiv.appendChild(removeBtn);
+                
+                previewContainer.appendChild(imageDiv);  // Add the new image card to preview container
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // Handle form submission with multiple images
+    document.querySelector("form").addEventListener("submit", function(event) {
+        event.preventDefault();  // Prevent the default form submission
+
+        const formData = new FormData(this);  // Create FormData from the form
+
+        // Manually add images to FormData
+        const images = document.getElementById('images').files;
+        for (let i = 0; i < images.length; i++) {
+            formData.append("images", images[i]);  // Add each image to FormData
+        }
+
+        // Manually add the thumbnail image if selected
+        const thumbImage = document.getElementById('thumb_image').files[0];
+        if (thumbImage) {
+            formData.append("thumb_image", thumbImage);  // Add the thumbnail image
+        }
+
+        // Create the AJAX request
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", this.action, true);
+        
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                window.location.href ='{% url "list_menu_items" %}';  // Redirect after success
+            } else {
+                alert("Error saving the menu item.");
+            }
+        };
+        
+        xhr.send(formData);  // Send the form data via AJAX
+    });
+</script>
+<script>
+    const hotDealStatusSwitch = document.getElementById('hot_deal_status');
+    const hotDealStatusLabel = document.getElementById('hot_deal_status_label');
+
+    // Update label text when the switch is toggled
+    hotDealStatusSwitch.addEventListener('change', function() {
+        if (this.checked) {
+            hotDealStatusLabel.textContent = 'On';
+        } else {
+            hotDealStatusLabel.textContent = 'Off';
+        }
+    });
+</script>
+
+      
+<script>
+    const statusSwitch = document.getElementById('status');
+    const statusLabel = document.getElementById('status_label');
+
+    // Update label text when the switch is toggled
+    statusSwitch.addEventListener('change', function() {
+        if (this.checked) {
+            statusLabel.textContent = 'Active';
+        } else {
+            statusLabel.textContent = 'Inactive';
+        }
+    });
+</script>
+
+
+    
+
+
+
+
+
+
+{% endblock custom_js %}
+
+
+
+
+
+
+

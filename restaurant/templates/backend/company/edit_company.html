@@ -1,0 +1,31 @@
+{% extends "backend/base/base.html" %}
+{% load static %}
+
+{% block main_content %}
+<div class="container mt-5">
+    <h2>Edit Company</h2>
+
+    <!-- Company Edit Form -->
+    <form id="edit-company-form" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="hidden" name="company_id" value="{{ company.id }}">
+        
+        <div class="mb-3">
+            <label for="name" class="form-label">Company Name</label>
+            <input type="text" id="name" name="name" class="form-control" value="{{ company.name }}" readonly>
+        </div>
+
+        <div class="mb-3">
+            <label for="logo" class="form-label">Company Logo</label>
+            {% if company.logo %}
+                <div>
+                    <img src="{{ company.logo.url }}" alt="Current Logo" style="width: 100px; height: auto;">
+                </div>
+            {% endif %}
+            <input type="file" id="logo" name="logo" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update Company</button>
+    </form>
+</div>
+{% endblock %}

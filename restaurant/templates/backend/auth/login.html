@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" class="h-100">
+
+
+<!-- Mirrored from koki.dexignzone.com/xhtml/page-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2024 11:31:24 GMT -->
+<head>
+    <!-- Title -->
+	<title>Koki - Restaurant Food Admin Dashboard Template</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="DexignZone">
+	<meta name="robots" content="">
+
+	<meta name="keywords" content="	admin dashboard, admin template, administration, analytics, bootstrap, cafe admin, elegant, food, health, kitchen, modern, responsive admin dashboard, restaurant dashboard">
+	<meta name="description" content="Boost your Restaurant business with Koki's Bootstrap 5 HTML Template. Our professionally designed admin templates cater specifically to the needs of Food, admin and cafe business, offering visually stunning and functional designs. Choose from a variety of Koki website templates that are perfect for showcasing your menu, promoting your services, and attracting Factory  customers. Partner with DexignZone to create an impressive online presence for your Restaurant. Start driving more traffic and growing your business today">
+
+	<meta property="og:title" content="Koki - Restaurant Food Admin Dashboard Template">
+	<meta property="og:description" content="Boost your Restaurant business with Koki's Bootstrap 5 HTML Template. Our professionally designed admin templates cater specifically to the needs of Food, admin and cafe business, offering visually stunning and functional designs. Choose from a variety of Koki website templates that are perfect for showcasing your menu, promoting your services, and attracting Factory  customers. Partner with DexignZone to create an impressive online presence for your Restaurant. Start driving more traffic and growing your business today">
+	<meta property="og:image" content="social-image.png">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicon icon -->
+	<link rel="icon" type="image/png" href="{% static 'frontend/images/logo.png' %}">
+    <link href="{% static 'backend/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="h-100">
+    <div class="authincation h-100">
+        <div class="container h-100">
+            <div class="row justify-content-center h-100 align-items-center">
+                <div class="col-md-6">
+                    <div class="authincation-content">
+                        <div class="row no-gutters">
+                            <div class="col-xl-12">
+                                <div class="auth-form">
+									<div class="text-center mb-3">
+										<a href="index.html"><img src="{% static 'frontend/images/logo.png' %}" style="width: 150px; height:150px;" alt=""></a>
+									</div>
+                                    <h4 class="text-center mb-4">Sign in your account</h4>
+                                    <form action="" method="POST">
+                                        {% csrf_token %}
+                                        {% if messages %}
+                                            <div class="alert alert-danger">
+                                                {% for message in messages %}
+                                                    <p>{{ message }}</p>
+                                                {% endfor %}
+                                            </div>
+                                        {% endif %}
+                                        <div class="form-group">
+                                            <label class="mb-1"><strong>Username</strong></label>
+                                            <input type="text" class="form-control" name="username" value="hello@example.com">
+                                        </div>
+                                       <div class="form-group position-relative">
+                                            <label class="mb-1"><strong>Password</strong></label>
+											<input type="password" id="dz-password" name="password" class="form-control" value="123456">
+											<span class="show-pass eye">
+											
+												<i class="fa fa-eye-slash"></i>
+												<i class="fa fa-eye"></i>
+											
+											</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-primary btn-block">Sign Me In</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="{% static 'backend/vendor/global/global.min.js' %}"></script>
+   <script src="{%static 'backend/js/custom.min.js' %}"></script>
+    <script src="{% static 'backend/js/deznav-init.js' %}"></script>
+
+</body>
+
+
+<!-- Mirrored from koki.dexignzone.com/xhtml/page-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2024 11:31:24 GMT -->
+</html>

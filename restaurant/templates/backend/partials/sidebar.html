@@ -1,0 +1,56 @@
+{% load static %}
+
+
+<div class="deznav">
+    <div class="deznav-scroll">
+        <ul class="metismenu" id="menu">
+            <li>
+                <a>
+                   
+                    <span class="nav-text">Dashboard</span>
+                </a>
+         
+            </li>
+
+            <li>
+                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-dashboard-1"></i>
+                    <span class="nav-text">About Us</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{% url 'about_us_create' %}">Create</a></li>
+                    <li><a href="{% url 'about_us_list' %}">List</a></li>
+                    <li><a href="{% url 'company_profile_create' %}">Create Company Profile</a></li>
+                    <li><a href="{% url 'company_profile_list' %}">Company Profile List</a></li>
+                    <li><a href="{% url 'owner_profile_create' %}">Create Owner Profile</a></li>
+                    <li><a href="{% url 'owner_profile_list' %}">Owner Profile List</a></li>
+                </ul>
+
+            </li>
+
+                <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <i class="flaticon-app"></i>
+                    <span class="nav-text">Apps</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{% url 'contactus_admin' %}">Contact Us</a></li>
+                    <li><a href="{% url 'list_categories' %}">Category</a></li>
+                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Menu Item</a>
+                        <ul aria-expanded="false">
+                            <li><a href="{% url 'list_menu_items'%}">List Menu</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'list_galleries' %}">Gallery</a></li>
+                     <li><a href="{% url 'list_gallery_categories' %}">Gallery Category</a></li>
+                   
+                </ul>
+            </li>
+          
+
+        </ul>
+    
+       
+     
+    </div>
+</div>

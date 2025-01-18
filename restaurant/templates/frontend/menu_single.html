@@ -1,0 +1,217 @@
+{% extends "frontend/base/base.html" %}
+{% load static %}
+
+{% block custom_css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css" integrity="sha512-58P9Hy7II0YeXLv+iFiLCv1rtLW47xmiRpC1oFafeKNShp8V5bKV/ciVtYqbk2YfxXQMt58DjNfkXFOn62xE+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css" integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="{% static 'frontend/stylesheets/custom_style.css' %}">
+{% endblock custom_css %}
+
+
+{% block main_content %}
+    <!-- Page Title -->
+    <div class="page-title parallax parallax1 flat_strech">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">                    
+                    <div class="page-title-heading">
+                        <h1 class="title">Menu Single</h1>
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li> <a href="#">Home</a></li>
+                                <li><a href="#">Our menu</a></li>
+                            </ul>                   
+                        </div>
+                    </div><!-- /.page-title-captions -->                        
+                </div><!-- /.col-md-12 -->  
+            </div><!-- /.row -->  
+        </div><!-- /.container -->                      
+    </div>  
+
+    <!-- Flat row -->
+    <div class="flat-row flat-wooc">
+        <div class="container">
+            <div class="row">
+                <div class="woocommerce-page clearfix"> 
+                    <div class="col-md-6">                 
+                        <div class="flat-product-single-slider">
+                            <div id="flat-product-flexslider">
+                                <ul class="slides">
+                                    <li><img width="570" height="570" alt="product-single" src="{{ menu_item.thumb_image.url }}" class="attachment-themesflat-gallery-product size-themesflat-gallery-product"  /></li>
+                                    {% for menu_image in menu_item.images.all %}
+                                        <li><img width="570" height="570" alt="product-single" src="{{ menu_image.image.url }}" class="attachment-themesflat-gallery-product size-themesflat-gallery-product"  /></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+
+                            <div id="flat-product-carousel">
+                                <ul class="slides">
+                                    <li><img width="570" height="570" alt="product-single" src="{{ menu_item.thumb_image.url }}" class="attachment-themesflat-gallery-product size-themesflat-gallery-product"  /></li>
+                                    {% for menu_image in menu_item.images.all %}
+                                        <li><img width="570" height="570" alt="product-single" src="{{ menu_image.image.url }}" class="attachment-themesflat-gallery-product size-themesflat-gallery-product"  /></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div><!-- /.flat-portfolio-single-slider --> 
+                    </div><!--/.col-md-6 -->  
+
+                    <div class="col-md-6">
+                        <div class="entry-summary entry-summary-single-menu">
+                            <h2 class="product_title">{{ menu_item.name }}</h2>
+
+                            <ul class="favorite">   
+                                <li>
+                                    <i class="fa fa-heart"></i>
+                                    <i class="fa fa-heart"></i>
+                                    <i class="fa fa-heart"></i>
+                                    <i class="fa fa-heart"></i>
+                                    <i class="fa fa-heart"></i>
+                                </li>
+                            </ul>
+
+                            <p class="price">{{ menu_item.price }}৳</p>
+
+                            <div class="description">
+                                <p>{{ menu_item.description }}</p>
+                            </div>
+
+                            <ul class="iconlist">
+                                {% for ingredient in menu_item.ingredients.all %}
+                                    <li><i class="fa fa-circle-o"></i> {{ ingredient.name }} </li>
+                                {% endfor %}
+                            </ul>
+
+                            {% comment %} <form class="cart clearfix" method="post">
+                                <div class="quantity">
+                                    <input type="number" step="1" min="1" name="quantity" value="4" title="Qty" class="input-text qty text" size="4">
+                                </div>
+                                <input type="hidden" name="add-to-cart" value="191">
+
+                                <button type="submit" class="single_booking_button">Booking now</button>
+
+                                <button type="submit" class="single_add_to_cart_button border">add to cart</button>
+                            </form> {% endcomment %}
+
+
+                            
+                            <a href="tel:+8801958666961">
+                                <button type="button" class="single_booking_button">
+                                    <span>
+                                        <i class="fa-brands fa-whatsapp" style="color: #f2f2f2; font-size: 26px; margin-right: 20px;"></i>Call now
+                                    </span>
+                                </button>
+                            </a>
+
+
+            <ul class="flat-socials">
+    <li>Share link: </li>
+    <li class="tiktok">
+        <a href="https://www.tiktok.com/share?url={{ request.build_absolute_uri }}" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+    </li>
+    <li class="facebook">
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    </li>
+    <li class="instagram">
+        <a href="https://www.instagram.com/?url={{ request.build_absolute_uri }}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    </li>
+    <li class="pinterest">
+        <a href="https://pinterest.com/pin/create/button/?url={{ request.build_absolute_uri }}" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
+    </li>
+    <li class="whatsapp">
+        <a href="https://wa.me/?text={{ request.build_absolute_uri }}" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    </li>
+</ul>
+
+
+
+                        </div><!-- /.entry-summary -->
+                    </div><!--/.col-md-8 -->
+                </div><!--/.woocommerce-page -->
+            </div><!--/.row -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="flat-accordion">
+                        <div class="flat-toggle">
+                            <h4 class="toggle-title active">DESCRIPTION</h4>
+                            <div class="toggle-content">
+                                <p>{{ menu_item.description }}</p>
+                                </div>
+                            </div><!-- /toggle -->
+
+                            <div class="flat-toggle">
+                                <h4 class="toggle-title">ASSITIONAL INFORMATION</h4>
+                                <div class="toggle-content">
+                                    <p>{{ menu_item.description }}</p>                               
+                                </div>
+                            </div><!-- /toggle -->
+
+                            <!--<div class="flat-toggle">
+                                <h4 class="toggle-title">CUSTOMER REVIEWS <span>(19)</span></h4>
+                                <div class="toggle-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>                               
+                                </div>
+                            </div>-->
+                            <!-- /toggle -->
+
+
+                        </div><!-- /.flat-accordion -->
+                    </div><!--/.col-md-12 -->
+                </div><!--/.row -->
+                <!--  <div class="flat-divider d62px"></div> -->
+            </div><!--/.container -->
+        </div><!--/.flat-row -->
+
+        <div class="related products-row">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title-section style5">
+                            <h1 class="title">Related Products</h1>
+                        </div>
+                    </div><!--/.col-md-12-->
+                </div>
+
+                <div class="row">
+                    <div class="related products clearfix">
+                        {% for menu_items_with_slug in menu_items_with_slugs|slice:":4" %}
+                            <div class="col-sm-3 col-xs-6 style2">
+                                <div class="product effect1">
+                                    <div class="box-wrap">
+                                        <div class="box-image">
+                                            <a href="{% url 'menu_single' menu_items_with_slug.slug_name company.id menu_items_with_slug.id %}">
+                                            {% comment %} <a href="#"></a> {% endcomment %}
+                                            <img src="{{ menu_items_with_slug.thumb_image.url }}" alt="images" class="related">
+                                            </a>
+                                        </div>
+                                        <div class="box-content">
+                                            <h6>{{ menu_items_with_slug.name }}</h6>
+                                            <ul>
+                                                <li >{{ menu_items_with_slug.price }}</li>
+                                                <li >
+                                                    <i class="fa fa-heart"></i>
+                                                    <i class="fa fa-heart"></i>
+                                                    <i class="fa fa-heart"></i>
+                                                    <i class="fa fa-heart"></i>
+                                                    <i class="fa fa-heart"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+
+                    </div><!-- /.related products -->
+                </div><!-- /.row -->
+
+                <div class="flat-divider d47px"></div>
+                <div class="kf_property_line1"></div>
+            </div><!-- /.container -->
+        </div>
+
+        
+{% endblock main_content %}

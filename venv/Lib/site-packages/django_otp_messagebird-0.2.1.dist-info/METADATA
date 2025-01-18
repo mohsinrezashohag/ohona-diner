@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: django-otp-messagebird
+Version: 0.2.1
+Summary: A django-otp plugin that delivers tokens via MessageBird's SMS service.
+Home-page: https://github.com/arjan-s/django-otp-messagebird
+Author: arjan5
+Author-email: arjan.schrijver@foxcrypto.com
+License: BSD
+Project-URL: Documentation, https://django-otp-messagebird.readthedocs.io/
+Project-URL: Source, https://github.com/arjan-s/django-otp-messagebird
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Framework :: Django
+Requires-Dist: django-otp (>=0.9.2)
+Requires-Dist: messagebird
+
+.. image:: https://img.shields.io/pypi/v/django-otp-messagebird?color=blue
+   :target: https://pypi.org/project/django-otp-messagebird/
+   :alt: PyPI
+.. image:: https://img.shields.io/readthedocs/django-otp-messagebird
+   :target: https://django-otp-messagebird.readthedocs.io/
+   :alt: Documentation
+.. image:: https://img.shields.io/badge/github-django--otp--messagebird-green
+   :target: https://github.com/arjan-s/django-otp-messagebird
+   :alt: Source
+
+This is a django-otp plugin that delivers tokens via MessageBird's `SMS
+<https://messagebird.com/en/sms/>`_ service.
+
+See `django-otp <https://pypi.org/project/django-otp>`_ for more information
+on the OTP framework.
+
+

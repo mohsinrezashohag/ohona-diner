@@ -1,0 +1,90 @@
+{% load static %}
+<style>
+.active > a {
+    color: #e44c2a !important;
+}
+
+</style>
+<div class="header-wrap clearfix">
+
+    <div class="container">
+
+    <div class="logo-mobi"><a href="{% url 'home' %}"> <img src="{% static 'frontend/images/logo.png' %}" alt="image" class="nav-logo-mobile"></a></div>
+
+    <div class="btn-menu">
+
+        <span></span>
+
+    </div>
+
+        <nav id="mainnav" class="mainnav">
+
+            <ul class="menu">
+
+                <li class="has-sub {% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+                
+                <li class="dropdown-menu-li {% if '/menu' in request.path %}active{% endif %}">
+                    <a href="javascript:void(0)">Menu</a>
+                    <ul class="submenu"> 
+                        {% for company in companies %}
+                            <li class="{% if request.path == company.get_absolute_url %}active{% endif %}">
+                                <a href="{% url 'nav_menu' company.slug_name company.id %}">{{ company.name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+
+                <!--<li> <a href="reservation.html">Reservation </a></li>-->
+
+                <!--<li> <a href="shop.html">Shop</a></li>-->
+
+                <li class="logo">
+                    <a href="{% url 'home' %}">
+                        <img class="nav-logo" src="{% static 'frontend/images/logo.png' %}" alt="logo">
+                    </a>
+                </li>
+
+
+                <!--<li class="has-sub"> <a href="blog.html">Blog</a>
+
+                    <ul class="submenu right-sub-menu "> 
+
+                        <li><a href="blog.html">Blog</a></li>
+
+                        <li><a href="blog-single.html">Blog Single</a></li>
+
+                    </ul>
+
+                </li>-->
+
+                
+                <li class="has-sub {% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+                    <a href="{% url 'about' %}">About Us</a>
+                </li>
+
+
+                <!--<li><a href="#">Page</a>
+
+                    <ul class="submenu"> 
+
+                        <li ><a href="gallary.html">Gallery</a></li>
+
+                    </ul>
+
+
+
+                </li>-->
+
+                <li class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+                    <a href="{% url 'contact' %}">Contact</a>
+                </li>
+
+            </ul><!--/.menu -->                                      
+
+        </nav><!--/.mainnav -->
+
+    </div><!--/.container -->
+
+</div><!--/.header-wrap -->

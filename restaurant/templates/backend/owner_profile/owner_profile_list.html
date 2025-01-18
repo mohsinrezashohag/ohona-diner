@@ -1,0 +1,360 @@
+{% extends "backend/base/base.html" %}
+{% load static %}
+
+{% block custom_css %}
+    <link href="{% static 'backend/vendor/datatables/css/jquery.dataTables.min.css' %}" rel="stylesheet">
+    <link href="{% static 'backend/css/form_create.css' %}" rel="stylesheet">
+{% endblock custom_css %}
+
+{% block main_content %}
+    <div class="form-head d-flex mb-4 align-items-start">
+        <div class="input-group search-area d-inline-flex">
+            <input type="text" class="form-control" placeholder="Search here">
+            <div class="input-group-append">
+                <span class="input-group-text"><i class="fas fa-search"></i></span>
+            </div>
+        </div>
+        <div class="dropdown ms-auto d-inline-block">
+            <div class="btn btn-outline-primary btn-rounded dropdown-toggle" data-bs-toggle="dropdown">
+                <svg class="me-3" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                    <path d="M22.4276 2.856H21.8676V1.428C21.8676 0.56 21.2796 0 20.4396 0C19.5996 0 19.0116 0.56 19.0116 1.428V2.856H9.71557V1.428C9.71557 0.56 9.15557 0 8.28757 0C7.41957 0 6.85957 0.56 6.85957 1.428V2.856H5.57157C2.85557 2.856 0.55957 5.152 0.55957 7.868V23.016C0.55957 25.732 2.85557 28.028 5.57157 28.028H22.4276C25.1436 28.028 27.4396 25.732 27.4396 23.016V7.868C27.4396 5.152 25.1436 2.856 22.4276 2.856ZM5.57157 5.712H22.4276C23.5756 5.712 24.5836 6.72 24.5836 7.868V9.856H3.41557V7.868C3.41557 6.72 4.42357 5.712 5.57157 5.712ZM22.4276 25.144H5.57157C4.42357 25.144 3.41557 24.136 3.41557 22.988V12.712H24.5556V22.988C24.5836 24.136 23.5756 25.144 22.4276 25.144Z" fill="#EA4989"></path>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0">
+                    <rect width="28" height="28" fill="white"></rect>
+                    </clipPath>
+                    </defs>
+                </svg>
+                Today
+            </div>
+            <div class="dropdown-menu dropdown-menu-left">
+                <a class="dropdown-item" href="#">A To Z List</a>
+                <a class="dropdown-item" href="#">Z To A List</a>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-xl-12">
+            {% if messages %}
+                <div class="alert-container">
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <div class="table-responsive">
+                <table id="company-profile-table" class="display mb-4 dataTablesCard">
+                    <thead>
+                        <tr>
+                            <th><strong class="font-w600">Sl No.</strong></th>
+                            <th><strong class="font-w600 wspace-no">Name</strong></th>
+                            <th><strong class="font-w600">Company</strong></th>
+                            <th><strong class="font-w600 wspace-no">Email</strong></th>
+                            <th><strong class="font-w600 wspace-no">Facebook</strong></th>
+                            <th><strong class="font-w600 wspace-no">Instagram</strong></th>
+                            <th><strong class="font-w600 wspace-no">Tiktok</strong></th>
+                            <th><strong class="font-w600">Image</strong></th>
+                            <th><strong class="font-w600">Action</strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for owner_profile in owner_profiles %}
+                            <tr>
+                                <td class="ps-3">{{ forloop.counter }}</td>
+                                <td>{{ owner_profile.name }}</td>
+                                <td>{{ owner_profile.company.name }}</td>
+                                <td>{{ owner_profile.email }}</td>
+                                <td>{{ owner_profile.facebook_link }}</td>
+                                <td>{{ owner_profile.instagram_link }}</td>
+                                <td>{{ owner_profile.twitter_link }}</td>
+                                <td>
+                                    {% if owner_profile.image %}
+                                        <img src="{{ owner_profile.image.url }}" alt="{{ owner_profile.company.name }}" class="table-images" width="100">
+                                    {% else %}
+                                        No Image
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-outline-primary btn-xs edit-btn mb-2" data-bs-toggle="modal" data-bs-target="#editModal"
+                                        data-id="{{ owner_profile.id }}"
+                                        data-title="{{ owner_profile.company.name }}"
+                                        data-company-id="{{ owner_profile.company.id }}"
+                                        data-name="{{ owner_profile.name }}"
+                                        data-email="{{ owner_profile.email }}"
+                                        data-phone="{{ owner_profile.phone }}"
+                                        data-facebook="{{ owner_profile.facebook_link }}"
+                                        data-instagram="{{ owner_profile.instagram_link }}"
+                                        data-twitter="{{ owner_profile.twitter_link }}"
+                                        data-linkedin="{{ owner_profile.linkedin_link }}"
+                                        data-description="{{ owner_profile.description }}"
+                                        data-image="{% if owner_profile.image %}{{ owner_profile.image.url }}{% else %}{% endif %}"
+
+                                    >
+                                        Edit
+                                    </button>
+                                    <button type="button" class="btn btn-outline-primary btn-xs delete-btn mb-2" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="{{ owner_profile.id }}">Delete</button>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="5">No Owner's Profile entries found.</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit About Us Section</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <form id="editForm" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="modal-body">
+                        <input type="hidden" name="id" id="edit-id">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                <p class="mb-1">Slect Company</p>
+                                <select class="default-select form-control wide" name="company_id">
+                                    {% for company in companies %}
+                                        <option value="{{ company.id }}">{{ company.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                <p class="mb-1">Name</p>
+                                <input type="text" id="name" name="name" class="form-control input-rounded" placeholder="Name">
+                            </div>
+                            
+                            <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                <p class="mb-1">Email</p>
+                                <input type="email" id="email" name="email" class="form-control input-rounded" placeholder="Email">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                <p class="mb-1">Phone</p>
+                                <input type="text" id="phone" name="phone" class="form-control input-rounded" placeholder="Phone">
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                <label for="formFile" class="form-label">Add an Image</label>
+                                <input class="form-control" id="edit-image" name="image" type="file" id="formFile">
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                <p class="mb-1">Facebook Page</p>
+                                <input type="url" id="facebook" name="facebook" class="form-control input-rounded" placeholder="Company Name">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                <p class="mb-1">Instagram Page</p>
+                                <input type="url" id="instagram" name="instagram" class="form-control input-rounded" placeholder="Email">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                <p class="mb-1">Linked Profile</p>
+                                <input type="url" id="linkedin" name="linkedin" class="form-control input-rounded" placeholder="Phone">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 mb-3">
+                                <p class="mb-1">Twitter</p>
+                                <input type="url" id="twitter" name="twitter" class="form-control input-rounded" placeholder="https://example.com">
+                            </div>
+
+                            <div class="col-12 mb-3 mt-6">
+                                <p class="mb-1">Add a Description <span class="mandatory-field-star">*</span></p>
+                                <div class="ck-editor-div">
+                                    {% comment %} <div id="ckeditor-classic"></div> {% endcomment %}
+                                    <textarea id="ckeditor-classic" name="description" class="form-control input-rounded" placeholder="Description"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--Delete Modal-->
+    <div class="modal fade" id="deleteModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirm Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete this entry?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+                    
+                    <input type="hidden" name="delete-id" id="delete-id">
+                    <button id="confirm-delete" type="submit" class="btn btn-primary">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Success</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    The entry has been deleted successfully.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main_content %}
+
+{% block custom_js %}
+    <script src="{% static 'backend/vendor/datatables/js/jquery.dataTables.min.js' %}"></script>
+    <!-- ckeditor -->
+    <script src="{% static 'backend/js/ckeditor.js' %}"></script>
+    {% comment %} <script src="{% static 'backend/js/plugins-init/form-editor.init.js' %}"></script> {% endcomment %}
+
+	<script>
+		(function($) {
+		 
+			var table = $('#company-profile-table').DataTable({
+				searching: false,
+				paging:true,
+				select: false,
+				//info: false,         
+				lengthChange:false 
+				
+			});
+			$('#example tbody').on('click', 'tr', function () {
+				var data = table.row( this ).data();
+				
+			});
+		   
+		})(jQuery);
+	</script>
+
+    <script>
+        let editorInstance; // Variable to store the editor instance
+    
+        $(document).on('click', '.edit-btn', function () {
+            // Retrieve data attributes from the clicked button
+            const id = $(this).data('id');
+            const title = $(this).data('title');
+            const description = $(this).data('description');
+            const name = $(this).data('name');
+            const imageUrl = $(this).data('image');
+            const companyId = $(this).data('company-id');
+            const email = $(this).data('email');
+            const phone = $(this).data('phone');
+            const website = $(this).data('website');
+            const address = $(this).data('address');
+            const facebook = $(this).data('facebook');
+            const instagram = $(this).data('instagram');
+            const twitter = $(this).data('twitter');
+            const linkedin = $(this).data('linkedin');
+
+
+            const $dropdown = $('select[name="company_id"]');
+            $dropdown.val(companyId); // Update the value of the native select element
+            $dropdown.selectpicker('refresh');
+    
+            console.log('companyId: ', companyId);
+    
+            // Populate the modal fields
+            $('#edit-id').val(id);
+            $('#email').val(email);
+            $('#phone').val(phone);
+            $('#name').val(name);
+            $('#website').val(website);
+            $('#address').val(address);
+            $('#facebook').val(facebook);
+            $('#instagram').val(instagram);
+            $('#linkedin').val(linkedin);
+            $('#twitter').val(twitter);
+    
+            // Check if CKEditor instance is already created
+            if (editorInstance) {
+                editorInstance.setData(description); // Set the description data
+            } else {
+                ClassicEditor.create(document.querySelector("#ckeditor-classic"))
+                    .then(editor => {
+                        editorInstance = editor; // Store the editor instance
+                        editor.setData(description); // Set the description data
+                        editor.ui.view.editable.element.style.height = "200px";
+                    })
+                    .catch(error => {
+                        console.error('CKEditor initialization error:', error);
+                    });
+            }
+    
+            $('#editModal').modal('show');
+    
+            // Show the current image preview if available
+            const imagePreviewContainer = $('#edit-image').parent();
+            imagePreviewContainer.find('.image-preview').remove(); // Clear previous preview if it exists
+            if (imageUrl) {
+                const imagePreview = `<img src="${imageUrl}" alt="Current Image" class="image-preview" width="100">`;
+                imagePreviewContainer.append(imagePreview);
+            }
+        });
+
+        // delete Company Profile
+        $(document).on('click', '.delete-btn', function () {
+            const id = $(this).data('id'); // Get the ID from the button
+            $('#confirm-delete').data('id', id); // Pass the ID to the confirm button
+        });
+    
+        $(document).on('click', '#confirm-delete', function () {
+            const id = $(this).data('id');
+
+            // Use the fetch API
+            fetch("{% url 'owner_profile_delete' %}", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": '{{ csrf_token }}'
+                },
+                body: JSON.stringify({ 'id': id })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        $('#deleteModal').modal('hide'); // Hide the delete modal
+                        $(`button[data-id="${id}"]`).closest('tr').remove(); // Remove the row
+                        $('#successModal').modal('show'); // Show the success modal
+                        console.log('entry deleted')
+
+                    }
+                    else {
+                        console.log('error from the database')
+                        alert(data.error); // Show error message
+                    }
+                })
+                .catch(() => {
+                    alert('An error occurred. Please try again.');
+                });
+        });
+
+
+    </script>
+{% endblock custom_js %}

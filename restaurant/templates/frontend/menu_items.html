@@ -1,0 +1,135 @@
+{% extends "frontend/base/base.html" %}
+{% load static %}
+
+{% block custom_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'frontend/stylesheets/custom_style.css' %}">
+{% endblock custom_css %}
+
+
+{% block main_content %}
+    <div class="page-title parallax parallax1 flat_strech">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">                    
+                    <div class="page-title-heading">
+                        <h1 class="title">{{ company.name }} Menu</h1>
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li> <a href="{% url 'home' %}">Home </a></li>
+                                <li><a href="{% url 'nav_menu' company.slug_name company.id %}">{{ company.name }} Menu</a></li>
+                            </ul>                   
+                        </div>
+                    </div><!-- /.page-title-captions -->                        
+                </div><!-- /.col-md-12 -->  
+            </div><!-- /.row -->  
+        </div><!-- /.container -->                      
+    </div>  
+
+
+    <section class="flat-row menu-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-section style1 ">
+                        <div class="top-section">
+                            <p>Discover</p>
+                        </div>
+                        <h1 class="title">Menu Hot</h1>
+                    </div>
+                </div><!--col-md-12-->
+            </div><!--row-->
+
+
+            
+            <div class="row">
+                {% for hot_deal_menu_item in hot_deal_menu_items %}
+                    <div class="col-sm-3 col-xs-6 food-menu-image-container">
+                        <div class="product effect1">
+                            <div class="box-wrap">
+                                <div class="box-image hot-menu-box-image">
+                                    <a href="{% url 'menu_single' hot_deal_menu_item.slug_name company.id hot_deal_menu_item.id %}"><img src="{{ hot_deal_menu_item.thumb_image.url }}" alt="images" class="hot-deal-menu-item-img"></a>
+                                </div>
+                                <div class="box-content">
+                                    <h6>{{ hot_deal_menu_item.name }}</h6>
+                                    <ul>
+                                        <li>৳{{ hot_deal_menu_item.price }}</li>
+                                        <li>
+                                            <i class="fa fa-heart"></i>
+                                            <i class="fa fa-heart"></i>
+                                            <i class="fa fa-heart"></i>
+                                            <i class="fa fa-heart"></i>
+                                            <i class="fa fa-heart"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div><!--row-->
+        </div><!--container -->
+    </section>
+
+
+    <!-- Flat Tab-->
+
+    <section class="flat-row flat-tab-menu menu-2">
+        <div class="container">
+            <div class="row">
+            </div><!--/.row-->
+
+            <div class="row">
+                <div class="col-md-12 flat-tabs ">
+                    <div class="bg-tabs">
+                        <div class="title-section style1 martp-0px">
+                            <div class="top-section">
+                            <p>Find About</p>
+                            </div>
+                                <h1 class="title marbt-33px" style="color: white;">Our Menu</h1>
+                        </div>
+
+                        <ul class="menu-tab">
+    {% for category in categories %}
+        <li style="margin-top: 20px;"><a href="#" style="color: white;">{{ category.name }}</a></li>
+    {% endfor %}
+</ul>
+                    </div><!--/.bg-tabs-->
+
+                    <div class="flat-divider d67px"></div>
+
+                  <div class="content-tab">
+    {% for category in categories %}
+        <div class="content-inner">
+            <div class="row"> <!-- Start of row to group items -->
+                {% for menu_item in category.menu_items.all %}
+                    <div class="col-md-6" style="padding-left: 0;">
+                        <ul class="menu-fd">
+                            <li>
+                                <div class="media-wrap">
+                                    <a href="{% url 'menu_single' menu_item.slug_name company.id menu_item.id %}" class="pull-left">
+                                        <img src="{{ menu_item.thumb_image.url }}" alt="client" class="img-responsive" style="width: 60px; height: 60px;">
+                                    </a>
+
+                                    <div class="media-body">
+                                        <h6><a href="{% url 'menu_single' menu_item.slug_name company.id menu_item.id %}">{{ menu_item.name }}</a></h6>
+                                        <span>৳{{ menu_item.price }}</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div><!-- /.col-md-6" -->
+                {% endfor %}
+            </div><!-- /.row -->
+            <div class="clearfix"></div>
+            <div class="flat-divider d35px"></div>
+        </div><!-- /.content-inner -->
+    {% endfor %}
+</div><!-- /.content-tab -->
+<!-- /.content-tab -->
+                </div><!--flat-tabs-->  
+            </div><!--row-->
+        </div><!--container -->
+    </section>
+
+
+{% endblock main_content %}

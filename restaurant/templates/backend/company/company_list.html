@@ -1,0 +1,96 @@
+{% extends "backend/base/base.html" %}
+{% load static %}
+
+{% block main_content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Company List</h2>
+    <a href="{% url 'add_company' %}" class="btn btn-success mb-3">Add New Company</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Company Logo</th>
+                <th>Company Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for company in companies %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>
+                        {% if company.logo %}
+                            <img src="{{ company.logo.url }}" alt="Logo" style="width: 50px; height: auto;">
+                        {% else %}
+                            <span>No logo</span>
+                        {% endif %}
+                    </td>
+                    <td>{{ company.name }}</td>
+                    <td>
+                        <a href="{% url 'edit_company' company.id %}" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="{% url 'generate_menu_pdf' company_id=company.id %}" class="btn btn-success btn-sm" target="_blank">Print Menu</a>
+
+                        <button class="btn btn-danger btn-sm delete-btn" data-id="{{ company.id }}">Delete</button>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="4" class="text-center">No companies found.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- SweetAlert2 Script -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Find all the delete buttons on the page
+        const deleteButtons = document.querySelectorAll('.delete-btn');
+
+        // Add click event listener to each delete button
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default behavior of the button
+                const companyId = button.getAttribute('data-id'); // Get the company ID
+
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#3085d6',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Send the delete request via AJAX
+                        fetch(`/user/company/delete/${companyId}/`, {
+                            method: 'POST',
+                            headers: {
+                                'X-Requested-With': 'XMLHttpRequest',  // To tell the server this is an AJAX request
+                                'X-CSRFToken': '{{ csrf_token }}' // Django CSRF token for security
+                            }
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                // Show success message with SweetAlert2
+                                Swal.fire('Deleted!', data.message, 'success').then(() => {
+                                    location.reload();  // Reload the page to reflect changes
+                                });
+                            } else {
+                                Swal.fire('Error', data.message, 'error');
+                            }
+                        })
+                        .catch(error => {
+                            Swal.fire('Error', 'An error occurred while deleting the company.', 'error');
+                        });
+                    }
+                });
+            });
+        });
+    });
+</script>
+{% endblock %}

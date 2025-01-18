@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+{% load static %}
+
+<head>
+
+    <!-- Basic Page Needs -->
+
+    <meta charset="utf-8">
+
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+    <title>Ohana Diner</title>
+
+
+
+    <meta name="author" content="Restaurant">
+
+  <meta property="og:image" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+
+    <!-- Mobile Specific Metas -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <!-- Bootstrap  -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'frontend/stylesheets/bootstrap.css' %}" >
+
+
+
+    <!-- Theme Style -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'frontend/stylesheets/style.css' %}">
+
+
+
+    <!-- Responsive -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'frontend/stylesheets/responsive.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'frontend/stylesheets/jquery.datetimepicker.css' %}">
+
+
+
+    <!-- Colors -->
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'frontend/stylesheets/colors/color1.css' %}" id="colors">
+
+
+
+    <!-- Animation Style -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'frontend/stylesheets/animate.css' %}">
+
+
+
+    <!-- Favicon and touch icons  -->
+
+    <link href="icon/apple-touch-icon-48-precomposed.png" rel="apple-touch-icon" sizes="48x48">
+
+    <link href="icon/apple-touch-icon-32-precomposed.png" rel="apple-touch-icon-precomposed">
+
+    <link href="{% static 'frontend/images/logo.png' %}" rel="shortcut icon">
+
+    {% block custom_css %}
+    
+    {% endblock custom_css %}
+
+    </head>    
+
+
+
+    <body class=""> 
+
+        <section class="loading-overlay">
+
+            <div class="Loading-Page">
+
+                <h2 class="loader">Loading</h2>
+
+            </div>
+
+        </section>
+
+
+
+        <div class="box">
+
+            <header id="header" class="header clearfix">
+
+                {% include "frontend/partials/navbar.html" %}
+
+            </header>
+            <!--/.header -->  
+
+
+
+
+            {% block main_content %}
+            
+            {% endblock main_content %}
+
+        
+
+
+
+            <!-- Google Map -->
+
+            <!--<div id="flat-map">
+
+            </div>-->
+            <!--flat-map -->
+
+
+
+            
+    </div><!--box -->
+    {% include "frontend/partials/footer.html" %}
+
+
+
+    <!-- Javascript -->
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/jquery.min.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/jquery.datetimepicker.full.min.js' %}"></script> 
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/bootstrap.min.js' %}"></script> 
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/jquery.easing.js' %}"></script> 
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/imagesloaded.min.js' %}"></script> 
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/jquery.isotope.min.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/jquery-waypoints.js' %}"></script> 
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/jquery.magnific-popup.min.js' %}"></script>   
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/jquery.cookie.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/parallax.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/smoothscroll.js' %}"></script>   
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/jquery.flexslider-min.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/owl.carousel.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/jquery-validate.js' %}"></script>
+
+    <!-- <script type="text/javascript" src="{% static 'frontend/javascript/switcher.js' %}"></script> -->
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvV0EE3yFozGhjmUv3BgoyviVdXzCwHlk"></script>
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/gmap3.min.js' %}"></script>  
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/jquery.fancybox.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/main.js' %}"></script>
+
+
+
+    <!-- Revolution Slider -->
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/jquery.themepunch.tools.min.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/jquery.themepunch.revolution.min.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'frontend/javascript/slider.js' %}"></script>
+
+
+
+</body>
+
+
+<!-- Mirrored from themesflat.co/html/sumi/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Nov 2024 03:52:21 GMT -->
+</html>

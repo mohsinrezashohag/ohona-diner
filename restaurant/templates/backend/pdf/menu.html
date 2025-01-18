@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ company.name }} - Menu</title>
+    <style>
+        /* Add your CSS styling for the menu layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .menu-container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .company-logo {
+            display: block;
+            margin: 0 auto;
+            max-width: 200px;
+            height: auto;
+        }
+
+        .menu-header {
+            text-align: center;
+            font-size: 24px;
+            color: #0066cc;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-item img {
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+        }
+
+        .menu-item-details {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        .menu-item-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .menu-item-description {
+            font-size: 14px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .menu-item-price {
+            font-size: 16px;
+            color: #0066cc;
+        }
+
+        .btn-print {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            margin: 30px auto;
+        }
+
+        .btn-print:hover {
+            background-color: #004c99;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <img src="{{ company.logo }}" alt="{{ company.name }} Logo" class="company-logo">
+        <div class="menu-header">
+            <h2>{{ company.name }} - Menu</h2>
+        </div>
+
+        <div class="menu-items">
+            {% for item in menu_items %}
+            <div class="menu-item">
+                <div class="menu-item-details">
+                    <div class="menu-item-name">{{ item.name }}</div>
+                    <div class="menu-item-description">{{ item.description }}</div>
+                </div>
+                <div class="menu-item-price">
+                    ${{ item.price }}
+                </div>
+                {% if item.image %}
+                <img src="{{ item.image }}" alt="{{ item.name }} Image">
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+
+        <button class="btn-print" id="download-pdf">Download PDF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        document.getElementById("download-pdf").addEventListener("click", function () {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Set up fonts and colors
+            doc.setFont("helvetica", "bold");
+            doc.setTextColor(0, 102, 204);  // Primary color for text
+
+            // Add company logo to PDF
+            const logo = document.querySelector(".company-logo");
+            if (logo) {
+                doc.addImage(logo.src, 'PNG', 15, 10, 50, 30);  // Adjust position and size of logo
+            }
+
+            doc.setFontSize(22);
+            doc.text("{{ company.name }} - Menu", 70, 30);
+
+            // Loop through menu items and add them to the PDF
+            let yPosition = 50;  // Starting Y position
+
+            {% for item in menu_items %}
+                doc.setFontSize(16);
+                doc.text("{{ item.name }}", 15, yPosition);
+                doc.text("$ {{ item.price }}", 150, yPosition);
+                
+                if ("{{ item.description }}") {
+                    yPosition += 10;
+                    doc.setFontSize(12);
+                    doc.text("Description: {{ item.description }}", 15, yPosition);
+                }
+
+                {% if item.image %}
+                    // Add menu item image to the PDF
+                    const imagePath = "{{ item.image }}";  // Use base64 encoded image or path
+                    doc.addImage(imagePath, 'PNG', 150, yPosition - 10, 40, 40);
+                {% endif %}
+
+                yPosition += 40;  // Space for next item
+            {% endfor %}
+
+            // Save the PDF
+            doc.save("{{ company.name }}_Menu.pdf");
+        });
+    </script>
+
+</body>
+</html>

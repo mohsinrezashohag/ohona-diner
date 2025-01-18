@@ -1,0 +1,87 @@
+.owner-profile-container{
+    display: flex;
+    justify-content: center;
+}
+
+.each-owner-profile{
+    width: 33.33%;
+}
+
+.owner-profile-image-div{
+    display: flex;
+    justify-content: center;
+}
+
+.company-profile-image-div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.company-profile-contact-text{
+    font-weight: 600;
+}
+
+.home-menu-hot-items-div{
+    display: flex;
+}
+
+/* .home-menu-hot-food-items-container-div{
+    display: flex;
+} */
+
+.home-menu-hot-food-items-div{
+    width: 50%;
+}
+
+.home-menu-hot-image-div{
+    width: 50%;
+}
+
+.active > a {
+    color: yellow;
+}
+
+.food-menu-image-container{
+    margin-bottom: 10px;
+}
+
+.hot-menu-box-image{
+    width: 100%;
+    height: 190px;
+    max-height: 190px;
+    object-fit: cover;
+}
+
+.single_booking_button{
+    width: 50%;
+    font-size: 20px;
+    background-color: green;
+    border: none;
+    transition: 0.3s linear;
+}
+
+.single_booking_button:hover{
+    background-color: rgb(4, 168, 4);
+}
+
+.entry-summary-single-menu{
+    width: 100% !important;
+}
+
+@media screen and (max-width: 600px) {
+    .single_booking_button{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-menu-hot-items-div {
+        display: block;
+        width: 100%;
+    }
+    
+    .home-menu-hot-food-items-div {
+        width: 100%;
+    }
+    
+}

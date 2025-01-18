@@ -1,0 +1,214 @@
+{% extends "backend/base/base.html" %}
+{% load static %}
+<link href="vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+{% block main_content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Category List</h2>
+
+    <!-- Add Category Button -->
+    <button class="btn btn-primary mb-3" id="addCategoryButton">Add Category</button>
+
+    <!-- Categories Table -->
+    <table class="table table-bordered" id="example5">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for category in categories %}
+            <tr>
+                <td>{{ category.id }}</td>
+                <td>{{ category.name }}</td>
+                <td>{{ category.description }}</td>
+                <td>{{ category.status|yesno:"Active,Inactive" }}</td>
+                <td>
+                    {% if category.image %}
+                    <img src="{{ category.image.url }}" alt="{{ category.name }}" style="width: 50px; height: auto;">
+                    {% else %}
+                    No Image
+                    {% endif %}
+                </td>
+                <td>
+                    <!-- Small Edit Button with Icon -->
+                    <button class="btn btn-success btn-sm editCategoryButton" 
+                            data-id="{{ category.id }}" 
+                            data-name="{{ category.name }}" 
+                            data-description="{{ category.description }}" 
+                            data-status="{{ category.status }}" 
+                            data-image-url="{% if category.image %}{{ category.image.url }}{% endif %}">
+                        <i class="fas fa-edit"></i> Edit
+                    </button>
+                    
+                    <!-- Small Delete Button with Icon -->
+                    <button class="btn btn-danger btn-sm deleteCategoryButton" data-id="{{ category.id }}">
+                        <i class="fas fa-trash-alt"></i> Delete
+                    </button>
+                </td>
+                
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Add/Edit Category Modal -->
+<div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="categoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="categoryForm">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="categoryModalLabel">Add/Edit Category</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="categoryId" name="category_id">
+                    <div class="mb-3">
+                        <label for="categoryName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="categoryName" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="categoryDescription" class="form-label">Description</label>
+                        <textarea class="form-control" id="categoryDescription" name="description"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="categoryStatus" class="form-label">Status</label>
+                        <select class="form-select" id="categoryStatus" name="status">
+                            <option value="1">Active</option>
+                            <option value="0">Inactive</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="categoryImage" class="form-label">Image</label>
+                        <input type="file" class="form-control" id="categoryImage" name="image">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Include SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="vendor/datatables/js/jquery.dataTables.min.js"></script>
+	<script>
+		(function($) {
+		 
+			var table = $('#example5').DataTable({
+				searching: false,
+				paging:true,
+				select: false,
+				//info: false,         
+				lengthChange:false 
+				
+			});
+			$('#example tbody').on('click', 'tr', function () {
+				var data = table.row( this ).data();
+				
+			});
+		   
+		})(jQuery);
+	</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Add Category Button
+    document.getElementById("addCategoryButton").addEventListener("click", () => {
+        document.getElementById("categoryForm").reset();
+        document.getElementById("categoryId").value = "";
+        document.getElementById("categoryModalLabel").innerText = "Add Category";
+        new bootstrap.Modal(document.getElementById("categoryModal")).show();
+    });
+
+    // Edit Category Button
+    document.querySelectorAll(".editCategoryButton").forEach(button => {
+        button.addEventListener("click", () => {
+            const modal = new bootstrap.Modal(document.getElementById("categoryModal"));
+            document.getElementById("categoryModalLabel").innerText = "Edit Category";
+
+            document.getElementById("categoryId").value = button.dataset.id;
+            document.getElementById("categoryName").value = button.dataset.name;
+            document.getElementById("categoryDescription").value = button.dataset.description;
+            document.getElementById("categoryStatus").value = button.dataset.status;
+
+            modal.show();
+        });
+    });
+
+    // Delete Category Button
+    document.querySelectorAll(".deleteCategoryButton").forEach(button => {
+        button.addEventListener("click", () => {
+            const categoryId = button.dataset.id;
+
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Yes, delete it!"
+            }).then(result => {
+                if (result.isConfirmed) {
+                    fetch(`/user/delete-category/${categoryId}/`, {
+                        method: "DELETE",
+                        headers: {
+                            "X-CSRFToken": "{{ csrf_token }}"
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            Swal.fire("Deleted!", "Category has been deleted.", "success")
+                                .then(() => location.reload());
+                        } else {
+                            Swal.fire("Error!", data.message, "error");
+                        }
+                    })
+                    .catch(error => {
+                        Swal.fire("Error!", "An error occurred while deleting.", "error");
+                    });
+                }
+            });
+        });
+    });
+
+    // Handle Add/Edit Form Submission
+    document.getElementById("categoryForm").addEventListener("submit", e => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+
+        const categoryId = document.getElementById("categoryId").value;
+        const url = categoryId ? `/user/edit-category/${categoryId}/` : "/user/add-category/";
+        const method = categoryId ? "POST" : "POST";
+
+        fetch(url, {
+            method: method,
+            body: formData,
+            headers: {
+                "X-CSRFToken": "{{ csrf_token }}"
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                Swal.fire("Success!", data.message, "success")
+                    .then(() => location.reload());
+            } else {
+                Swal.fire("Error!", data.message, "error");
+            }
+        })
+        .catch(error => {
+            Swal.fire("Error!", "An error occurred while saving.", "error");
+        });
+    });
+});
+</script>
+{% endblock %}

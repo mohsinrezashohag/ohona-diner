@@ -1,0 +1,135 @@
+{% extends "frontend/base/base.html" %}
+{% load static %}
+
+{% block custom_css %}
+<style>
+    .contact-card {
+        border-radius: 12px; /* Rounded corners for cards */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        margin: 0 auto;
+        background-color: #fff;
+    }
+
+    .contact-logo {
+        max-width: 100%; /* Make sure logo fits inside the card */
+        height: auto;
+        max-height: 150px;
+    }
+
+    .contact-details {
+        padding: 20px;
+        background-color: #f7f7f7;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .flat-information {
+        margin-bottom: 20px;
+    }
+
+    .information-title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .address, .email, .phone {
+        font-size: 14px;
+        color: #666;
+    }
+
+    .contact-link {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .contact-link:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .col-md-4 {
+            margin-bottom: 20px;
+        }
+    }
+</style>
+{% endblock custom_css %}
+
+
+{% block main_content %}
+    <div class="page-title parallax parallax1 flat_strech">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12">                    
+
+                    <div class="page-title-heading">
+
+                        <h1 class="title">Contact</h1>
+
+                        <div class="breadcrumbs">
+
+                            <ul>
+
+                                <li> <a href="{% url 'home' %}">Home </a></li>
+
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+
+                            </ul>                   
+
+                        </div>
+
+                    </div><!-- /.page-title-captions -->                        
+
+                </div><!-- /.col-md-12 -->  
+
+            </div><!-- /.row -->  
+
+        </div><!-- /.container -->                      
+
+    </div>  
+
+    <section class="flat-row contact-1">
+        <div class="container">
+            <div class="row">
+                {% for contact in contacts %}
+                    <div class="col-12 col-md-4 mb-4"> <!-- Each contact in a column -->
+                        <!-- Card for Company Logo -->
+                        <div class="card contact-card">
+                            <div class="card-body text-center">
+                                {% if contact.company.logo %}
+                                    <img src="{{ contact.company.logo.url }}" alt="{{ contact.company.name }} Logo" class="contact-logo">
+                                {% else %}
+                                    <span>No logo</span>
+                                {% endif %}
+                            </div>
+                        </div>
+    
+                        <!-- Contact Information (Address, Email, Phone) -->
+                        <div class="contact-details mt-4">
+                            <div class="flat-information">
+                                <span class="fa fa-map-marker" aria-hidden="true"></span>
+                                <h5 class="information-title">ADDRESS</h5>
+                                <p class="address">{{ contact.address }}</p>
+                            </div>
+                            <div class="flat-information">
+                                <span class="fa fa-envelope" aria-hidden="true"></span>
+                                <h5 class="information-title">EMAIL</h5>
+                                <a href="mailto:{{ contact.email }}" class="contact-link">{{ contact.email }}</a>
+                            </div>
+                            <div class="flat-information">
+                                <span class="fa fa-phone" aria-hidden="true"></span>
+                                <h5 class="information-title">HOTLINE</h5>
+                                <a href="tel:{{ contact.phone }}" class="contact-link">{{ contact.phone }}</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    
+    
+{% endblock main_content %}

@@ -1,0 +1,127 @@
+{% extends "backend/base/base.html" %}
+{% load static %}
+
+{% block custom_css %}
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    
+    <style>
+        .btn-extra-small {
+    font-size: 10px; /* Smaller text */
+    padding: 3px 6px; /* Reduce padding */
+}
+    </style>
+{% endblock %}
+
+{% block main_content %}
+<h2>Menu Items</h2>
+<a href="{% url 'add_menu_item' %}" class="btn btn-primary mb-3">Add New Menu Item</a>
+
+<!-- Table for Menu Items -->
+<table class="table table-bordered" id="menuTable">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Company</th>
+            <th>Hot Deal</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in menu_items %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+   <td style="font-size: 12px;">{{ item.name }}</td>
+
+   <td>{{ item.description|slice:":30" }}{% if item.description|length > 30 %}...{% endif %}</td>
+
+            <td>{{ item.price }}</td>
+            <td>{{ item.category.name }}</td>
+            <td>{{ item.company.name }}</td>
+            <td>
+                {% if item.hot_deal_status %}
+                    <span class="badge bg-success">Yes</span>
+                {% else %}
+                    <span class="badge bg-danger">No</span>
+                {% endif %}
+            </td>
+            
+            <td>
+                {% if item.status %}
+                    <span class="badge bg-success">Active</span>
+                {% else %}
+                    <span class="badge bg-secondary">Inactive</span>
+                {% endif %}
+            </td>
+            
+        <td>
+    <!-- Edit Button with Icon -->
+    <a href="{% url 'edit_menu_item' item.id %}" class="btn btn-warning btn-sm">
+        <i class="fas fa-edit"></i> Edit
+    </a>
+
+    <!-- Ingredient List Button with Icon -->
+    <a href="{% url 'ingredient_list' item.id %}" class="btn btn-info btn-sm">
+        <i class="fas fa-list"></i> Ingredient
+    </a>
+
+    <!-- Delete Button with Icon -->
+    <button type="button" class="btn btn-danger btn-sm" onclick="confirmDelete({{ item.id }})">
+        <i class="fas fa-trash-alt"></i> Delete
+    </button>
+</td>
+
+            
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="9">No menu items available.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+
+{% block custom_js %}
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize DataTables
+            $('#menuTable').DataTable({
+                responsive: true,  // Makes table responsive
+                paging: true,      // Enable pagination
+                searching: true,   // Enable search box
+                ordering: true,    // Enable sorting
+            });
+        });
+
+        function confirmDelete(itemId) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: 'This action cannot be undone!',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'No, cancel',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "{% url 'delete_menu_item' 0 %}".replace('0', itemId);
+                }
+            });
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends "backend/base/base.html" %}
+{% load static %}
+
+{% block custom_css %}
+{% comment %} <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script> {% endcomment %}
+    <!--<link href="{% static 'backend/css/lineicons.css' %}" rel="stylesheet">-->
+    <link href="{% static 'backend/css/form_create.css' %}" rel="stylesheet">
+{% endblock custom_css %}
+
+{% block main_content %}
+
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Add a section for About Us</h4>
+                </div>
+                <div class="card-body">
+                    <form method="POST" class="w-100" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% if messages %}
+                            <div class="alert-container">
+                                {% for message in messages %}
+                                    <div class="alert alert-{{ message.tags }}">
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                        <div class="basic-form d-flex">
+                            <div class="col-12 px-3">
+                                <div class="mb-3">
+                                    <p>Title</p>
+                                    <input type="text" name="title" class="form-control input-rounded" placeholder="Title">
+                                </div>
+
+                                <div class="mb-3 mt-6">
+                                    <p>Add a Description</p>
+                                    <div class="ck-editor-div">
+                                        {% comment %} <div id="ckeditor-classic"></div> {% endcomment %}
+                                        <textarea id="ckeditor-classic" name="description" class="form-control input-rounded" placeholder="Description"></textarea>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">Add an Image</label>
+                                    <input class="form-control" name="image" type="file" id="formFile">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main_content %}
+
+{% block custom_js %}
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    {% comment %} <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script> {% endcomment %}
+    <!-- ckeditor -->
+    <script src="{% static 'backend/js/ckeditor.js' %}"></script>
+    
+
+
+    <script src="{% static 'backend/js/plugins-init/form-editor.init.js' %}"></script>
+    {% comment %} <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script> {% endcomment %}
+    {% comment %} <script>
+        CKEDITOR.replace( 'description' );
+    </script> {% endcomment %}
+{% endblock custom_js %}

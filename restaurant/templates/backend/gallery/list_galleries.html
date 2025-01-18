@@ -1,0 +1,276 @@
+{% extends "backend/base/base.html" %}
+{% load static %}
+
+{% block main_content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Manage Galleries</h2>
+
+    <!-- Add Gallery Button -->
+    <button class="btn btn-primary btn-sm mb-3" data-bs-toggle="modal" data-bs-target="#addGalleryModal">
+        <i class="fa fa-plus"></i> Add Gallery
+    </button>
+
+    <!-- Gallery Table -->
+    <table class="table table-bordered table-hover" id="galleryTable">
+        <thead class="table-light">
+            <tr>
+                <th>#</th>
+                <th>Image</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Caption</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for gallery in galleries %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>
+                    {% if gallery.image %}
+                    <img src="{{ gallery.image.url }}" alt="Gallery Image" class="img-thumbnail" style="max-width: 100px;">
+                    {% else %}
+                    <span>No Image</span>
+                    {% endif %}
+                </td>
+                <td>{{ gallery.category.name }}</td>
+                <td>
+                    {% with status=gallery.status|yesno:"Active,Inactive" %}
+                        {% if status == 'Active' %}
+                            <span class="badge bg-success">{{ status }}</span>
+                        {% else %}
+                            <span class="badge bg-danger">{{ status }}</span>
+                        {% endif %}
+                    {% endwith %}
+                </td>
+                
+                <td>{{ gallery.caption|default_if_none:"No Caption" }}</td>
+                <td>
+                    <!-- Edit Button -->
+                    <button class="btn btn-success btn-sm editGalleryButton" 
+                        data-id="{{ gallery.id }}" 
+                        data-category-id="{{ gallery.category.id }}" 
+                        data-status="{{ gallery.status }}" 
+                        data-caption="{{ gallery.caption }}" 
+                        data-image-url="{% if gallery.image %}{{ gallery.image.url }}{% endif %}">
+                        <i class="fa fa-edit"></i> Edit
+                    </button>
+
+                    <!-- Delete Button -->
+                    <button class="btn btn-danger btn-sm deleteGalleryButton" data-id="{{ gallery.id }}">
+                        <i class="fa fa-trash"></i> Delete
+                    </button>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6" class="text-center">No galleries found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Add Gallery Modal -->
+<div class="modal fade" id="addGalleryModal" tabindex="-1" aria-labelledby="addGalleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addGalleryModalLabel">Add Gallery</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="addGalleryForm" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="addGalleryCategory" class="form-label">Category</label>
+                        <select class="form-select" id="addGalleryCategory" name="category_id" required>
+                            <option value="" disabled selected>Select Category</option>
+                            {% for category in categories %}
+                            <option value="{{ category.id }}">{{ category.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="addGalleryImage" class="form-label">Image</label>
+                        <input type="file" class="form-control" id="addGalleryImage" name="image" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="addGalleryCaption" class="form-label">Caption</label>
+                        <textarea class="form-control" id="addGalleryCaption" name="caption" rows="2"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="addGalleryStatus" class="form-label">Status</label>
+                        <select class="form-select" id="addGalleryStatus" name="status">
+                            <option value="True">Active</option>
+                            <option value="False">Inactive</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Gallery</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Gallery Modal -->
+<div class="modal fade" id="editGalleryModal" tabindex="-1" aria-labelledby="editGalleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editGalleryModalLabel">Edit Gallery</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="editGalleryForm" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="hidden" id="editGalleryId" name="id">
+                    <div class="mb-3">
+                        <label for="editGalleryCategory" class="form-label">Category</label>
+                        <select class="form-select" id="editGalleryCategory" name="category_id" required>
+                            <option value="" disabled selected>Select Category</option>
+                            {% for category in categories %}
+                            <option value="{{ category.id }}">{{ category.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editGalleryImage" class="form-label">Image</label>
+                        <input type="file" class="form-control" id="editGalleryImage" name="image">
+                        <img id="editGalleryImagePreview" src="" alt="Image Preview" class="mt-2" style="max-width: 100px;">
+                    </div>
+                    <div class="mb-3">
+                        <label for="editGalleryCaption" class="form-label">Caption</label>
+                        <textarea class="form-control" id="editGalleryCaption" name="caption" rows="2"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editGalleryStatus" class="form-label">Status</label>
+                        <select class="form-select" id="editGalleryStatus" name="status">
+                            <option value="True">Active</option>
+                            <option value="False">Inactive</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block custom_js %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    // Edit Gallery Button
+    document.querySelectorAll(".editGalleryButton").forEach(button => {
+        button.addEventListener("click", function () {
+            const galleryId = this.dataset.id;
+            const categoryId = this.dataset.categoryId;
+            const status = this.dataset.status;
+            const caption = this.dataset.caption;
+            const imageUrl = this.dataset.imageUrl;
+
+            document.getElementById("editGalleryId").value = galleryId;
+            document.getElementById("editGalleryCategory").value = categoryId;
+            document.getElementById("editGalleryCaption").value = caption;
+            document.getElementById("editGalleryStatus").value = status;
+            const imagePreview = document.getElementById("editGalleryImagePreview");
+            imagePreview.src = imageUrl ? imageUrl : "";  // Image preview logic
+
+            const modal = new bootstrap.Modal(document.getElementById("editGalleryModal"));
+            modal.show();
+        });
+    });
+
+    // Handle Add Gallery Form Submission
+    document.getElementById("addGalleryForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+
+        fetch("/user/gallery/add/", {
+            method: "POST",
+            body: formData,
+            headers: {
+                "X-CSRFToken": document.querySelector('[name=csrfmiddlewaretoken]').value
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                Swal.fire("Success!", data.message, "success").then(() => location.reload());
+            } else {
+                Swal.fire("Error!", data.message, "error");
+            }
+        })
+        .catch(error => Swal.fire("Error!", "An error occurred while saving.", "error"));
+    });
+
+    // Handle Edit Gallery Form Submission
+// Handle Edit Gallery Form Submission
+// Handle Edit Gallery Form Submission
+document.getElementById("editGalleryForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const galleryId = document.getElementById("editGalleryId").value;
+
+    fetch(`/user/gallery/edit/${galleryId}/`, {
+        method: "POST",
+        body: formData,
+        headers: {
+            "X-CSRFToken": document.querySelector('[name=csrfmiddlewaretoken]').value
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            Swal.fire("Success!", data.message, "success").then(() => location.reload());
+        } else {
+            // Check if the error is specifically due to the category not being found
+            if (data.message === "The selected category does not exist. Please select a valid category.") {
+                Swal.fire("Error!", data.message, "error");
+            } else {
+                Swal.fire("Error!", data.message, "error");
+            }
+        }
+    })
+    .catch(error => Swal.fire("Error!", "An error occurred while saving.", "error"));
+});
+
+
+
+
+    // Delete Gallery Button
+    document.querySelectorAll(".deleteGalleryButton").forEach(button => {
+        button.addEventListener("click", () => {
+            const galleryId = button.dataset.id;
+            Swal.fire({
+                title: "Are you sure?",
+                text: "This will permanently delete the gallery.",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Yes, delete it!"
+            }).then(result => {
+                if (result.isConfirmed) {
+                    fetch(`/user/gallery/delete/${galleryId}/`, {
+                        method: "POST",
+                        headers: {
+                            "X-CSRFToken": document.querySelector('[name=csrfmiddlewaretoken]').value
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            Swal.fire("Deleted!", data.message, "success").then(() => location.reload());
+                        } else {
+                            Swal.fire("Error!", data.message, "error");
+                        }
+                    })
+                    .catch(error => Swal.fire("Error!", "An error occurred while deleting.", "error"));
+                }
+            });
+        });
+    });
+</script>
+
+{% endblock %}

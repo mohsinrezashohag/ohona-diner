@@ -1,0 +1,92 @@
+{% extends "backend/base/base.html" %}
+{% load static %}
+
+{% block main_content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Contact Details</h2>
+    <a href="{% url 'add_contactus_admin' %}" class="btn btn-success mb-3">Add New Contact</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Company</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in contacts %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ contact.company.name }}</td>
+                    <td>{{ contact.email }}</td>
+                    <td>{{ contact.phone }}</td>
+                    <td>{{ contact.address }}</td>
+                    <td>
+                        <a href="{% url 'edit_contactus_admin' contact.id %}" class="btn btn-primary btn-sm">Edit</a>
+                        <button class="btn btn-danger btn-sm delete-btn" data-id="{{ contact.id }}">Delete</button>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="6" class="text-center">No contact details found.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- SweetAlert2 Script -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Find all the delete buttons on the page
+        const deleteButtons = document.querySelectorAll('.delete-btn');
+
+        // Add click event listener to each delete button
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default behavior of the button
+                const contactId = button.getAttribute('data-id'); // Get the contact ID
+
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "You won't be able to revert this!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#3085d6',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Send the delete request via AJAX
+                        fetch(`/user/delete_contactus_admin/${contactId}/`, {
+                            method: 'POST',
+                            headers: {
+                                'X-Requested-With': 'XMLHttpRequest',  // To tell the server this is an AJAX request
+                                'X-CSRFToken': '{{ csrf_token }}' // Django CSRF token for security
+                            }
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                // Show success message with SweetAlert2
+                                Swal.fire('Deleted!', data.message, 'success').then(() => {
+                                    location.reload();  // Reload the page to reflect changes
+                                });
+                            } else {
+                                Swal.fire('Error', data.message, 'error');
+                            }
+                        })
+                        .catch(error => {
+                            Swal.fire('Error', 'An error occurred while deleting the contact.', 'error');
+                        });
+                    }
+                });
+            });
+        });
+    });
+</script>
+{% endblock %}

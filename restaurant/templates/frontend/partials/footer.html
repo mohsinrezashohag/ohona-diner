@@ -1,0 +1,287 @@
+{% load static %}
+<footer class="footer">
+
+    <div class="footer-widgets">        
+
+        <div class="container">
+
+            <div class="row"> 
+
+                <div class="col-md-3">
+
+                    <div class="widget widget_text">
+
+                        <h3 class="widget-title">About Us</h3>          
+
+                        <div class="textwidget">
+                        
+                            <p> A group of Culinary Artists committed to health and quality, <br/> united by a fierce passion of food art and cuisine creation. </p>
+
+                            <ul class="footer-info">
+
+                                <li class="address">Bangladesh Eye Hospital, House 133, Captain Road, New 9/A Dhanmondi, Behind the, Dhanmondi 27, Dhaka</li>
+
+                                <li class="email">Email us: ohana.diner2023@gmail.com</li>
+
+                                <li class="phone">Call us:8801880200570</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div><!-- /.col-md-3 -->
+
+
+
+                {% comment %} <div class="col-md-3">
+
+                    <div class="widget widget_recent_posts">      
+
+                        <h3 class="widget-title">Latest Posts</h3>       
+
+                        <ul>
+
+                            <li class="clearfix">
+
+                                <div class="thumb flat-hover-images">
+
+                                    <a href="#"><img src="{% static 'frontend/images/blog/5.jpg' %}" alt="image"></a>
+
+                                </div>
+
+                                <div class="content">
+
+                                    <h5 class="title"><a href="#">Whole Wheat & Soy Waffles Cake </a></h5>
+
+                                    <div class="meta">19 September, 2016</div>
+
+                                </div>
+
+                            </li>
+
+
+
+                            <li class="clearfix">
+
+                                <div class="thumb flat-hover-images">
+
+                                    <a href="#"><img src="{% static 'frontend/images/blog/6.jpg' %}" alt="image"></a>
+
+                                </div>
+
+                                <div class="content">
+
+                                    <h5 class="title"><a href="#">Whole Wheat & Soy Waffles Cake</a></h5>
+
+                                    <div class="meta">19 September, 2016</div>
+
+                                </div>
+
+                            </li>
+
+                            
+
+                        </ul>
+
+                    </div><!-- /.widget_recent_entries -->
+
+                </div><!-- /.col-md-3 --> {% endcomment %}
+
+
+
+                <div class="col-md-3">
+
+                    <div class="widget widget-link clearfix">
+
+                        <h3 class="widget-title">User Links </h3>
+
+
+
+                        <ul class="links">
+
+                        <li><a href="{% url 'home' %}">Home</a></li>
+
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+
+                        {% for company in companies %}
+                            <li ><a href="{% url 'nav_menu' company.slug_name company.id %}">{{ company.name }}</a></li>
+                        {% endfor %}
+
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+
+                        </ul>
+
+
+
+
+                      <div class="social-links">
+    <a href="https://www.facebook.com/OhanaDinerbd" target="_blank">
+        <i class="fa-brands fa-facebook-square"></i> Facebook
+    </a>
+
+    <a href="https://www.tiktok.com/@ohana.diner" target="_blank">
+        <i class="fa-brands fa-tiktok"></i> TikTok
+    </a>
+
+    <a href="mailto:ohana.diner2023@gmail.com" target="_blank">
+        <i class="fa-brands fa-google-plus-square"></i> Email
+    </a>
+
+    <a href="https://www.instagram.com/ohanadiner" target="_blank">
+        <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
+</div>
+
+                        
+
+                    </div>
+
+                </div><!-- /.col-md-3 -->
+
+
+
+                <div class="col-md-3">
+
+                    <div class="widget widget_instagram">
+
+                        <h3 class="widget-title">Gallery</h3>            
+
+
+
+                        <ul class="clearfix">                                
+
+                            <li>
+
+                                <div class="thumb images-hover flat-hover-images">
+
+                                    <a href="#">
+
+                                        <span><img src="{% static 'frontend/images/instagram/1.jpg' %}" alt="image"></span>
+
+                                    </a>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <div class="thumb images-hover flat-hover-images">
+
+                                    <a href="#">
+
+                                        <span><img src="{% static 'frontend/images/instagram/2.jpg' %}" alt="image"></span>
+
+                                    </a>
+
+                                </div>
+
+                            </li>
+
+                            <li class="last">
+
+                                <div class="thumb images-hover flat-hover-images">
+
+                                    <a href="#">
+
+                                        <span><img src="{% static 'frontend/images/instagram/3.jpg' %}" alt="image"></span>
+
+                                    </a>
+
+                                </div>
+
+                            </li>
+
+                            <li class="last">
+
+                                <div class="thumb images-hover flat-hover-images">
+
+                                    <a href="#">
+
+                                        <span><img src="{% static 'frontend/images/instagram/4.jpg' %}" alt="image"></span>
+
+                                    </a>
+
+                                </div>
+
+                            </li>
+
+
+
+                            <li class="last">
+
+                                <div class="thumb images-hover flat-hover-images">
+
+                                    <a href="#">
+
+                                        <span><img src="{% static 'frontend/images/instagram/5.jpg' %}" alt="image"></span>
+
+                                    </a>
+
+                                </div>
+
+                            </li>
+
+
+
+                            <li class="last">
+
+                                <div class="thumb images-hover flat-hover-images">
+
+                                    <a href="#">
+
+                                        <span><img src="{% static 'frontend/images/instagram/6.jpg' %}" alt="image"></span>
+
+                                    </a>
+
+                                </div>
+
+                            </li>
+
+                        </ul>  
+
+
+
+                    </div><!-- /.widget_instagram -->
+
+                </div>
+
+            </div><!-- /.row -->    
+
+        </div><!-- /.container -->
+
+    </div><!-- /.footer-widgets -->
+
+
+
+    <div class="footer-content">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <div class="copyright">
+
+                        <div class="copyright-content">
+
+                        Copyright <a href="https://iglweb.com/web/" target="_blank">IGL Web Ltd.</a> © 2024. All Rights Reserved</div>
+
+                    </div>
+
+                    <!-- Go Top -->
+
+                    <a class="go-top-v1"> <i class="fa fa-arrow-up"></i>  &nbsp;Back to Top</a>
+
+                </div><!-- /.col-md-12 -->
+
+            </div><!-- /.row -->
+
+        </div><!-- /.container -->
+
+    </div><!-- /.footer-content -->
+
+</footer>
